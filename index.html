@@ -162,13 +162,12 @@
               >
             </div>
             <div>
-              <span class="small">Verwertbare Signalgruppen</span><br /><strong
-                id="confidenceSignals"
-                >–</strong
-              >
+              <span class="small">Auswertbare Merkmalsgruppen</span
+              ><br /><strong id="confidenceSignals">–</strong>
             </div>
           </div>
 
+          <div class="resultMeaning" id="analysisMeaning"></div>
           <h3>Forensischer Befund</h3>
           <div class="forensic" id="forensicFinding"></div>
         </div>
@@ -332,6 +331,7 @@
               </div>
             </div>
             <div id="synthFinding" class="forensic"></div>
+            <div class="resultMeaning" id="synthMeaning"></div>
             <table>
               <thead>
                 <tr>
@@ -871,21 +871,6 @@
             Drittanbietern geladen.
           </p>
 
-          <h3>Start über einen lokalen Webserver</h3>
-          <p>
-            Die modularisierte Quellversion benötigt einen lokalen HTTP-Server
-            oder statisches Webhosting. Starten Sie sie mit npm start und öffnen
-            Sie die angezeigte localhost-Adresse. Direktes Öffnen über file://
-            wird für diese Ausgabe nicht unterstützt.
-          </p>
-
-          <h3>Lokale Auslieferung und Cache</h3>
-          <p>
-            Das lokale Gemma-Modell wird nach dem Laden optional in IndexedDB
-            gespeichert. Tokenizer-Laufzeiten und Modell werden mit dieser
-            Website ausgeliefert. Es gibt keine CDN- oder Modell-Downloads von
-            Drittanbietern während der Benutzung.
-          </p>
           <div class="notice documentation-notice">
             <p>
               <strong>Referenz- statt Gemini-Detektor:</strong> Google DeepMind
@@ -968,6 +953,9 @@
     ><template id="template-listItem"><li data-field="text"></li></template>
     <footer class="site-footer">
       <a href="licenses.html">Lizenzen und Drittanbieter</a>
+      <a href="https://github.com/marsrakete/ki-text-analyzer"
+        >GitHub-Projekt</a
+      >
     </footer>
     <script type="module" src="src/app.js"></script>
   </body>

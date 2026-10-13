@@ -4,7 +4,7 @@ Statische Browser-Anwendung für beschreibende Textstatistik, heuristische Stilm
 
 ## Starten
 
-Die fertigen Tokenizer-Dateien sind im Projekt enthalten. Die Seite benötigt einen HTTP-Server; direktes Öffnen von `index.html` über `file://` wird für die modulare Ausgabe nicht unterstützt.
+Die fertigen Tokenizer-Dateien sind im Projekt enthalten. Die modularisierte Quellversion benötigt einen lokalen HTTP-Server oder statisches Webhosting; direktes Öffnen von `index.html` über `file://` wird für diese Ausgabe nicht unterstützt.
 
 ```powershell
 npm start
@@ -82,7 +82,9 @@ Gemma verwendet `@sctg/sentencepiece-js` **1.3.3**. Die Browser-Laufzeit einschl
 
 Versionen, Modellquelle und SHA-256-Prüfsummen stehen in `assets/tokenizers/manifest.json`. Lizenzdateien und Herkunft sind unter `vendor/licenses/` und in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) festgehalten.
 
-Die Anwendung benötigt während der Nutzung keine externen CDN- oder Modellzugriffe. Ein statischer Server muss die lokalen Dateien weiterhin bereitstellen. Das ist keine Service-Worker-PWA und keine Ein-Datei-Ausgabe. Ein vollständig netzunabhängiger Betrieb ist mit lokalem Server und allen mitgelieferten Dateien möglich; ein späterer Aufruf einer extern gehosteten Seite ohne Verbindung ist dadurch nicht zugesagt.
+### Lokale Auslieferung und Cache
+
+Tokenizer-Laufzeiten und Modell werden mit der Website ausgeliefert. Die Anwendung benötigt während der Nutzung keine externen CDN- oder Modellzugriffe. Ein statischer Server muss die lokalen Dateien weiterhin bereitstellen. Das ist keine Service-Worker-PWA und keine Ein-Datei-Ausgabe. Ein vollständig netzunabhängiger Betrieb ist mit lokalem Server und allen mitgelieferten Dateien möglich; ein späterer Aufruf einer extern gehosteten Seite ohne Verbindung ist dadurch nicht zugesagt.
 
 Das Gemma-Modell wird optional im bestehenden IndexedDB-Store `ki-text-analyzer-assets` gespeichert. Datenbankname, Store und Version bleiben erhalten. Cachefehler verhindern die lokale Modellladung nicht. „Tokenizer-Cache löschen“ wartet auf laufende Ladevorgänge, leert den Modell-Store und setzt die vorbereiteten Instanzen zurück. Es entfernt keine vom Browser selbst verwalteten HTTP-/JavaScript-Caches.
 
@@ -94,11 +96,15 @@ Die Einträge stehen zentral in `config/licenses.config.json`; die HTML-Struktur
 
 **Offen bleibt die Lizenzzuordnung von `assets/tokenizers/gemma.model`.** Der beigefügte Apache-2.0-Text stammt aus dem Herkunftsrepository. Er belegt allein keine abschließende Freigabe dieser Binärdatei unter Apache-2.0; eventuell zusätzlich geltende Gemma-Bedingungen müssen gesondert geklärt werden. Die Beilage kennzeichnet diesen Unterschied ausdrücklich.
 
+Die [dokumentierte Prüfung vom 13.10.2026](GEMMA_LICENSE_REVIEW.md) bestätigt den Original-Lizenztext und die identische Datei in Googles Vertex-AI-SDK. Sie erläutert die verbleibende Abgrenzung zu den Gemma-Bedingungen und enthält einen konkreten Anfrageentwurf an den Rechteinhaber.
+
 ## Verhalten und fachliche Grenzen
 
 Die bisherigen heuristischen Werte, Gewichte und Schwellen sind durch Vergleichsfixtures geschützt. Korrigiert wurden der fehlende `reasons`-Rückgabewert, der bisher zum Renderfehler führte, und die SynthID-Kontexthistorie: Sie beginnt entsprechend der Referenz mit Null-Hashes. Zusätzlich werden sichere Ganzzahlen und Parameterbereiche jetzt ausdrücklich geprüft. Mobile Tabellen können lange Begriffe umbrechen.
 
 Der heuristische Score ist weder Herkunftsnachweis noch Wahrscheinlichkeit für KI-Autorenschaft. Die bisherigen Grenzen und Signalgruppen bleiben erhalten; die Anzeige „Aussagekraft“ ist weiterhin eine heuristische Eingabeabdeckung und keine kalibrierte Messunsicherheit.
+
+Direkt bei beiden Ergebnissen erklärt „Was bedeutet das Ergebnis?“ die fachlichen Grenzen. Die Heuristik erläutert die Bedeutung der Aussagekraft und zeigt bei weniger als 80 Wörtern einen zusätzlichen Hinweis zur kurzen Textbasis. SynthID unterscheidet ein erhöhtes von einem unauffälligen Referenzsignal und erklärt Konfigurationsabhängigkeit, fehlende Kalibrierung und mögliche Grenzen der Erkennung. Berechnungen und Schwellen bleiben unverändert.
 
 SynthID prüft die öffentliche Referenzkonfiguration mit den angegebenen Keys und dem passenden Tokenizer. Das ist kein universeller Gemini-Detektor. Der z-Wert bleibt eine Näherung; Abhängigkeiten zwischen g-values werden dabei nicht berücksichtigt.
 

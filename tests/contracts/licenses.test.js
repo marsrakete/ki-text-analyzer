@@ -1,6 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
 import { JSDOM } from "jsdom";
 
 test("license appendix ships full texts, provenance and the unresolved model status" /** Verify the generated appendix against its inventory and original texts.
@@ -49,6 +50,30 @@ test("license appendix ships full texts, provenance and the unresolved model sta
     assert.ok(notices.includes(entry.changes));
   }
   assert.equal(document.querySelector("#gemma [data-status]").hidden, false);
+  const gemma = config.components.find(
+    /** Locate the reviewed tokenizer entry.
+     * @param {object} entry License inventory entry.
+     * @returns {boolean} Whether the entry describes Gemma data. */
+    (entry) => entry.id === "gemma",
+  );
+  assert.equal(
+    createHash("sha256")
+      .update(await readFile("assets/tokenizers/gemma.model"))
+      .digest("hex"),
+    gemma.review.modelSha256,
+  );
+  assert.equal(
+    createHash("sha256")
+      .update(await readFile(gemma.file))
+      .digest("hex"),
+    gemma.review.repositoryLicenseSha256,
+  );
+  assert.ok(notices.includes(gemma.review.document));
+  assert.ok(
+    (await readFile(gemma.review.document, "utf8")).includes(
+      gemma.review.sdkSource,
+    ),
+  );
   assert.match(
     document.querySelector("#gemma").textContent,
     /Zuordnung.*offen/,

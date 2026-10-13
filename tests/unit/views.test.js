@@ -26,9 +26,8 @@ function setup() {
     messages,
   };
 }
-test("template filling and rows preserve hostile input as text", /** Verify the behavior described by this test case.
- * @returns {*} Operation result or undefined for a side effect. */
-() => {
+test("template filling and rows preserve hostile input as text" /** Verify the behavior described by this test case.
+ * @returns {*} Operation result or undefined for a side effect. */, () => {
   const { document, templates } = setup();
   const hostile = "<img src=x onerror=alert(1)>";
   const node = cloneTemplate(templates.metric, {
@@ -52,9 +51,8 @@ test("template filling and rows preserve hostile input as text", /** Verify the 
   assert.equal(format("{0} + {1}", "A", "B"), "A + B");
   assert.equal(format("{0}"), " {0}".trim());
 });
-test("analysis view fills every section and safely visualizes Unicode/HTML", /** Verify the behavior described by this test case.
- * @returns {*} Operation result or undefined for a side effect. */
-() => {
+test("analysis view fills every section and safely visualizes Unicode/HTML" /** Verify the behavior described by this test case.
+ * @returns {*} Operation result or undefined for a side effect. */, () => {
   const config = setup(),
     view = createAnalysisView(config);
   const text = "Hallo\u200B <img src=x onerror=alert(1)>. Welt.";
@@ -71,6 +69,26 @@ test("analysis view fills every section and safely visualizes Unicode/HTML", /**
     /\[ZWSP\]/,
   );
   assert.equal(config.root.querySelector("#unicodeVisualized img"), null);
+  assert.ok(
+    config.root
+      .querySelector("#analysisMeaning")
+      .textContent.includes(messages.confidenceMeaning),
+  );
+  assert.ok(
+    config.root
+      .querySelector("#analysisMeaning")
+      .textContent.includes(messages.shortTextMeaning),
+  );
+  for (const count of [79, 80]) {
+    const sample = Array(count).fill("Wort").join(" ") + ".";
+    view.render(sample, analyze(sample), null);
+    assert.equal(
+      config.root
+        .querySelector("#analysisMeaning")
+        .textContent.includes(messages.shortTextMeaning),
+      count < 80,
+    );
+  }
   view.render("", analyze(""), null);
   assert.match(
     config.root.querySelector("#functionWordRows").textContent,
@@ -90,9 +108,8 @@ test("analysis view fills every section and safely visualizes Unicode/HTML", /**
     true,
   );
 });
-test("analysis controller ignores results completed after clearing or changing text", /** Verify the behavior described by this test case.
- * @returns {*} Operation result or undefined for a side effect. */
-async () => {
+test("analysis controller ignores results completed after clearing or changing text" /** Verify the behavior described by this test case.
+ * @returns {*} Operation result or undefined for a side effect. */, async () => {
   const { document } = setup();
   const elements = {
     input: document.getElementById("input"),
@@ -157,9 +174,8 @@ async () => {
   elements.sample.click();
   assert.equal(elements.input.value, "Beispiel");
 });
-test("SynthID view provides status, safe result text and busy/error states", /** Verify the behavior described by this test case.
- * @returns {*} Operation result or undefined for a side effect. */
-() => {
+test("SynthID view provides status, safe result text and busy/error states" /** Verify the behavior described by this test case.
+ * @returns {*} Operation result or undefined for a side effect. */, () => {
   const config = setup(),
     view = createSynthIDView(config);
   view.preparing("gemma");
@@ -192,6 +208,41 @@ test("SynthID view provides status, safe result text and busy/error states", /**
   });
   assert.equal(config.root.querySelectorAll("#synthRows tr").length, 7);
   assert.equal(config.root.querySelector("#synthFinding img"), null);
+  assert.ok(
+    config.root
+      .querySelector("#synthMeaning")
+      .textContent.includes(messages.synthNoSignalMeaning),
+  );
+  for (const z of [1.49, 1.5, 4]) {
+    view.render({
+      result: {
+        valid: 1,
+        totalNgrams: 1,
+        mean: 0.5,
+        weighted: 0.5,
+        z,
+        iv: "1",
+        masked: 0,
+      },
+      count: 5,
+      source: "Test",
+      keys: [1],
+      ngramLen: 5,
+    });
+    assert.equal(
+      config.root
+        .querySelector("#synthMeaning")
+        .textContent.includes(messages.synthSignalMeaning),
+      z >= 1.5,
+    );
+    assert.equal(
+      config.root
+        .querySelector("#synthMeaning p")
+        .textContent.includes(messages.synthMeaning),
+      true,
+    );
+    assert.equal(config.root.querySelectorAll("#synthMeaning p").length, 3);
+  }
   view.error("Fehler <img>");
   assert.equal(
     config.root.querySelector("#synthPrereq").textContent,
@@ -204,9 +255,8 @@ test("SynthID view provides status, safe result text and busy/error states", /**
     true,
   );
 });
-test("SynthID controller validates before loading and ignores stale score completion", /** Verify the behavior described by this test case.
- * @returns {*} Operation result or undefined for a side effect. */
-async () => {
+test("SynthID controller validates before loading and ignores stale score completion" /** Verify the behavior described by this test case.
+ * @returns {*} Operation result or undefined for a side effect. */, async () => {
   const { document } = setup();
   const ids = {
     input: "input",

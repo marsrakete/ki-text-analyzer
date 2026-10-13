@@ -10,8 +10,19 @@ test("license appendix is reachable before analysis, serves original texts and f
   page,
 }) => {
   await page.setViewportSize({ width: 390, height: 844 });
-  await expect(page.locator(".site-footer a")).toBeVisible();
-  await page.locator(".site-footer a").click();
+  await expect(
+    page.locator('.site-footer a[href="licenses.html"]'),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: "GitHub-Projekt" }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: "GitHub-Projekt" }),
+  ).toHaveAttribute("href", "https://github.com/marsrakete/ki-text-analyzer");
+  await page
+    .locator(".site-footer")
+    .screenshot({ path: "screenshots/footer-mobile.png" });
+  await page.locator('.site-footer a[href="licenses.html"]').click();
   await expect(page).toHaveURL(/licenses\.html$/);
   await expect(page.locator("h1")).toHaveText("Lizenzen und Drittanbieter");
   await expect(page.locator(".license-entry")).toHaveCount(12);
@@ -191,6 +202,12 @@ test("initialization, full example, Unicode, scores and clearing" /** Verify the
   await page.locator("#analyzeBtn").click();
   await expect(page.locator("#analysisMessage")).toContainText("Bitte zuerst");
   await example(page);
+  await expect(page.locator("#analysisMeaning")).toContainText(
+    "keine Wahrscheinlichkeit",
+  );
+  await expect(page.locator("#analysisMeaning")).toContainText(
+    "keine hohe Sicherheit",
+  );
   await expect(page.locator("#unicodeVisualized .markerToken")).toHaveCount(4);
   await expect(page.locator("#reasons li")).not.toHaveCount(0);
   await expect(page.locator("#advancedRows tr")).toHaveCount(25);
@@ -201,6 +218,10 @@ test("initialization, full example, Unicode, scores and clearing" /** Verify the
     "starkes Referenzsignal",
   );
   await expect(page.locator("#synthRows tr")).toHaveCount(7);
+  await expect(page.locator("#synthMeaning")).toContainText("erhöhte Signal");
+  await expect(page.locator("#synthMeaning")).toContainText(
+    "nicht kalibrierten Schwellen",
+  );
   await page.locator("#synthNgramLen").fill("1");
   await page.locator("#synthAnalyzeBtn").click();
   await expect(page.locator("#tokenizerStatus")).toContainText(
@@ -400,6 +421,16 @@ for (const width of [390, 768, 1280]) {
         height: 900,
       });
       await example(page);
+      await expect(page.locator("#analysisMeaning")).toBeVisible();
+      await page.locator("#synthPositiveDemoBtn").click();
+      await page.locator("#synthAnalyzeBtn").click();
+      await expect(page.locator("#synthMeaning")).toBeVisible();
+      await page
+        .locator("#analysisMeaning")
+        .screenshot({ path: "screenshots/analysis-meaning-" + width + ".png" });
+      await page
+        .locator("#synthMeaning")
+        .screenshot({ path: "screenshots/synth-meaning-" + width + ".png" });
       const geometry = await page.evaluate(
         /** Inspect or exercise page state inside the browser.
          * @returns {*} Operation result or undefined for a side effect. */

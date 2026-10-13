@@ -54,6 +54,21 @@ export const messages = {
     "Der Text zeigt {0}. Das Ergebnis ist heuristisch und darf nicht als Beweis für KI-Autorenschaft verwendet werden.",
   words: "{0} Wörter",
   signals: "{0} von 9",
+  meaningLabel: "Was bedeutet das Ergebnis?",
+  analysisMeaning:
+    "Der Score beschreibt statistische und stilistische Muster im Text. Er gibt keine Wahrscheinlichkeit für KI-Autorenschaft an. Auch menschliche Texte können hohe Werte erreichen; KI-Texte können unauffällig bleiben.",
+  confidenceMeaning:
+    "Die Aussagekraft beschreibt, wie viel Text und wie viele Merkmalsgruppen auswertbar sind. Auch „hoch“ bedeutet keine hohe Sicherheit über die Herkunft. Die Gruppen sind keine unabhängigen Beweise und die Einstufung ist keine gemessene Trefferquote.",
+  shortTextMeaning:
+    "Bei diesem kurzen Text stehen nur wenige sprachliche Muster zum Vergleich zur Verfügung. Einzelne Formulierungen können das Ergebnis stark beeinflussen; der Score wird deshalb in Richtung des neutralen Werts 50 abgeschwächt.",
+  synthMeaning:
+    "Diese Prüfung sucht ein Wasserzeichensignal mit den gewählten Einstellungen. Tokenizer und Wasserzeichen-Konfiguration müssen zur Erzeugung des Textes passen. Sie erkennt nicht allgemein alle KI- oder Gemini-Texte.",
+  synthSignalMeaning:
+    "Das erhöhte Signal passt zur geprüften Referenzkonfiguration. Daraus lässt sich weder der konkrete Erzeuger noch eine verlässliche Wahrscheinlichkeit für KI-Autorenschaft bestimmen.",
+  synthNoSignalMeaning:
+    "Ein unauffälliges Signal schließt KI-Autorenschaft oder ein anderes Wasserzeichen nicht aus. Andere Einstellungen, kurze Texte und nachträgliche Bearbeitungen können die Erkennung beeinträchtigen.",
+  synthCalibrationMeaning:
+    "Der z-Wert dient hier nur zur Orientierung. Er ist eine Näherung mit nicht kalibrierten Schwellen; die angezeigte Signalstärke ist keine bestätigte Trefferentscheidung.",
   scoreExplanation:
     "Der Score ist kein Wahrscheinlichkeitswert. Ein Ergebnis von {0}/100 bedeutet also nicht, dass der Text mit {0} % Wahrscheinlichkeit von einer KI stammt.",
   scoreOrigin:

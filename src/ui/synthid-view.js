@@ -1,5 +1,5 @@
 import { format } from "../content/de.js";
-import { renderRows } from "../shared/dom.js";
+import { cloneTemplate, renderRows } from "../shared/dom.js";
 
 /** Create the SynthID view independently of tokenization and storage.
  * @param {object} config Root element, templates and messages.
@@ -123,6 +123,19 @@ export function createSynthIDView({ root, templates, messages }) {
       result.z.toFixed(2),
       level,
     );
+    let interpretation = messages.synthNoSignalMeaning;
+    if (result.z >= 1.5) {
+      interpretation = messages.synthSignalMeaning;
+    }
+    const meaning = element("synthMeaning");
+    meaning.replaceChildren();
+    for (const [label, text] of [
+      [messages.meaningLabel, messages.synthMeaning],
+      ["", interpretation],
+      ["", messages.synthCalibrationMeaning],
+    ]) {
+      meaning.append(cloneTemplate(templates.paragraph, { label, text }));
+    }
     const values = [
       format(messages.synthConfiguration, keys.length, ngramLen),
       result.iv,

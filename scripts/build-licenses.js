@@ -62,6 +62,26 @@ async function main() {
         "",
       );
   }
+  const reviewed = config.components.filter(
+    /** Select entries with a documented license review.
+     * @param {object} entry Component metadata.
+     * @returns {boolean} Whether a review is available. */
+    (entry) => Boolean(entry.review),
+  );
+  for (const entry of reviewed) {
+    sections.push(
+      "Dokumentierte Prüfung: [" +
+        entry.review.document +
+        "](" +
+        entry.review.document +
+        ") (Stand " +
+        entry.review.date +
+        ").",
+      "",
+      "Offizielle SDK-Herkunftsbestätigung: " + entry.review.sdkSource,
+      "",
+    );
+  }
   sections.push(
     "## Entwicklungswerkzeuge",
     "",

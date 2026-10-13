@@ -48,6 +48,14 @@
 .confidenceBox strong {
   font-size: 18px;
 }
+.resultMeaning {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fbfcfe;
+  overflow-wrap: anywhere;
+}
 .forensic {
   border-left: 5px solid var(--accent);
   background: #f5f7ff;

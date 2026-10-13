@@ -135,6 +135,13 @@ export function createAnalysisView({ root, templates, messages }) {
       messages.signals,
       confidence.groups,
     );
+    const meaning = element("analysisMeaning");
+    meaning.replaceChildren();
+    paragraph(meaning, messages.meaningLabel, messages.analysisMeaning);
+    paragraph(meaning, "", messages.confidenceMeaning);
+    if (r.ws.length < 80) {
+      paragraph(meaning, "", messages.shortTextMeaning);
+    }
     element("forensicFinding").textContent = finding(r, subs, confidence);
     let interpretation = messages.interpretationStrong;
     if (r.score < 35) {

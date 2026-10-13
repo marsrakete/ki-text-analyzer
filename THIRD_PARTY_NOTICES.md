@@ -122,9 +122,13 @@ Der eigene Anwendungscode steht unter Apache-2.0 (siehe LICENSE). Fremdkomponent
 - Vollständiger Originaltext: [vendor/licenses/gemma-model.txt](vendor/licenses/gemma-model.txt)
 - Änderungen: Die Datei wurde unverändert übernommen und nur lokal umbenannt. Der beigefügte Lizenztext ist die LICENSE des Herkunftsrepositories, keine abschließende Lizenzfreigabe für die Binärdatei.
 
-Die genaue Zuordnung der Gemma-Tokenizer-Datei ist noch offen. Eine Apache-2.0-Lizenz des Repositories ersetzt keine Klärung eventuell zusätzlich geltender Gemma-Nutzungsbedingungen. Die Apache-2.0-Lizenz unseres eigenen Codes wird dadurch nicht auf diese Datei ausgedehnt.
+Geprüft am 13.10.2026: Die Herkunft und die identische Verwendung in Googles Vertex-AI-SDK sind über die SHA-256-Prüfsumme bestätigt. Das Herkunftsrepository nennt Apache-2.0. Ob zusätzlich die Gemma-Bedingungen für diesen separat verwendeten Tokenizer gelten, bleibt mangels ausdrücklicher Zuordnung offen. Eine abschließende Apache-only-Freigabe wird nicht behauptet; unser eigener Code bleibt unter Apache-2.0.
 
 Zusätzliche Originalbedingungen: https://ai.google.dev/gemma/terms
+
+Dokumentierte Prüfung: [GEMMA_LICENSE_REVIEW.md](GEMMA_LICENSE_REVIEW.md) (Stand 2026-10-13).
+
+Offizielle SDK-Herkunftsbestätigung: https://github.com/googleapis/python-aiplatform/blob/44766a094f50d03093197027327d0ac2ec641829/vertexai/tokenization/_tokenizer_loading.py
 
 ## Entwicklungswerkzeuge
 

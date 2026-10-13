@@ -134,7 +134,14 @@
       "source": "https://github.com/google/gemma_pytorch/blob/33b652c465537c6158f9a472ea5700e5e770ad3f/tokenizer/tokenizer.model",
       "file": "vendor/licenses/gemma-model.txt",
       "changes": "Die Datei wurde unverändert übernommen und nur lokal umbenannt. Der beigefügte Lizenztext ist die LICENSE des Herkunftsrepositories, keine abschließende Lizenzfreigabe für die Binärdatei.",
-      "status": "Die genaue Zuordnung der Gemma-Tokenizer-Datei ist noch offen. Eine Apache-2.0-Lizenz des Repositories ersetzt keine Klärung eventuell zusätzlich geltender Gemma-Nutzungsbedingungen. Die Apache-2.0-Lizenz unseres eigenen Codes wird dadurch nicht auf diese Datei ausgedehnt.",
+      "status": "Geprüft am 13.10.2026: Die Herkunft und die identische Verwendung in Googles Vertex-AI-SDK sind über die SHA-256-Prüfsumme bestätigt. Das Herkunftsrepository nennt Apache-2.0. Ob zusätzlich die Gemma-Bedingungen für diesen separat verwendeten Tokenizer gelten, bleibt mangels ausdrücklicher Zuordnung offen. Eine abschließende Apache-only-Freigabe wird nicht behauptet; unser eigener Code bleibt unter Apache-2.0.",
+      "review": {
+        "date": "2026-10-13",
+        "document": "GEMMA_LICENSE_REVIEW.md",
+        "modelSha256": "61a7b147390c64585d6c3543dd6fc636906c9af3865a5548f27f31aee1d4c8e2",
+        "repositoryLicenseSha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "sdkSource": "https://github.com/googleapis/python-aiplatform/blob/44766a094f50d03093197027327d0ac2ec641829/vertexai/tokenization/_tokenizer_loading.py"
+      },
       "terms": "https://ai.google.dev/gemma/terms"
     }
   ]
