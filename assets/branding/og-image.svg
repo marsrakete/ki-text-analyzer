@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">KI-Text-Analyzer – Texte genauer verstehen</title>
+  <desc id="desc">Textstatistik, Stilmuster und Unicode-Spuren. Ein helles Textblatt wird mit einer türkisfarbenen Lupe untersucht.</desc>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1"><stop stop-color="#fcfdff"/><stop offset="1" stop-color="#e8edff"/></linearGradient>
+    <linearGradient id="panel" x2="1" y2="1"><stop stop-color="#3247aa"/><stop offset="1" stop-color="#121d4b"/></linearGradient>
+    <linearGradient id="mint" x2="1" y2="1"><stop stop-color="#b9ffe8"/><stop offset="1" stop-color="#26cbb7"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="170%" height="170%"><feDropShadow dy="18" stdDeviation="18" flood-color="#152655" flood-opacity=".13"/></filter>
+    <filter id="paperShadow" x="-30%" y="-30%" width="170%" height="170%"><feDropShadow dy="12" stdDeviation="10" flood-color="#080f33" flood-opacity=".25"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#background)"/>
+  <circle cx="1110" cy="26" r="370" fill="#dbe3ff" opacity=".55"/>
+  <circle cx="1080" cy="680" r="284" fill="#d1f5eb" opacity=".6"/>
+  <path d="M0 596h1200" stroke="#d6deed"/>
+
+  <g font-family="Segoe UI, DejaVu Sans, sans-serif">
+    <rect x="64" y="48" width="56" height="56" rx="15" fill="#243fbe"/>
+    <use href="icon.svg#mark" x="64" y="48" width="56" height="56"/>
+    <text x="138" y="83" font-size="23" font-weight="700" fill="#263555">KI-Text-Analyzer</text>
+
+    <text x="64" y="167" font-size="14" font-weight="700" letter-spacing="3" fill="#315efb">EIN GENAUER BLICK AUF DEINEN TEXT</text>
+    <text x="60" y="246" font-size="62" font-weight="700" letter-spacing="-2" fill="#172442">Texte genauer</text>
+    <text x="60" y="319" font-size="62" font-weight="700" letter-spacing="-2" fill="#172442">verstehen.</text>
+    <text x="64" y="378" font-size="22" fill="#586782">Muster erkennen. Sprache untersuchen.</text>
+    <text x="64" y="411" font-size="22" fill="#586782">Direkt auf deinem Gerät.</text>
+
+    <rect x="64" y="456" width="150" height="42" rx="21" fill="#fff" stroke="#d3dcec"/>
+    <text x="139" y="483" text-anchor="middle" font-size="16" font-weight="600" fill="#33476f">Textstatistik</text>
+    <rect x="224" y="456" width="136" height="42" rx="21" fill="#fff" stroke="#d3dcec"/>
+    <text x="292" y="483" text-anchor="middle" font-size="16" font-weight="600" fill="#33476f">Stilmuster</text>
+    <rect x="370" y="456" width="172" height="42" rx="21" fill="#fff" stroke="#d3dcec"/>
+    <text x="456" y="483" text-anchor="middle" font-size="16" font-weight="600" fill="#33476f">Unicode-Spuren</text>
+    <circle cx="74" cy="552" r="5" fill="#20af95"/>
+    <text x="90" y="558" font-size="17" fill="#5a6882">Lokale Analyse · keine Textübertragung</text>
+  </g>
+
+  <g transform="translate(684 76)" filter="url(#shadow)">
+    <rect width="452" height="478" rx="44" fill="url(#panel)"/>
+    <circle cx="372" cy="56" r="150" fill="#536adc" opacity=".2"/>
+    <circle cx="72" cy="408" r="112" fill="#26cbb7" opacity=".08"/>
+    <g opacity=".25" fill="#bbc9ff">
+      <circle cx="36" cy="90" r="3"/><circle cx="36" cy="114" r="3"/><circle cx="36" cy="138" r="3"/>
+      <circle cx="416" cy="326" r="3"/><circle cx="416" cy="350" r="3"/><circle cx="416" cy="374" r="3"/>
+    </g>
+    <g transform="translate(84 62) rotate(-6 130 150)" filter="url(#paperShadow)">
+      <path d="M22 0h176l62 62v246a22 22 0 0 1-22 22H22A22 22 0 0 1 0 308V22A22 22 0 0 1 22 0Z" fill="#fff"/>
+      <path d="M198 0v44a18 18 0 0 0 18 18h44" fill="#d9e1ff"/>
+      <rect x="32" y="38" width="80" height="11" rx="5.5" fill="#315efb"/>
+      <path d="M34 98h164M34 126h136M34 154h167M34 182h99M34 252h162M34 280h118" stroke="#c7d0e2" stroke-width="9" stroke-linecap="round"/>
+      <rect x="28" y="200" width="196" height="29" rx="7" fill="#d8f8ed"/>
+      <path d="M38 214h121" stroke="#24aa93" stroke-width="8" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(294 302)">
+      <path d="m54 55 53 53" stroke="#80eeda" stroke-width="28" stroke-linecap="round"/>
+      <circle r="82" fill="#172655" stroke="url(#mint)" stroke-width="16"/>
+      <path d="M-42 15v-29m28 44v-60m28 50v-35m28 30v-53" stroke="#eafff8" stroke-width="12" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(35 419)" font-family="Segoe UI, DejaVu Sans, sans-serif">
+      <rect width="184" height="32" rx="16" fill="#fff" fill-opacity=".08"/>
+      <circle cx="17" cy="16" r="4" fill="#7fe8ce"/>
+      <text x="30" y="22" font-size="13" fill="#e1ebff">Muster statt Vermutung</text>
+    </g>
+  </g>
+</svg>

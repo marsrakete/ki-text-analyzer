@@ -1,0 +1,10 @@
+{
+  "name": "KI-Text-Analyzer",
+  "shortName": "Text-Analyzer",
+  "url": "https://marsrakete.github.io/ki-text-analyzer/",
+  "description": "Texte genauer verstehen: Textstatistik, Stilmuster, Unicode-Spuren und SynthID-Referenzprüfung. Die Analyse läuft auf deinem Gerät.",
+  "image": "assets/branding/og-image.png",
+  "imageAlt": "KI-Text-Analyzer: Texte genauer verstehen. Textblatt mit Analyse-Lupe; Textstatistik, Stilmuster und Unicode-Spuren.",
+  "themeColor": "#243fbe",
+  "backgroundColor": "#f5f7fa"
+}

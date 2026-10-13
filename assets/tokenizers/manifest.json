@@ -1,0 +1,18 @@
+{
+  "gpt2": {
+    "package": "gpt-tokenizer",
+    "version": "4.0.0",
+    "vocabulary": "GPT-2/r50k"
+  },
+  "gemma": {
+    "runtime": "@sctg/sentencepiece-js",
+    "version": "1.3.3",
+    "source": "https://github.com/google/gemma_pytorch/blob/33b652c465537c6158f9a472ea5700e5e770ad3f/tokenizer/tokenizer.model",
+    "commit": "33b652c465537c6158f9a472ea5700e5e770ad3f"
+  },
+  "sha256": {
+    "vendor/gpt2.js": "e734ae1b3b513f6737af3f1332262e5963eafab13fe35f64bcee3021cbedb490",
+    "vendor/sentencepiece.js": "5844b67efb0a1bd0c77c96cb78c4719d138c9a5277bcb961039456a46358eb63",
+    "assets/tokenizers/gemma.model": "61a7b147390c64585d6c3543dd6fc636906c9af3865a5548f27f31aee1d4c8e2"
+  }
+}

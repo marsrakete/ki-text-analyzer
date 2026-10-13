@@ -1,0 +1,2598 @@
+[
+  {
+    "text": "",
+    "result": {
+      "ws": [],
+      "ss": [],
+      "sentLens": [],
+      "avgSentence": 0,
+      "sentenceSD": 0,
+      "burstiness": 0,
+      "lexical": 0,
+      "ent": 0,
+      "punct": 0,
+      "paragraphCount": 0,
+      "digitCount": 0,
+      "questionCount": 0,
+      "exclamationCount": 0,
+      "quotes": 0,
+      "transitions": [],
+      "phrases": [],
+      "uni": [],
+      "scripts": {
+        "latin": 0,
+        "cyr": 0,
+        "greek": 0
+      },
+      "repeats": [],
+      "triRepeat": 0,
+      "score": 50,
+      "scoreParts": [
+        {
+          "label": "Neutraler Ausgangswert",
+          "detail": "Die Analyse beginnt bewusst bei 50 Punkten. Erst danach verschieben einzelne Merkmale den Wert nach oben oder unten.",
+          "delta": 0
+        },
+        {
+          "label": "Längenkorrektur",
+          "detail": "Der Text ist kurz. Deshalb werden alle Ausschläge zum neutralen Wert 50 deutlich abgeschwächt.",
+          "delta": 0
+        }
+      ],
+      "avgWord": 0,
+      "wordLenSD": 0,
+      "wordLenCV": 0,
+      "medSentence": 0,
+      "sentCV": 0,
+      "hapax": 0,
+      "dislegomena": 0,
+      "longWords": 0,
+      "shortWords": 0,
+      "functionWords": 0,
+      "firstWordRepeat": 0,
+      "startDiversity": 0,
+      "para": {
+        "count": 0,
+        "mean": 0,
+        "sd": 0,
+        "cv": 0
+      },
+      "punctProfile": {
+        "commas": 0,
+        "semicolons": 0,
+        "colons": 0,
+        "dashes": 0,
+        "parens": 0,
+        "quotes": 0,
+        "ellipses": 0,
+        "density": 0
+      },
+      "rootTTR": 0,
+      "yuleK": 0,
+      "char4Repeat": 0,
+      "charEntropy": 0,
+      "bigramDiversity": 0,
+      "trigramDiversity": 0,
+      "condEntropy": 0,
+      "zipf": 0,
+      "lz": 0,
+      "sentJaccard": 0,
+      "sentAutocorr": 0,
+      "biProfile": {
+        "total": 0,
+        "unique": 0,
+        "diversity": 0,
+        "repeatRate": 0,
+        "entropy": 0,
+        "gini": 0,
+        "top": []
+      },
+      "triProfile": {
+        "total": 0,
+        "unique": 0,
+        "diversity": 0,
+        "repeatRate": 0,
+        "entropy": 0,
+        "gini": 0,
+        "top": []
+      },
+      "burstWindows": [],
+      "entropyWindows": [],
+      "functionProfile": []
+    },
+    "subscores": {
+      "regularity": 68,
+      "redundancy": 45,
+      "diversity": 85,
+      "style": 30
+    },
+    "confidence": {
+      "label": "niedrig",
+      "groups": 2
+    }
+  },
+  {
+    "text": "Hallo.",
+    "result": {
+      "ws": [
+        "hallo"
+      ],
+      "ss": [
+        "Hallo."
+      ],
+      "sentLens": [
+        1
+      ],
+      "avgSentence": 1,
+      "sentenceSD": 0,
+      "burstiness": 0,
+      "lexical": 1,
+      "ent": 0,
+      "punct": 0,
+      "paragraphCount": 1,
+      "digitCount": 0,
+      "questionCount": 0,
+      "exclamationCount": 0,
+      "quotes": 0,
+      "transitions": [],
+      "phrases": [],
+      "uni": [],
+      "scripts": {
+        "latin": 5,
+        "cyr": 0,
+        "greek": 0
+      },
+      "repeats": [],
+      "triRepeat": 0,
+      "score": 50,
+      "scoreParts": [
+        {
+          "label": "Neutraler Ausgangswert",
+          "detail": "Die Analyse beginnt bewusst bei 50 Punkten. Erst danach verschieben einzelne Merkmale den Wert nach oben oder unten.",
+          "delta": 0
+        },
+        {
+          "label": "Längenkorrektur",
+          "detail": "Der Text ist kurz. Deshalb werden alle Ausschläge zum neutralen Wert 50 deutlich abgeschwächt.",
+          "delta": 0
+        }
+      ],
+      "avgWord": 5,
+      "wordLenSD": 0,
+      "wordLenCV": 0,
+      "medSentence": 1,
+      "sentCV": 0,
+      "hapax": 1,
+      "dislegomena": 0,
+      "longWords": 0,
+      "shortWords": 0,
+      "functionWords": 0,
+      "firstWordRepeat": 0,
+      "startDiversity": 1,
+      "para": {
+        "count": 1,
+        "mean": 1,
+        "sd": 0,
+        "cv": 0
+      },
+      "punctProfile": {
+        "commas": 0,
+        "semicolons": 0,
+        "colons": 0,
+        "dashes": 0,
+        "parens": 0,
+        "quotes": 0,
+        "ellipses": 0,
+        "density": 0
+      },
+      "rootTTR": 1,
+      "yuleK": 0,
+      "char4Repeat": 0,
+      "charEntropy": 2.2516291673878226,
+      "bigramDiversity": 0,
+      "trigramDiversity": 0,
+      "condEntropy": 0,
+      "zipf": 0,
+      "lz": 0.8333333333333334,
+      "sentJaccard": 0,
+      "sentAutocorr": 0,
+      "biProfile": {
+        "total": 0,
+        "unique": 0,
+        "diversity": 0,
+        "repeatRate": 0,
+        "entropy": 0,
+        "gini": 0,
+        "top": []
+      },
+      "triProfile": {
+        "total": 0,
+        "unique": 0,
+        "diversity": 0,
+        "repeatRate": 0,
+        "entropy": 0,
+        "gini": 0,
+        "top": []
+      },
+      "burstWindows": [],
+      "entropyWindows": [],
+      "functionProfile": []
+    },
+    "subscores": {
+      "regularity": 68,
+      "redundancy": 35,
+      "diversity": 52,
+      "style": 30
+    },
+    "confidence": {
+      "label": "niedrig",
+      "groups": 2
+    }
+  },
+  {
+    "text": "Das ist ein kurzer Beispieltext. Ein zweiter Satz folgt.",
+    "result": {
+      "ws": [
+        "das",
+        "ist",
+        "ein",
+        "kurzer",
+        "beispieltext",
+        "ein",
+        "zweiter",
+        "satz",
+        "folgt"
+      ],
+      "ss": [
+        "Das ist ein kurzer Beispieltext.",
+        "Ein zweiter Satz folgt."
+      ],
+      "sentLens": [
+        5,
+        4
+      ],
+      "avgSentence": 4.5,
+      "sentenceSD": 0.5,
+      "burstiness": 0.1111111111111111,
+      "lexical": 0.8888888888888888,
+      "ent": 2.94770277922009,
+      "punct": 0,
+      "paragraphCount": 1,
+      "digitCount": 0,
+      "questionCount": 0,
+      "exclamationCount": 0,
+      "quotes": 0,
+      "transitions": [],
+      "phrases": [],
+      "uni": [],
+      "scripts": {
+        "latin": 46,
+        "cyr": 0,
+        "greek": 0
+      },
+      "repeats": [],
+      "triRepeat": 0,
+      "score": 50,
+      "scoreParts": [
+        {
+          "label": "Neutraler Ausgangswert",
+          "detail": "Die Analyse beginnt bewusst bei 50 Punkten. Erst danach verschieben einzelne Merkmale den Wert nach oben oder unten.",
+          "delta": 0
+        },
+        {
+          "label": "Längenkorrektur",
+          "detail": "Der Text ist kurz. Deshalb werden alle Ausschläge zum neutralen Wert 50 deutlich abgeschwächt.",
+          "delta": 0
+        }
+      ],
+      "avgWord": 5.111111111111111,
+      "wordLenSD": 2.806517986736686,
+      "wordLenCV": 0.5491013452310908,
+      "medSentence": 4.5,
+      "sentCV": 0.1111111111111111,
+      "hapax": 0.7777777777777778,
+      "dislegomena": 0.1111111111111111,
+      "longWords": 0.1111111111111111,
+      "shortWords": 0.4444444444444444,
+      "functionWords": 0.4444444444444444,
+      "firstWordRepeat": 0,
+      "startDiversity": 1,
+      "para": {
+        "count": 1,
+        "mean": 9,
+        "sd": 0,
+        "cv": 0
+      },
+      "punctProfile": {
+        "commas": 0,
+        "semicolons": 0,
+        "colons": 0,
+        "dashes": 0,
+        "parens": 0,
+        "quotes": 0,
+        "ellipses": 0,
+        "density": 0
+      },
+      "rootTTR": 2.6666666666666665,
+      "yuleK": 246.91358024691357,
+      "char4Repeat": 0.03773584905660377,
+      "charEntropy": 4.0763603333156855,
+      "bigramDiversity": 1,
+      "trigramDiversity": 1,
+      "condEntropy": 0.25,
+      "zipf": 0,
+      "lz": 0.5714285714285714,
+      "sentJaccard": 0.125,
+      "sentAutocorr": 0,
+      "biProfile": {
+        "total": 8,
+        "unique": 8,
+        "diversity": 1,
+        "repeatRate": 0,
+        "entropy": 3,
+        "gini": 0,
+        "top": [
+          [
+            "das ist",
+            1
+          ],
+          [
+            "ist ein",
+            1
+          ],
+          [
+            "ein kurzer",
+            1
+          ],
+          [
+            "kurzer beispieltext",
+            1
+          ],
+          [
+            "beispieltext ein",
+            1
+          ],
+          [
+            "ein zweiter",
+            1
+          ],
+          [
+            "zweiter satz",
+            1
+          ],
+          [
+            "satz folgt",
+            1
+          ]
+        ]
+      },
+      "triProfile": {
+        "total": 7,
+        "unique": 7,
+        "diversity": 1,
+        "repeatRate": 0,
+        "entropy": 2.807354922057604,
+        "gini": 0,
+        "top": [
+          [
+            "das ist ein",
+            1
+          ],
+          [
+            "ist ein kurzer",
+            1
+          ],
+          [
+            "ein kurzer beispieltext",
+            1
+          ],
+          [
+            "kurzer beispieltext ein",
+            1
+          ],
+          [
+            "beispieltext ein zweiter",
+            1
+          ],
+          [
+            "ein zweiter satz",
+            1
+          ],
+          [
+            "zweiter satz folgt",
+            1
+          ]
+        ]
+      },
+      "burstWindows": [
+        {
+          "start": 1,
+          "end": 2,
+          "value": 0.1111111111111111
+        }
+      ],
+      "entropyWindows": [],
+      "functionProfile": [
+        {
+          "word": "ein",
+          "count": 2,
+          "share": 0.2222222222222222
+        },
+        {
+          "word": "das",
+          "count": 1,
+          "share": 0.1111111111111111
+        },
+        {
+          "word": "ist",
+          "count": 1,
+          "share": 0.1111111111111111
+        }
+      ]
+    },
+    "subscores": {
+      "regularity": 68,
+      "redundancy": 38,
+      "diversity": 52,
+      "style": 30
+    },
+    "confidence": {
+      "label": "niedrig",
+      "groups": 2
+    }
+  },
+  {
+    "text": "Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. Wiederholung ist wichtig. ",
+    "result": {
+      "ws": [
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig",
+        "wiederholung",
+        "ist",
+        "wichtig"
+      ],
+      "ss": [
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig.",
+        "Wiederholung ist wichtig."
+      ],
+      "sentLens": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "avgSentence": 3,
+      "sentenceSD": 0,
+      "burstiness": 0,
+      "lexical": 0.014285714285714285,
+      "ent": 1.584962500721156,
+      "punct": 0,
+      "paragraphCount": 1,
+      "digitCount": 0,
+      "questionCount": 0,
+      "exclamationCount": 0,
+      "quotes": 0,
+      "transitions": [],
+      "phrases": [],
+      "uni": [],
+      "scripts": {
+        "latin": 1540,
+        "cyr": 0,
+        "greek": 0
+      },
+      "repeats": [
+        [
+          "wiederholung",
+          70
+        ],
+        [
+          "wichtig",
+          70
+        ]
+      ],
+      "triRepeat": 0.9855769230769231,
+      "score": 95,
+      "scoreParts": [
+        {
+          "label": "Neutraler Ausgangswert",
+          "detail": "Die Analyse beginnt bewusst bei 50 Punkten. Erst danach verschieben einzelne Merkmale den Wert nach oben oder unten.",
+          "delta": 0
+        },
+        {
+          "label": "Sehr gleichmäßige Satzlängen",
+          "detail": "Geringe Burstiness: Die Sätze sind ungewöhnlich ähnlich lang. Das kommt bei stark geglätteten Texten häufiger vor.",
+          "delta": 13
+        },
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "detail": "Mehrere identische kurze Wortfolgen treten wiederholt auf. Das kann auf formelhafte Textproduktion hinweisen.",
+          "delta": 8
+        },
+        {
+          "label": "Geringere lexikalische Vielfalt",
+          "detail": "Bei ausreichender Textlänge ist der Anteil unterschiedlicher Wörter relativ niedrig.",
+          "delta": 6
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "detail": "Ein längerer Text ohne Fragen oder Ausrufe wirkt formaler und stärker geglättet.",
+          "delta": 4
+        },
+        {
+          "label": "Wiederholte Satzanfänge",
+          "detail": "Viele Sätze beginnen mit denselben Wörtern. Das kann auf formelhafte Textproduktion hindeuten.",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "detail": "Kurze Zeichenfolgen wiederholen sich relativ häufig.",
+          "delta": 2
+        },
+        {
+          "label": "Geringere Bigramm-Diversität",
+          "detail": "Viele Wortpaare wiederholen sich; das erhöht die gemessene Regelmäßigkeit.",
+          "delta": 3
+        },
+        {
+          "label": "Ähnliche Satzwortschätze",
+          "detail": "Die Sätze teilen relativ viele gleiche Inhaltswörter.",
+          "delta": 3
+        },
+        {
+          "label": "Erhöhte Bigramm-Wiederholung",
+          "detail": "Ein relativ großer Anteil der Wortpaare tritt mehrfach auf.",
+          "delta": 3
+        },
+        {
+          "label": "Konstante lokale Burstiness",
+          "detail": "Die Satzlängen-Regelmäßigkeit bleibt über mehrere Textabschnitte ungewöhnlich konstant.",
+          "delta": 3
+        },
+        {
+          "label": "Konstanter Entropieverlauf",
+          "detail": "Die lokale Wortentropie verändert sich über den Text hinweg nur wenig.",
+          "delta": 3
+        }
+      ],
+      "avgWord": 7.333333333333333,
+      "wordLenSD": 3.6817870057290922,
+      "wordLenCV": 0.5020618644176035,
+      "medSentence": 3,
+      "sentCV": 0,
+      "hapax": 0,
+      "dislegomena": 0,
+      "longWords": 0.3333333333333333,
+      "shortWords": 0.3333333333333333,
+      "functionWords": 0.3333333333333333,
+      "firstWordRepeat": 0.9857142857142858,
+      "startDiversity": 0.014285714285714285,
+      "para": {
+        "count": 1,
+        "mean": 210,
+        "sd": 0,
+        "cv": 0
+      },
+      "punctProfile": {
+        "commas": 0,
+        "semicolons": 0,
+        "colons": 0,
+        "dashes": 0,
+        "parens": 0,
+        "quotes": 0,
+        "ellipses": 0,
+        "density": 0
+      },
+      "rootTTR": 0.20701966780270628,
+      "yuleK": 3285.714285714286,
+      "char4Repeat": 0.98568281938326,
+      "charEntropy": 3.902174814211727,
+      "bigramDiversity": 0.014354066985645933,
+      "trigramDiversity": 0.014423076923076924,
+      "condEntropy": 0,
+      "zipf": 0,
+      "lz": 0.014843320505772403,
+      "sentJaccard": 1,
+      "sentAutocorr": 0,
+      "biProfile": {
+        "total": 209,
+        "unique": 3,
+        "diversity": 0.014354066985645933,
+        "repeatRate": 0.9856459330143541,
+        "entropy": 1.584929419688591,
+        "gini": 0.0031897926634769647,
+        "top": [
+          [
+            "wiederholung ist",
+            70
+          ],
+          [
+            "ist wichtig",
+            70
+          ],
+          [
+            "wichtig wiederholung",
+            69
+          ]
+        ]
+      },
+      "triProfile": {
+        "total": 208,
+        "unique": 3,
+        "diversity": 0.014423076923076924,
+        "repeatRate": 0.9855769230769231,
+        "entropy": 1.5849292074606356,
+        "gini": 0.0032051282051281937,
+        "top": [
+          [
+            "wiederholung ist wichtig",
+            70
+          ],
+          [
+            "ist wichtig wiederholung",
+            69
+          ],
+          [
+            "wichtig wiederholung ist",
+            69
+          ]
+        ]
+      },
+      "burstWindows": [
+        {
+          "start": 1,
+          "end": 5,
+          "value": 0
+        },
+        {
+          "start": 2,
+          "end": 6,
+          "value": 0
+        },
+        {
+          "start": 3,
+          "end": 7,
+          "value": 0
+        },
+        {
+          "start": 4,
+          "end": 8,
+          "value": 0
+        },
+        {
+          "start": 5,
+          "end": 9,
+          "value": 0
+        },
+        {
+          "start": 6,
+          "end": 10,
+          "value": 0
+        },
+        {
+          "start": 7,
+          "end": 11,
+          "value": 0
+        },
+        {
+          "start": 8,
+          "end": 12,
+          "value": 0
+        },
+        {
+          "start": 9,
+          "end": 13,
+          "value": 0
+        },
+        {
+          "start": 10,
+          "end": 14,
+          "value": 0
+        },
+        {
+          "start": 11,
+          "end": 15,
+          "value": 0
+        },
+        {
+          "start": 12,
+          "end": 16,
+          "value": 0
+        },
+        {
+          "start": 13,
+          "end": 17,
+          "value": 0
+        },
+        {
+          "start": 14,
+          "end": 18,
+          "value": 0
+        },
+        {
+          "start": 15,
+          "end": 19,
+          "value": 0
+        },
+        {
+          "start": 16,
+          "end": 20,
+          "value": 0
+        },
+        {
+          "start": 17,
+          "end": 21,
+          "value": 0
+        },
+        {
+          "start": 18,
+          "end": 22,
+          "value": 0
+        },
+        {
+          "start": 19,
+          "end": 23,
+          "value": 0
+        },
+        {
+          "start": 20,
+          "end": 24,
+          "value": 0
+        },
+        {
+          "start": 21,
+          "end": 25,
+          "value": 0
+        },
+        {
+          "start": 22,
+          "end": 26,
+          "value": 0
+        },
+        {
+          "start": 23,
+          "end": 27,
+          "value": 0
+        },
+        {
+          "start": 24,
+          "end": 28,
+          "value": 0
+        },
+        {
+          "start": 25,
+          "end": 29,
+          "value": 0
+        },
+        {
+          "start": 26,
+          "end": 30,
+          "value": 0
+        },
+        {
+          "start": 27,
+          "end": 31,
+          "value": 0
+        },
+        {
+          "start": 28,
+          "end": 32,
+          "value": 0
+        },
+        {
+          "start": 29,
+          "end": 33,
+          "value": 0
+        },
+        {
+          "start": 30,
+          "end": 34,
+          "value": 0
+        },
+        {
+          "start": 31,
+          "end": 35,
+          "value": 0
+        },
+        {
+          "start": 32,
+          "end": 36,
+          "value": 0
+        },
+        {
+          "start": 33,
+          "end": 37,
+          "value": 0
+        },
+        {
+          "start": 34,
+          "end": 38,
+          "value": 0
+        },
+        {
+          "start": 35,
+          "end": 39,
+          "value": 0
+        },
+        {
+          "start": 36,
+          "end": 40,
+          "value": 0
+        },
+        {
+          "start": 37,
+          "end": 41,
+          "value": 0
+        },
+        {
+          "start": 38,
+          "end": 42,
+          "value": 0
+        },
+        {
+          "start": 39,
+          "end": 43,
+          "value": 0
+        },
+        {
+          "start": 40,
+          "end": 44,
+          "value": 0
+        },
+        {
+          "start": 41,
+          "end": 45,
+          "value": 0
+        },
+        {
+          "start": 42,
+          "end": 46,
+          "value": 0
+        },
+        {
+          "start": 43,
+          "end": 47,
+          "value": 0
+        },
+        {
+          "start": 44,
+          "end": 48,
+          "value": 0
+        },
+        {
+          "start": 45,
+          "end": 49,
+          "value": 0
+        },
+        {
+          "start": 46,
+          "end": 50,
+          "value": 0
+        },
+        {
+          "start": 47,
+          "end": 51,
+          "value": 0
+        },
+        {
+          "start": 48,
+          "end": 52,
+          "value": 0
+        },
+        {
+          "start": 49,
+          "end": 53,
+          "value": 0
+        },
+        {
+          "start": 50,
+          "end": 54,
+          "value": 0
+        },
+        {
+          "start": 51,
+          "end": 55,
+          "value": 0
+        },
+        {
+          "start": 52,
+          "end": 56,
+          "value": 0
+        },
+        {
+          "start": 53,
+          "end": 57,
+          "value": 0
+        },
+        {
+          "start": 54,
+          "end": 58,
+          "value": 0
+        },
+        {
+          "start": 55,
+          "end": 59,
+          "value": 0
+        },
+        {
+          "start": 56,
+          "end": 60,
+          "value": 0
+        },
+        {
+          "start": 57,
+          "end": 61,
+          "value": 0
+        },
+        {
+          "start": 58,
+          "end": 62,
+          "value": 0
+        },
+        {
+          "start": 59,
+          "end": 63,
+          "value": 0
+        },
+        {
+          "start": 60,
+          "end": 64,
+          "value": 0
+        },
+        {
+          "start": 61,
+          "end": 65,
+          "value": 0
+        },
+        {
+          "start": 62,
+          "end": 66,
+          "value": 0
+        },
+        {
+          "start": 63,
+          "end": 67,
+          "value": 0
+        },
+        {
+          "start": 64,
+          "end": 68,
+          "value": 0
+        },
+        {
+          "start": 65,
+          "end": 69,
+          "value": 0
+        },
+        {
+          "start": 66,
+          "end": 70,
+          "value": 0
+        }
+      ],
+      "entropyWindows": [
+        {
+          "start": 1,
+          "end": 80,
+          "value": 1.584736122531166
+        },
+        {
+          "start": 41,
+          "end": 120,
+          "value": 1.584736122531166
+        },
+        {
+          "start": 81,
+          "end": 160,
+          "value": 1.584736122531166
+        },
+        {
+          "start": 121,
+          "end": 200,
+          "value": 1.584736122531166
+        },
+        {
+          "start": 161,
+          "end": 210,
+          "value": 1.584381457724494
+        }
+      ],
+      "functionProfile": [
+        {
+          "word": "ist",
+          "count": 70,
+          "share": 0.3333333333333333
+        }
+      ]
+    },
+    "subscores": {
+      "regularity": 80,
+      "redundancy": 100,
+      "diversity": 93,
+      "style": 45
+    },
+    "confidence": {
+      "label": "mittel",
+      "groups": 7
+    }
+  },
+  {
+    "text": "Erster Absatz.\n\nZweiter Absatz ist länger.\n\nEin dritter Absatz folgt.",
+    "result": {
+      "ws": [
+        "erster",
+        "absatz",
+        "zweiter",
+        "absatz",
+        "ist",
+        "länger",
+        "ein",
+        "dritter",
+        "absatz",
+        "folgt"
+      ],
+      "ss": [
+        "Erster Absatz.",
+        "Zweiter Absatz ist länger.",
+        "Ein dritter Absatz folgt."
+      ],
+      "sentLens": [
+        2,
+        4,
+        4
+      ],
+      "avgSentence": 3.3333333333333335,
+      "sentenceSD": 0.9428090415820634,
+      "burstiness": 0.282842712474619,
+      "lexical": 0.8,
+      "ent": 2.8464393446710154,
+      "punct": 0,
+      "paragraphCount": 3,
+      "digitCount": 0,
+      "questionCount": 0,
+      "exclamationCount": 0,
+      "quotes": 0,
+      "transitions": [],
+      "phrases": [],
+      "uni": [],
+      "scripts": {
+        "latin": 55,
+        "cyr": 0,
+        "greek": 0
+      },
+      "repeats": [
+        [
+          "absatz",
+          3
+        ]
+      ],
+      "triRepeat": 0,
+      "score": 50,
+      "scoreParts": [
+        {
+          "label": "Neutraler Ausgangswert",
+          "detail": "Die Analyse beginnt bewusst bei 50 Punkten. Erst danach verschieben einzelne Merkmale den Wert nach oben oder unten.",
+          "delta": 0
+        },
+        {
+          "label": "Längenkorrektur",
+          "detail": "Der Text ist kurz. Deshalb werden alle Ausschläge zum neutralen Wert 50 deutlich abgeschwächt.",
+          "delta": 0
+        }
+      ],
+      "avgWord": 5.5,
+      "wordLenSD": 1.3601470508735443,
+      "wordLenCV": 0.24729946379518986,
+      "medSentence": 4,
+      "sentCV": 0.282842712474619,
+      "hapax": 0.7,
+      "dislegomena": 0,
+      "longWords": 0,
+      "shortWords": 0.2,
+      "functionWords": 0.2,
+      "firstWordRepeat": 0,
+      "startDiversity": 1,
+      "para": {
+        "count": 3,
+        "mean": 3.3333333333333335,
+        "sd": 0.9428090415820634,
+        "cv": 0.282842712474619
+      },
+      "punctProfile": {
+        "commas": 0,
+        "semicolons": 0,
+        "colons": 0,
+        "dashes": 0,
+        "parens": 0,
+        "quotes": 0,
+        "ellipses": 0,
+        "density": 0
+      },
+      "rootTTR": 2.5298221281347035,
+      "yuleK": 600,
+      "char4Repeat": 0.234375,
+      "charEntropy": 4.156578037482489,
+      "bigramDiversity": 1,
+      "trigramDiversity": 1,
+      "condEntropy": 0.5283208335737187,
+      "zipf": 0,
+      "lz": 0.4626865671641791,
+      "sentJaccard": 0.18095238095238098,
+      "sentAutocorr": -0.16666666666666674,
+      "biProfile": {
+        "total": 9,
+        "unique": 9,
+        "diversity": 1,
+        "repeatRate": 0,
+        "entropy": 3.169925001442312,
+        "gini": 0,
+        "top": [
+          [
+            "erster absatz",
+            1
+          ],
+          [
+            "absatz zweiter",
+            1
+          ],
+          [
+            "zweiter absatz",
+            1
+          ],
+          [
+            "absatz ist",
+            1
+          ],
+          [
+            "ist länger",
+            1
+          ],
+          [
+            "länger ein",
+            1
+          ],
+          [
+            "ein dritter",
+            1
+          ],
+          [
+            "dritter absatz",
+            1
+          ]
+        ]
+      },
+      "triProfile": {
+        "total": 8,
+        "unique": 8,
+        "diversity": 1,
+        "repeatRate": 0,
+        "entropy": 3,
+        "gini": 0,
+        "top": [
+          [
+            "erster absatz zweiter",
+            1
+          ],
+          [
+            "absatz zweiter absatz",
+            1
+          ],
+          [
+            "zweiter absatz ist",
+            1
+          ],
+          [
+            "absatz ist länger",
+            1
+          ],
+          [
+            "ist länger ein",
+            1
+          ],
+          [
+            "länger ein dritter",
+            1
+          ],
+          [
+            "ein dritter absatz",
+            1
+          ],
+          [
+            "dritter absatz folgt",
+            1
+          ]
+        ]
+      },
+      "burstWindows": [
+        {
+          "start": 1,
+          "end": 3,
+          "value": 0.282842712474619
+        }
+      ],
+      "entropyWindows": [],
+      "functionProfile": [
+        {
+          "word": "ist",
+          "count": 1,
+          "share": 0.1
+        },
+        {
+          "word": "ein",
+          "count": 1,
+          "share": 0.1
+        }
+      ]
+    },
+    "subscores": {
+      "regularity": 68,
+      "redundancy": 56,
+      "diversity": 52,
+      "style": 30
+    },
+    "confidence": {
+      "label": "niedrig",
+      "groups": 3
+    }
+  },
+  {
+    "text": "A​B⁠C­D⁣E 😀 А Ω",
+    "result": {
+      "ws": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "а",
+        "ω"
+      ],
+      "ss": [
+        "A​B⁠C­D⁣E 😀 А Ω"
+      ],
+      "sentLens": [
+        7
+      ],
+      "avgSentence": 7,
+      "sentenceSD": 0,
+      "burstiness": 0,
+      "lexical": 1,
+      "ent": 2.807354922057604,
+      "punct": 0,
+      "paragraphCount": 1,
+      "digitCount": 0,
+      "questionCount": 0,
+      "exclamationCount": 0,
+      "quotes": 0,
+      "transitions": [],
+      "phrases": [],
+      "uni": [
+        {
+          "index": 1,
+          "cp": 8203,
+          "name": "ZERO WIDTH SPACE",
+          "char": "​"
+        },
+        {
+          "index": 3,
+          "cp": 8288,
+          "name": "WORD JOINER",
+          "char": "⁠"
+        },
+        {
+          "index": 5,
+          "cp": 173,
+          "name": "SOFT HYPHEN",
+          "char": "­"
+        },
+        {
+          "index": 7,
+          "cp": 8291,
+          "name": "INVISIBLE SEPARATOR",
+          "char": "⁣"
+        }
+      ],
+      "scripts": {
+        "latin": 5,
+        "cyr": 1,
+        "greek": 1
+      },
+      "repeats": [],
+      "triRepeat": 0,
+      "score": 50,
+      "scoreParts": [
+        {
+          "label": "Neutraler Ausgangswert",
+          "detail": "Die Analyse beginnt bewusst bei 50 Punkten. Erst danach verschieben einzelne Merkmale den Wert nach oben oder unten.",
+          "delta": 0
+        },
+        {
+          "label": "Längenkorrektur",
+          "detail": "Der Text ist kurz. Deshalb werden alle Ausschläge zum neutralen Wert 50 deutlich abgeschwächt.",
+          "delta": 0
+        }
+      ],
+      "avgWord": 1,
+      "wordLenSD": 0,
+      "wordLenCV": 0,
+      "medSentence": 7,
+      "sentCV": 0,
+      "hapax": 1,
+      "dislegomena": 0,
+      "longWords": 0,
+      "shortWords": 1,
+      "functionWords": 0,
+      "firstWordRepeat": 0,
+      "startDiversity": 1,
+      "para": {
+        "count": 1,
+        "mean": 7,
+        "sd": 0,
+        "cv": 0
+      },
+      "punctProfile": {
+        "commas": 0,
+        "semicolons": 0,
+        "colons": 0,
+        "dashes": 0,
+        "parens": 0,
+        "quotes": 0,
+        "ellipses": 0,
+        "density": 0
+      },
+      "rootTTR": 2.6457513110645903,
+      "yuleK": 0,
+      "char4Repeat": 0,
+      "charEntropy": 3.589898095464287,
+      "bigramDiversity": 1,
+      "trigramDiversity": 1,
+      "condEntropy": 0,
+      "zipf": 0,
+      "lz": 0.875,
+      "sentJaccard": 0,
+      "sentAutocorr": 0,
+      "biProfile": {
+        "total": 6,
+        "unique": 6,
+        "diversity": 1,
+        "repeatRate": 0,
+        "entropy": 2.584962500721156,
+        "gini": 0,
+        "top": [
+          [
+            "a b",
+            1
+          ],
+          [
+            "b c",
+            1
+          ],
+          [
+            "c d",
+            1
+          ],
+          [
+            "d e",
+            1
+          ],
+          [
+            "e а",
+            1
+          ],
+          [
+            "а ω",
+            1
+          ]
+        ]
+      },
+      "triProfile": {
+        "total": 5,
+        "unique": 5,
+        "diversity": 1,
+        "repeatRate": 0,
+        "entropy": 2.321928094887362,
+        "gini": 0,
+        "top": [
+          [
+            "a b c",
+            1
+          ],
+          [
+            "b c d",
+            1
+          ],
+          [
+            "c d e",
+            1
+          ],
+          [
+            "d e а",
+            1
+          ],
+          [
+            "e а ω",
+            1
+          ]
+        ]
+      },
+      "burstWindows": [],
+      "entropyWindows": [],
+      "functionProfile": []
+    },
+    "subscores": {
+      "regularity": 68,
+      "redundancy": 35,
+      "diversity": 52,
+      "style": 30
+    },
+    "confidence": {
+      "label": "niedrig",
+      "groups": 2
+    }
+  },
+  {
+    "text": "WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ",
+    "result": {
+      "ws": [
+        "wortа",
+        "wortб",
+        "wortв",
+        "wortг",
+        "wortд",
+        "wortе",
+        "wortж",
+        "wortз",
+        "wortи",
+        "wortй",
+        "wortк",
+        "wortл",
+        "wortм",
+        "wortн",
+        "wortо",
+        "wortп",
+        "wortр",
+        "wortс",
+        "wortт",
+        "wortу",
+        "wortф",
+        "wortх",
+        "wortц",
+        "wortч",
+        "wortш",
+        "wortщ",
+        "wortъ",
+        "wortы",
+        "wortь",
+        "wortэ",
+        "wortю",
+        "wortя",
+        "wortа",
+        "wortб",
+        "wortв",
+        "wortг",
+        "wortд",
+        "wortе",
+        "wortж",
+        "wortз",
+        "wortи",
+        "wortй",
+        "wortк",
+        "wortл",
+        "wortм",
+        "wortн",
+        "wortо",
+        "wortп",
+        "wortр",
+        "wortс",
+        "wortт",
+        "wortу",
+        "wortф",
+        "wortх",
+        "wortц",
+        "wortч",
+        "wortш",
+        "wortщ",
+        "wortъ",
+        "wortы",
+        "wortь",
+        "wortэ",
+        "wortю",
+        "wortя",
+        "wortа",
+        "wortб",
+        "wortв",
+        "wortг",
+        "wortд",
+        "wortе",
+        "wortж",
+        "wortз",
+        "wortи",
+        "wortй",
+        "wortк",
+        "wortл",
+        "wortм",
+        "wortн",
+        "wortо",
+        "wortп",
+        "wortр",
+        "wortс",
+        "wortт",
+        "wortу",
+        "wortф",
+        "wortх",
+        "wortц",
+        "wortч",
+        "wortш",
+        "wortщ",
+        "wortъ",
+        "wortы",
+        "wortь",
+        "wortэ",
+        "wortю",
+        "wortя",
+        "wortа",
+        "wortб",
+        "wortв",
+        "wortг",
+        "wortд",
+        "wortе",
+        "wortж",
+        "wortз",
+        "wortи",
+        "wortй",
+        "wortк",
+        "wortл",
+        "wortм",
+        "wortн",
+        "wortо",
+        "wortп",
+        "wortр",
+        "wortс",
+        "wortт",
+        "wortу",
+        "wortф",
+        "wortх",
+        "wortц",
+        "wortч",
+        "wortш",
+        "wortщ",
+        "wortъ",
+        "wortы",
+        "wortь",
+        "wortэ",
+        "wortю",
+        "wortя",
+        "wortа",
+        "wortб",
+        "wortв",
+        "wortг",
+        "wortд",
+        "wortе",
+        "wortж",
+        "wortз",
+        "wortи",
+        "wortй",
+        "wortк",
+        "wortл",
+        "wortм",
+        "wortн",
+        "wortо",
+        "wortп",
+        "wortр",
+        "wortс",
+        "wortт",
+        "wortу",
+        "wortф",
+        "wortх",
+        "wortц",
+        "wortч",
+        "wortш",
+        "wortщ",
+        "wortъ",
+        "wortы",
+        "wortь",
+        "wortэ",
+        "wortю",
+        "wortя",
+        "wortа",
+        "wortб",
+        "wortв",
+        "wortг",
+        "wortд",
+        "wortе",
+        "wortж",
+        "wortз",
+        "wortи",
+        "wortй",
+        "wortк",
+        "wortл",
+        "wortм",
+        "wortн",
+        "wortо",
+        "wortп",
+        "wortр",
+        "wortс",
+        "wortт",
+        "wortу",
+        "wortф",
+        "wortх",
+        "wortц",
+        "wortч",
+        "wortш",
+        "wortщ",
+        "wortъ",
+        "wortы",
+        "wortь",
+        "wortэ",
+        "wortю",
+        "wortя",
+        "wortа",
+        "wortб",
+        "wortв",
+        "wortг",
+        "wortд",
+        "wortе",
+        "wortж",
+        "wortз",
+        "wortи",
+        "wortй",
+        "wortк",
+        "wortл",
+        "wortм",
+        "wortн",
+        "wortо",
+        "wortп",
+        "wortр",
+        "wortс",
+        "wortт",
+        "wortу",
+        "wortф",
+        "wortх",
+        "wortц",
+        "wortч",
+        "wortш",
+        "wortщ",
+        "wortъ",
+        "wortы",
+        "wortь",
+        "wortэ",
+        "wortю",
+        "wortя",
+        "wortа",
+        "wortб",
+        "wortв",
+        "wortг",
+        "wortд",
+        "wortе",
+        "wortж",
+        "wortз",
+        "wortи",
+        "wortй",
+        "wortк",
+        "wortл",
+        "wortм",
+        "wortн",
+        "wortо",
+        "wortп",
+        "wortр",
+        "wortс",
+        "wortт",
+        "wortу",
+        "wortф",
+        "wortх",
+        "wortц",
+        "wortч",
+        "wortш",
+        "wortщ",
+        "wortъ",
+        "wortы",
+        "wortь",
+        "wortэ",
+        "wortю",
+        "wortя",
+        "wortа",
+        "wortб",
+        "wortв",
+        "wortг",
+        "wortд",
+        "wortе",
+        "wortж",
+        "wortз",
+        "wortи",
+        "wortй",
+        "wortк",
+        "wortл",
+        "wortм",
+        "wortн",
+        "wortо",
+        "wortп",
+        "wortр",
+        "wortс",
+        "wortт",
+        "wortу",
+        "wortф",
+        "wortх",
+        "wortц",
+        "wortч",
+        "wortш",
+        "wortщ",
+        "wortъ",
+        "wortы",
+        "wortь",
+        "wortэ",
+        "wortю",
+        "wortя",
+        "wortа",
+        "wortб",
+        "wortв",
+        "wortг",
+        "wortд",
+        "wortе",
+        "wortж",
+        "wortз",
+        "wortи",
+        "wortй",
+        "wortк",
+        "wortл",
+        "wortм",
+        "wortн",
+        "wortо",
+        "wortп",
+        "wortр",
+        "wortс",
+        "wortт",
+        "wortу",
+        "wortф",
+        "wortх",
+        "wortц",
+        "wortч",
+        "wortш",
+        "wortщ",
+        "wortъ",
+        "wortы",
+        "wortь",
+        "wortэ",
+        "wortю",
+        "wortя",
+        "wortа",
+        "wortб",
+        "wortв",
+        "wortг",
+        "wortд",
+        "wortе",
+        "wortж",
+        "wortз",
+        "wortи",
+        "wortй",
+        "wortк",
+        "wortл",
+        "wortм",
+        "wortн",
+        "wortо",
+        "wortп",
+        "wortр",
+        "wortс",
+        "wortт",
+        "wortу",
+        "wortф",
+        "wortх",
+        "wortц",
+        "wortч",
+        "wortш",
+        "wortщ",
+        "wortъ",
+        "wortы",
+        "wortь",
+        "wortэ",
+        "wortю",
+        "wortя",
+        "wortа",
+        "wortб",
+        "wortв",
+        "wortг",
+        "wortд",
+        "wortе",
+        "wortж",
+        "wortз",
+        "wortи",
+        "wortй",
+        "wortк",
+        "wortл",
+        "wortм",
+        "wortн",
+        "wortо",
+        "wortп",
+        "wortр",
+        "wortс",
+        "wortт",
+        "wortу",
+        "wortф",
+        "wortх",
+        "wortц",
+        "wortч",
+        "wortш",
+        "wortщ",
+        "wortъ",
+        "wortы",
+        "wortь",
+        "wortэ",
+        "wortю",
+        "wortя",
+        "wortа",
+        "wortб",
+        "wortв",
+        "wortг",
+        "wortд",
+        "wortе",
+        "wortж",
+        "wortз",
+        "wortи",
+        "wortй",
+        "wortк",
+        "wortл",
+        "wortм",
+        "wortн",
+        "wortо",
+        "wortп",
+        "wortр",
+        "wortс",
+        "wortт",
+        "wortу",
+        "wortф",
+        "wortх",
+        "wortц",
+        "wortч",
+        "wortш",
+        "wortщ",
+        "wortъ",
+        "wortы",
+        "wortь",
+        "wortэ",
+        "wortю",
+        "wortя",
+        "wortа",
+        "wortб",
+        "wortв",
+        "wortг",
+        "wortд",
+        "wortе",
+        "wortж",
+        "wortз",
+        "wortи",
+        "wortй",
+        "wortк",
+        "wortл",
+        "wortм",
+        "wortн",
+        "wortо",
+        "wortп",
+        "wortр",
+        "wortс",
+        "wortт",
+        "wortу",
+        "wortф",
+        "wortх",
+        "wortц",
+        "wortч",
+        "wortш",
+        "wortщ",
+        "wortъ",
+        "wortы",
+        "wortь",
+        "wortэ",
+        "wortю",
+        "wortя",
+        "wortа",
+        "wortб",
+        "wortв",
+        "wortг",
+        "wortд",
+        "wortе",
+        "wortж",
+        "wortз",
+        "wortи",
+        "wortй",
+        "wortк",
+        "wortл",
+        "wortм",
+        "wortн",
+        "wortо",
+        "wortп",
+        "wortр",
+        "wortс",
+        "wortт",
+        "wortу",
+        "wortф",
+        "wortх",
+        "wortц",
+        "wortч",
+        "wortш",
+        "wortщ",
+        "wortъ",
+        "wortы",
+        "wortь",
+        "wortэ",
+        "wortю",
+        "wortя",
+        "wortа",
+        "wortб",
+        "wortв",
+        "wortг",
+        "wortд",
+        "wortе",
+        "wortж",
+        "wortз",
+        "wortи",
+        "wortй",
+        "wortк",
+        "wortл",
+        "wortм",
+        "wortн",
+        "wortо",
+        "wortп",
+        "wortр",
+        "wortс",
+        "wortт",
+        "wortу",
+        "wortф",
+        "wortх",
+        "wortц",
+        "wortч",
+        "wortш",
+        "wortщ",
+        "wortъ",
+        "wortы",
+        "wortь",
+        "wortэ",
+        "wortю",
+        "wortя",
+        "wortа",
+        "wortб",
+        "wortв",
+        "wortг",
+        "wortд",
+        "wortе",
+        "wortж",
+        "wortз"
+      ],
+      "ss": [
+        "WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ WortИ WortЙ WortК WortЛ WortМ WortН WortО WortП WortР WortС WortТ WortУ WortФ WortХ WortЦ WortЧ WortШ WortЩ WortЪ WortЫ WortЬ WortЭ WortЮ WortЯ WortА WortБ WortВ WortГ WortД WortЕ WortЖ WortЗ"
+      ],
+      "sentLens": [
+        520
+      ],
+      "avgSentence": 520,
+      "sentenceSD": 0,
+      "burstiness": 0,
+      "lexical": 0.06153846153846154,
+      "ent": 4.999492916086058,
+      "punct": 0,
+      "paragraphCount": 1,
+      "digitCount": 0,
+      "questionCount": 0,
+      "exclamationCount": 0,
+      "quotes": 0,
+      "transitions": [],
+      "phrases": [],
+      "uni": [],
+      "scripts": {
+        "latin": 2080,
+        "cyr": 520,
+        "greek": 0
+      },
+      "repeats": [
+        [
+          "wortа",
+          17
+        ],
+        [
+          "wortб",
+          17
+        ],
+        [
+          "wortв",
+          17
+        ],
+        [
+          "wortг",
+          17
+        ],
+        [
+          "wortд",
+          17
+        ],
+        [
+          "wortе",
+          17
+        ],
+        [
+          "wortж",
+          17
+        ],
+        [
+          "wortз",
+          17
+        ]
+      ],
+      "triRepeat": 0.9382239382239382,
+      "score": 79,
+      "scoreParts": [
+        {
+          "label": "Neutraler Ausgangswert",
+          "detail": "Die Analyse beginnt bewusst bei 50 Punkten. Erst danach verschieben einzelne Merkmale den Wert nach oben oder unten.",
+          "delta": 0
+        },
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "detail": "Mehrere identische kurze Wortfolgen treten wiederholt auf. Das kann auf formelhafte Textproduktion hinweisen.",
+          "delta": 8
+        },
+        {
+          "label": "Geringere lexikalische Vielfalt",
+          "detail": "Bei ausreichender Textlänge ist der Anteil unterschiedlicher Wörter relativ niedrig.",
+          "delta": 6
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "detail": "Ein längerer Text ohne Fragen oder Ausrufe wirkt formaler und stärker geglättet.",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "detail": "Kurze Zeichenfolgen wiederholen sich relativ häufig.",
+          "delta": 2
+        },
+        {
+          "label": "Geringere Bigramm-Diversität",
+          "detail": "Viele Wortpaare wiederholen sich; das erhöht die gemessene Regelmäßigkeit.",
+          "delta": 3
+        },
+        {
+          "label": "Erhöhte Bigramm-Wiederholung",
+          "detail": "Ein relativ großer Anteil der Wortpaare tritt mehrfach auf.",
+          "delta": 3
+        },
+        {
+          "label": "Konstanter Entropieverlauf",
+          "detail": "Die lokale Wortentropie verändert sich über den Text hinweg nur wenig.",
+          "delta": 3
+        }
+      ],
+      "avgWord": 5,
+      "wordLenSD": 0,
+      "wordLenCV": 0,
+      "medSentence": 520,
+      "sentCV": 0,
+      "hapax": 0,
+      "dislegomena": 0,
+      "longWords": 0,
+      "shortWords": 0,
+      "functionWords": 0,
+      "firstWordRepeat": 0,
+      "startDiversity": 1,
+      "para": {
+        "count": 1,
+        "mean": 520,
+        "sd": 0,
+        "cv": 0
+      },
+      "punctProfile": {
+        "commas": 0,
+        "semicolons": 0,
+        "colons": 0,
+        "dashes": 0,
+        "parens": 0,
+        "quotes": 0,
+        "ellipses": 0,
+        "density": 0
+      },
+      "rootTTR": 1.403292830891247,
+      "yuleK": 293.49112426035504,
+      "char4Repeat": 0.9582798459563543,
+      "charEntropy": 3.418478101713055,
+      "bigramDiversity": 0.06165703275529865,
+      "trigramDiversity": 0.06177606177606178,
+      "condEntropy": 0,
+      "zipf": -0.026124301322178755,
+      "lz": 0.013786470022443091,
+      "sentJaccard": 0,
+      "sentAutocorr": 0,
+      "biProfile": {
+        "total": 519,
+        "unique": 32,
+        "diversity": 0.06165703275529865,
+        "repeatRate": 0.9383429672447013,
+        "entropy": 4.999536627955587,
+        "gini": 0.010537090558766948,
+        "top": [
+          [
+            "wortа wortб",
+            17
+          ],
+          [
+            "wortб wortв",
+            17
+          ],
+          [
+            "wortв wortг",
+            17
+          ],
+          [
+            "wortг wortд",
+            17
+          ],
+          [
+            "wortд wortе",
+            17
+          ],
+          [
+            "wortе wortж",
+            17
+          ],
+          [
+            "wortж wortз",
+            17
+          ],
+          [
+            "wortз wortи",
+            16
+          ]
+        ]
+      },
+      "triProfile": {
+        "total": 518,
+        "unique": 32,
+        "diversity": 0.06177606177606178,
+        "repeatRate": 0.9382239382239382,
+        "entropy": 4.999585874930698,
+        "gini": 0.009411196911196962,
+        "top": [
+          [
+            "wortа wortб wortв",
+            17
+          ],
+          [
+            "wortб wortв wortг",
+            17
+          ],
+          [
+            "wortв wortг wortд",
+            17
+          ],
+          [
+            "wortг wortд wortе",
+            17
+          ],
+          [
+            "wortд wortе wortж",
+            17
+          ],
+          [
+            "wortе wortж wortз",
+            17
+          ],
+          [
+            "wortж wortз wortи",
+            16
+          ],
+          [
+            "wortз wortи wortй",
+            16
+          ]
+        ]
+      },
+      "burstWindows": [],
+      "entropyWindows": [
+        {
+          "start": 1,
+          "end": 80,
+          "value": 4.9709505944546715
+        },
+        {
+          "start": 41,
+          "end": 120,
+          "value": 4.9709505944546715
+        },
+        {
+          "start": 81,
+          "end": 160,
+          "value": 4.9709505944546715
+        },
+        {
+          "start": 121,
+          "end": 200,
+          "value": 4.9709505944546715
+        },
+        {
+          "start": 161,
+          "end": 240,
+          "value": 4.9709505944546715
+        },
+        {
+          "start": 201,
+          "end": 280,
+          "value": 4.9709505944546715
+        },
+        {
+          "start": 241,
+          "end": 320,
+          "value": 4.9709505944546715
+        },
+        {
+          "start": 281,
+          "end": 360,
+          "value": 4.9709505944546715
+        },
+        {
+          "start": 321,
+          "end": 400,
+          "value": 4.9709505944546715
+        },
+        {
+          "start": 361,
+          "end": 440,
+          "value": 4.9709505944546715
+        },
+        {
+          "start": 401,
+          "end": 480,
+          "value": 4.9709505944546715
+        },
+        {
+          "start": 441,
+          "end": 520,
+          "value": 4.9709505944546715
+        }
+      ],
+      "functionProfile": []
+    },
+    "subscores": {
+      "regularity": 68,
+      "redundancy": 100,
+      "diversity": 93,
+      "style": 35
+    },
+    "confidence": {
+      "label": "niedrig",
+      "groups": 5
+    }
+  }
+]

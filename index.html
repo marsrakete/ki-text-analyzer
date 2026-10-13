@@ -1,0 +1,974 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>KI-Text-Analyzer – lokaler Prototyp</title>
+    <link rel="stylesheet" href="styles/app.css" />
+    <meta
+      name="description"
+      content="Texte genauer verstehen: Textstatistik, Stilmuster, Unicode-Spuren und SynthID-Referenzprüfung. Die Analyse läuft auf deinem Gerät."
+    />
+    <meta name="theme-color" content="#243fbe" />
+    <meta name="apple-mobile-web-app-title" content="Text-Analyzer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="KI-Text-Analyzer" />
+    <meta property="og:title" content="KI-Text-Analyzer" />
+    <meta
+      property="og:description"
+      content="Texte genauer verstehen: Textstatistik, Stilmuster, Unicode-Spuren und SynthID-Referenzprüfung. Die Analyse läuft auf deinem Gerät."
+    />
+    <meta
+      property="og:url"
+      content="https://marsrakete.github.io/ki-text-analyzer/"
+    />
+    <meta
+      property="og:image"
+      content="https://marsrakete.github.io/ki-text-analyzer/assets/branding/og-image.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="KI-Text-Analyzer: Texte genauer verstehen. Textblatt mit Analyse-Lupe; Textstatistik, Stilmuster und Unicode-Spuren."
+    />
+    <meta property="og:locale" content="de_DE" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="KI-Text-Analyzer" />
+    <meta
+      name="twitter:description"
+      content="Texte genauer verstehen: Textstatistik, Stilmuster, Unicode-Spuren und SynthID-Referenzprüfung. Die Analyse läuft auf deinem Gerät."
+    />
+    <meta
+      name="twitter:image"
+      content="https://marsrakete.github.io/ki-text-analyzer/assets/branding/og-image.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="KI-Text-Analyzer: Texte genauer verstehen. Textblatt mit Analyse-Lupe; Textstatistik, Stilmuster und Unicode-Spuren."
+    />
+    <link
+      data-branding="canonical"
+      rel="canonical"
+      href="https://marsrakete.github.io/ki-text-analyzer/"
+    />
+    <link
+      data-branding="svg"
+      rel="icon"
+      href="assets/branding/icon.svg"
+      type="image/svg+xml"
+      sizes="any"
+    />
+    <link
+      data-branding="ico"
+      rel="icon"
+      href="favicon.ico"
+      type="image/x-icon"
+      sizes="16x16 32x32 48x48"
+    />
+    <link
+      data-branding="png"
+      rel="icon"
+      href="assets/branding/favicon-32.png"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link
+      data-branding="apple"
+      rel="apple-touch-icon"
+      href="assets/branding/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link data-branding="manifest" rel="manifest" href="manifest.webmanifest" />
+  </head>
+  <body>
+    <main>
+      <h1>KI-Text-Analyzer</h1>
+      <p class="small">
+        Lokaler Browser-Prototyp · Textanalyse auf diesem Gerät · keine
+        Übertragung des Eingabetextes
+      </p>
+
+      <div class="card">
+        <h2>Text eingeben</h2>
+        <textarea
+          id="input"
+          placeholder="Text hier einfügen …"
+          aria-label="Text zur Analyse"
+        ></textarea>
+        <div class="actions">
+          <button class="primary" id="analyzeBtn">Analysieren</button>
+          <button class="secondary" id="sampleBtn">Beispiel einsetzen</button>
+          <button class="secondary" id="clearBtn">Leeren</button>
+        </div>
+        <p
+          id="analysisMessage"
+          class="small"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </div>
+
+      <div id="results" class="hidden">
+        <div class="card">
+          <h2>Gesamteinschätzung</h2>
+          <div id="verdict"></div>
+          <div class="scoreHero">
+            <div class="scoreHeroLabel">Heuristischer KI-Muster-Score</div>
+            <div class="scoreHeroValue" id="scoreText"></div>
+            <div class="scoreHeroNote">Kein Herkunftsnachweis</div>
+          </div>
+          <div class="bar score-bar-space"><div id="scoreBar"></div></div>
+
+          <div class="subscore-grid">
+            <div class="subscore">
+              <div class="num" id="scoreRegularity">–</div>
+              <div class="name">Regelmäßigkeit</div>
+              <div class="desc">
+                Satz- und Absatzrhythmus, lokale Burstiness
+              </div>
+            </div>
+            <div class="subscore">
+              <div class="num" id="scoreRedundancy">–</div>
+              <div class="name">Redundanz</div>
+              <div class="desc">n-Gramme, Wiederholung, Kompression</div>
+            </div>
+            <div class="subscore">
+              <div class="num" id="scoreDiversity">–</div>
+              <div class="name">Sprachliche Vielfalt</div>
+              <div class="desc">Wortschatz, Entropie, Hapax, Wortlängen</div>
+            </div>
+            <div class="subscore">
+              <div class="num" id="scoreStyle">–</div>
+              <div class="name">KI-Stilmuster</div>
+              <div class="desc">
+                Phrasen, Übergänge, Satzanfänge, Funktionswörter
+              </div>
+            </div>
+          </div>
+
+          <div class="confidenceBox">
+            <div>
+              <span class="small">Aussagekraft</span><br /><strong
+                id="confidenceLabel"
+                >–</strong
+              >
+            </div>
+            <div>
+              <span class="small">Textlänge</span><br /><strong
+                id="confidenceLength"
+                >–</strong
+              >
+            </div>
+            <div>
+              <span class="small">Verwertbare Signalgruppen</span><br /><strong
+                id="confidenceSignals"
+                >–</strong
+              >
+            </div>
+          </div>
+
+          <h3>Forensischer Befund</h3>
+          <div class="forensic" id="forensicFinding"></div>
+        </div>
+
+        <div class="card">
+          <h2>Grunddaten</h2>
+          <div class="grid" id="metrics"></div>
+        </div>
+
+        <div class="card">
+          <h2>1. Unicode- und Watermark-Spuren</h2>
+          <div id="unicodeSummary"></div>
+          <div id="unicodeDetails"></div>
+
+          <h3>Unsichtbare Zeichen sichtbar machen</h3>
+          <div class="markerLegend">
+            <span>[ZWSP] Zero Width Space</span>
+            <span>[WJ] Word Joiner</span>
+            <span>[SHY] Soft Hyphen</span>
+            <span>[IS] Invisible Separator</span>
+            <span>[BOM] Zero Width No-Break Space</span>
+          </div>
+          <div id="unicodeVisualized" class="markerText"></div>
+        </div>
+
+        <div class="card">
+          <h2>2. Google SynthID Text – Referenzdetektor</h2>
+          <p>
+            Dieser Bereich ist von der heuristischen KI-Erkennung getrennt. Er
+            implementiert die öffentliche SynthID-Text-Referenzlogik von Google
+            DeepMind für <strong>ngram_len = 5</strong>, den veröffentlichten
+            Default-Key-Satz, Context-Repetition-Masking sowie Mean- und
+            Weighted-Mean-Scoring.
+          </p>
+
+          <div id="synthPrereq" class="calloutWarn">
+            Exakte Tokenisierung erforderlich. SynthID arbeitet auf Token-IDs.
+            Die gewählten Tokenizer und das Gemma-Modell werden aus den lokalen
+            Dateien dieser Website geladen; der Eingabetext bleibt auf diesem
+            Gerät.
+          </div>
+
+          <div class="synthConfig synth-config-space">
+            <div>
+              <label><strong>Aktiver Tokenizer</strong></label>
+              <select
+                id="synthTokenizerChoice"
+                class="tokenizer-select"
+                aria-label="Aktiver Tokenizer"
+              >
+                <option value="gemma">Gemma</option>
+                <option value="gpt2">GPT‑2</option>
+              </select>
+            </div>
+            <div>
+              <label><strong>Gemma BOS-Token</strong></label
+              ><br />
+              <label class="bos-option">
+                <input id="gemmaAddBos" type="checkbox" checked="" />
+                <code>&lt;bos&gt;</code> hinzufügen
+              </label>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="secondary" id="prepareTokenizerBtn" type="button">
+              Tokenizer vorbereiten
+            </button>
+            <button class="secondary" id="clearTokenizerCacheBtn" type="button">
+              Tokenizer-Cache löschen
+            </button>
+          </div>
+          <p id="tokenizerStatus" class="small" role="status">
+            Tokenizer werden bei Bedarf aus lokalen Dateien vorbereitet. Das
+            Gemma-Modell kann in IndexedDB gecacht werden.
+          </p>
+
+          <details>
+            <summary>Alternativ: Token-IDs direkt eingeben</summary>
+            <p class="small">
+              Für Tests kann hier eine bereits mit dem passenden
+              Modell-Tokenizer erzeugte Folge von Token-IDs eingefügt werden.
+              Leer lassen, wenn der ausgewählte Tokenizer automatisch verwendet
+              werden soll.
+            </p>
+            <textarea
+              id="synthTokenIds"
+              placeholder="z. B. 464, 2068, 7586, 318, ..."
+              aria-label="Manuelle Token-IDs"
+            ></textarea>
+          </details>
+
+          <div class="synthConfig synth-config-space">
+            <div>
+              <label><strong>n-Gramm-Länge</strong></label>
+              <input
+                id="synthNgramLen"
+                type="number"
+                min="2"
+                max="20"
+                aria-label="n-Gramm-Länge"
+              />
+            </div>
+            <div>
+              <label><strong>Context-History</strong></label>
+              <input
+                id="synthHistorySize"
+                type="number"
+                min="1"
+                max="100000"
+                aria-label="Context-History"
+              />
+            </div>
+            <div class="synth-keys-field">
+              <label><strong>Watermark-Keys</strong></label>
+              <textarea id="synthKeys" aria-label="Watermark-Keys"></textarea>
+              <div class="small">
+                Dies ist der öffentliche Default-Key-Satz der
+                DeepMind-Referenzimplementierung. Er ist nicht gleichbedeutend
+                mit produktiven Gemini-Schlüsseln.
+              </div>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="primary" id="synthAnalyzeBtn" type="button">
+              SynthID-Referenzprüfung
+            </button>
+            <button class="secondary" id="synthPositiveDemoBtn" type="button">
+              SynthID-Positivdemo laden
+            </button>
+            <button class="secondary" id="synthClearDemoBtn" type="button">
+              Demo-Token entfernen
+            </button>
+          </div>
+          <p class="small">
+            Die Positivdemo verwendet eine synthetisch konstruierte Tokenfolge,
+            die mit den öffentlichen Default-Keys ein deutliches Referenzsignal
+            erzeugt. Sie ist absichtlich <strong>kein Beispieltext</strong>,
+            weil ein sichtbarer Text ohne die passende wasserzeichnende
+            Generierung keinen seriös garantierten SynthID-Treffer liefern kann.
+          </p>
+
+          <div id="synthResults" class="hidden">
+            <div class="synthGrid">
+              <div class="synthStatus">
+                <span class="small">Token</span
+                ><strong id="synthTokenCount">–</strong>
+              </div>
+              <div class="synthStatus">
+                <span class="small">gewertete n-Gramme</span
+                ><strong id="synthNgramCount">–</strong>
+              </div>
+              <div class="synthStatus">
+                <span class="small">Mean Score</span
+                ><strong id="synthMean">–</strong>
+              </div>
+              <div class="synthStatus">
+                <span class="small">Weighted Mean</span
+                ><strong id="synthWeighted">–</strong>
+              </div>
+            </div>
+            <div id="synthFinding" class="forensic"></div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Wert</th>
+                  <th>Ergebnis</th>
+                  <th>Bedeutung</th>
+                </tr>
+              </thead>
+              <tbody id="synthRows"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>3. Statistische Muster</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Merkmal</th>
+                <th>Messwert</th>
+                <th>Einschätzung</th>
+              </tr>
+            </thead>
+            <tbody id="statsRows"></tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <h2>4. Stilometrische Auffälligkeiten</h2>
+          <div id="styleDetails"></div>
+        </div>
+
+        <div class="card">
+          <h2>5. Erweiterte Stilometrie</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Merkmal</th>
+                <th>Wert</th>
+                <th>Interpretation</th>
+              </tr>
+            </thead>
+            <tbody id="advancedRows"></tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <h2>6. Struktur- und Komplexitätsanalyse</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Algorithmus / Merkmal</th>
+                <th>Wert</th>
+                <th>Einordnung</th>
+              </tr>
+            </thead>
+            <tbody id="complexityRows"></tbody>
+          </table>
+          <p class="small">
+            Diese Verfahren arbeiten ohne Sprachmodell. Sie messen
+            Regelmäßigkeit, Redundanz und Vorhersagbarkeit des Textes – nicht
+            dessen tatsächliche Herkunft.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>7. Vertiefte Erkennungsmerkmale</h2>
+          <div class="grid">
+            <div class="metric">
+              <div class="v" id="ngramScore">–</div>
+              <div class="k">n-Gramm-Regelmäßigkeit</div>
+            </div>
+            <div class="metric">
+              <div class="v" id="localBurstScore">–</div>
+              <div class="k">Local Burstiness</div>
+            </div>
+            <div class="metric">
+              <div class="v" id="entropyTrendScore">–</div>
+              <div class="k">Entropie-Konstanz</div>
+            </div>
+            <div class="metric">
+              <div class="v" id="functionProfileScore">–</div>
+              <div class="k">Funktionswort-Profil</div>
+            </div>
+          </div>
+
+          <h3>n-Gramm-Profil</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Profil</th>
+                <th>Wert</th>
+                <th>Einordnung</th>
+              </tr>
+            </thead>
+            <tbody id="ngramProfileRows"></tbody>
+          </table>
+
+          <h3>Lokale Satzrhythmik</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Fenster</th>
+                <th>Burstiness</th>
+                <th>Einordnung</th>
+              </tr>
+            </thead>
+            <tbody id="burstWindowRows"></tbody>
+          </table>
+
+          <h3>Entropieverlauf</h3>
+          <div
+            id="entropySpark"
+            class="spark"
+            aria-label="Entropieverlauf"
+          ></div>
+          <p class="small" id="entropyTrendText"></p>
+
+          <h3>Funktionswort-Fingerprint</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Wort</th>
+                <th>Anteil</th>
+                <th>Vorkommen</th>
+              </tr>
+            </thead>
+            <tbody id="functionWordRows"></tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <h2>8. Begründung des Scores</h2>
+          <div id="scoreExplanation"></div>
+          <table>
+            <thead>
+              <tr>
+                <th>Einfluss</th>
+                <th>Bewertung</th>
+                <th>Auswirkung</th>
+              </tr>
+            </thead>
+            <tbody id="scoreBreakdown"></tbody>
+          </table>
+          <h3>Zusammenfassung</h3>
+          <ul id="reasons"></ul>
+        </div>
+
+        <div class="card">
+          <h2>Dokumentation: Welche Merkmale helfen wirklich?</h2>
+          <p>
+            Kein einzelnes Stilmerkmal beweist KI-Autorenschaft.
+            Aussagekräftiger wird die Analyse, wenn mehrere voneinander
+            verschiedene Signale gemeinsam in dieselbe Richtung zeigen. Deshalb
+            trennt dieser Prototyp zwischen stärker belegten, ergänzenden und
+            experimentellen Merkmalen.
+          </p>
+
+          <div class="flow">
+            <div class="step">
+              <strong>Text</strong>
+              <div class="kpi-note">Rohtext und Unicode</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+              <strong>Stilometrie</strong>
+              <div class="kpi-note">Wortschatz, Satzlänge, Funktionswörter</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+              <strong>Struktur</strong>
+              <div class="kpi-note">n-Gramme, Wiederholung, Absatzrhythmus</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+              <strong>Information</strong>
+              <div class="kpi-note">Entropie, Redundanz, Komplexität</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+              <strong>Gesamteinschätzung</strong>
+              <div class="kpi-note">mehrere schwache Signale kombiniert</div>
+            </div>
+          </div>
+
+          <h3>Unsere Merkmale im Einzelnen</h3>
+          <div class="doc-grid">
+            <div class="doc-box">
+              <h3>
+                Satzlänge und Burstiness
+                <span class="evidence" title="Evidenz: gut"
+                  ><span class="dot on"></span><span class="dot on"></span
+                  ><span class="dot on"></span><span class="dot on"></span
+                  ><span class="dot"></span
+                ></span>
+              </h3>
+              <p>
+                KI-Texte wirken häufig stärker geglättet. Deshalb sind nicht nur
+                mittlere Satzlänge, sondern vor allem deren Streuung und lokale
+                Schwankung interessant. Der Analyzer betrachtet zusätzlich
+                gleitende Satzfenster, damit lokale Regelmäßigkeit nicht in
+                einem globalen Mittelwert verschwindet.
+              </p>
+            </div>
+
+            <div class="doc-box">
+              <h3>
+                Lexikalische Vielfalt
+                <span class="evidence" title="Evidenz: gut"
+                  ><span class="dot on"></span><span class="dot on"></span
+                  ><span class="dot on"></span><span class="dot on"></span
+                  ><span class="dot"></span
+                ></span>
+              </h3>
+              <p>
+                Type-Token-Ratio, Hapax-Legomena, Yule's K und ähnliche Maße
+                beschreiben, wie vielfältig der Wortschatz eines Textes ist. Sie
+                sind nützlich, aber stark abhängig von Textlänge, Genre und
+                Thema. Deshalb werden mehrere Varianten parallel ausgewertet.
+              </p>
+            </div>
+
+            <div class="doc-box">
+              <h3>
+                Funktionswörter
+                <span class="evidence" title="Evidenz: gut"
+                  ><span class="dot on"></span><span class="dot on"></span
+                  ><span class="dot on"></span><span class="dot on"></span
+                  ><span class="dot"></span
+                ></span>
+              </h3>
+              <p>
+                Artikel, Präpositionen, Pronomen und Konjunktionen werden beim
+                Schreiben meist nicht bewusst gesteuert. Ihre Verteilung ist
+                deshalb ein klassisches stilometrisches Signal. Der Prototyp
+                zeigt sowohl den Gesamtanteil als auch ein kleines Profil
+                besonders häufiger Funktionswörter.
+              </p>
+            </div>
+
+            <div class="doc-box">
+              <h3>
+                Interpunktion und Satzanfänge
+                <span class="evidence" title="Evidenz: mittel"
+                  ><span class="dot on"></span><span class="dot on"></span
+                  ><span class="dot on"></span><span class="dot"></span
+                  ><span class="dot"></span
+                ></span>
+              </h3>
+              <p>
+                Kommas, Doppelpunkte, Gedankenstriche und wiederkehrende
+                Satzanfänge tragen zum Stilprofil bei. Allein sind sie schwach,
+                in Kombination mit gleichmäßigen Satzlängen und wiederholten
+                Strukturen aber nützlich.
+              </p>
+            </div>
+
+            <div class="doc-box">
+              <h3>
+                Entropie
+                <span class="evidence" title="Evidenz: gut"
+                  ><span class="dot on"></span><span class="dot on"></span
+                  ><span class="dot on"></span><span class="dot on"></span
+                  ><span class="dot"></span
+                ></span>
+              </h3>
+              <p>
+                Entropie misst Unvorhersagbarkeit beziehungsweise Vielfalt.
+                Dieser Prototyp berechnet Wort-, Zeichen- und lokale Entropie.
+                Das ist nicht identisch mit der Token-Wahrscheinlichkeit eines
+                Sprachmodells, aber ein sinnvoller modellfreier Näherungswert.
+              </p>
+            </div>
+
+            <div class="doc-box">
+              <h3>
+                Kompression und Lempel-Ziv
+                <span class="evidence" title="Evidenz: experimentell"
+                  ><span class="dot on"></span><span class="dot on"></span
+                  ><span class="dot"></span><span class="dot"></span
+                  ><span class="dot"></span
+                ></span>
+              </h3>
+              <p>
+                Stärker wiederholte und regelmäßigere Texte lassen sich meist
+                besser komprimieren. GZIP und Lempel-Ziv sind deshalb
+                interessante Redundanzmaße, aber bislang schwächer als direkte
+                KI-Detektoren validiert. Sie werden nur leicht gewichtet.
+              </p>
+            </div>
+          </div>
+
+          <h3>Besonders wichtig: n-Gramme</h3>
+          <p>
+            n-Gramme betrachten kurze Folgen von Zeichen oder Wörtern. Das ist
+            deutlich aussagekräftiger als nur nach einzelnen auffälligen Wörtern
+            zu suchen, weil wiederkehrende lokale Formulierungs- und
+            Strukturmuster sichtbar werden.
+          </p>
+          <div class="doc-grid">
+            <div class="doc-box">
+              <h3>Was wird gemessen?</h3>
+              <p>
+                Der Analyzer berechnet Wort-Bigramme und -Trigramme,
+                Zeichenfolgen, den Anteil einzigartiger n-Gramme,
+                Wiederholungsraten, n-Gramm-Entropie und einen Gini-Wert für die
+                Häufigkeitsverteilung.
+              </p>
+            </div>
+            <div class="doc-box">
+              <h3>Warum ist das nützlich?</h3>
+              <p>
+                Ein Text kann lexikalisch vielfältig wirken und trotzdem
+                dieselben lokalen Schablonen wiederholen. n-Gramme erfassen
+                solche Muster besser als reine Wortzählungen und bilden daher
+                eine der stärkeren modellfreien Signalgruppen.
+              </p>
+            </div>
+          </div>
+
+          <details open="">
+            <summary>Stärkere Signalgruppe</summary>
+            <p>
+              Entropie, lexikalische Vielfalt, n-Gramm-Muster,
+              Satzlängenvarianz, Funktionswörter und Wiederholungsmuster.
+            </p>
+          </details>
+          <details>
+            <summary>Mittlere Signalgruppe</summary>
+            <p>
+              Interpunktion, Wortlängen, Satzanfänge, syntaktische Parallelität,
+              lokale Burstiness und Wortschatzdispersion.
+            </p>
+          </details>
+          <details>
+            <summary>Experimentelle Signalgruppe</summary>
+            <p>
+              GZIP-Kompression, Lempel-Ziv-Komplexität, Zipf-Steigung,
+              Absatzsymmetrie und Satzlängen-Autokorrelation. Diese Werte sind
+              als Zusatzsignal gedacht und sollten den Score nur schwach
+              beeinflussen.
+            </p>
+          </details>
+        </div>
+
+        <div class="card">
+          <h2>Dokumentation: Google SynthID Text</h2>
+          <p>
+            <strong
+              >SynthID Text ist etwas anderes als die übrige Analyse auf dieser
+              Seite.</strong
+            >
+            Die stilometrischen Verfahren suchen nach typischen Mustern von
+            KI-Texten. SynthID dagegen ist ein bewusst bei der Generierung
+            eingebettetes statistisches Wasserzeichen.
+          </p>
+
+          <h3>Modularer Aufbau</h3>
+          <div class="doc-grid">
+            <div class="doc-box">
+              <h3>Asset-Store und Tokenizer-Registry</h3>
+              <p>
+                Der Asset-Store liest die lokal ausgelieferten Modelldaten und
+                cached sie optional in IndexedDB. Die Registry bereitet genau
+                einen Adapter pro Tokenizer vor und bündelt gleichzeitige
+                Ladevorgänge.
+              </p>
+            </div>
+            <div class="doc-box">
+              <h3>GPT2Tokenizer / GemmaTokenizer</h3>
+              <p>
+                Beide liefern dieselbe Schnittstelle <code>encode(text)</code>.
+                Die SynthID-Engine sieht nur Token-IDs.
+              </p>
+            </div>
+            <div class="doc-box">
+              <h3>SynthIDEngine</h3>
+              <p>
+                Enthält Hashing, Context-Masking, g-values sowie Mean- und
+                Weighted-Mean-Scoring. Sie kennt weder URLs noch
+                Benutzeroberfläche.
+              </p>
+            </div>
+            <div class="doc-box">
+              <h3>AnalysisUI</h3>
+              <p>
+                Views stellen die beiden Analysebereiche mit HTML-Templates dar.
+                Controller verbinden die Bedienelemente mit den Fachmodulen und
+                verhindern veraltete Ergebnisse nach Eingabeänderungen.
+              </p>
+            </div>
+          </div>
+
+          <div class="flow">
+            <div class="step">
+              <strong>Text</strong>
+              <div class="kpi-note">exakt tokenisieren</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+              <strong>Token-IDs</strong>
+              <div class="kpi-note">5er-n-Gramme bilden</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+              <strong>Keyed Hash</strong>
+              <div class="kpi-note">64-Bit-LCG + Watermark-Keys</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+              <strong>g-values</strong>
+              <div class="kpi-note">binäre Werte je Layer</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+              <strong>Score</strong>
+              <div class="kpi-note">Mean / Weighted Mean</div>
+            </div>
+          </div>
+
+          <div class="doc-grid">
+            <div class="doc-box">
+              <h3>Was ist hier implementiert?</h3>
+              <p>
+                Der Browser bildet aus den Token-IDs überlappende n-Gramme. Der
+                veröffentlichte SynthID-Hash verwendet einen 64-Bit Linear
+                Congruential Generator mit dem Multiplikator
+                <code>6364136223846793005</code>. Anschließend werden pro
+                Watermark-Layer binäre <em>g-values</em> rekonstruiert.
+                Wiederholte Kontexte werden – wie in der Referenzimplementierung
+                – maskiert.
+              </p>
+            </div>
+            <div class="doc-box">
+              <h3>Mean und Weighted Mean</h3>
+              <p>
+                Der Mean-Score mittelt alle gültigen g-values. Beim
+                Weighted-Mean-Score werden die Watermark-Layer mit linear von 10
+                auf 1 fallenden Gewichten bewertet und anschließend
+                normalisiert. Unter einer unmarkierten Nullhypothese liegt der
+                Erwartungswert grob um 0,5; eine belastbare
+                Entscheidungsschwelle muss jedoch zur konkreten Konfiguration
+                kalibriert werden.
+              </p>
+            </div>
+            <div class="doc-box">
+              <h3>Warum ist der Tokenizer entscheidend?</h3>
+              <p>
+                Schon eine andere Zerlegung desselben sichtbaren Textes erzeugt
+                andere Token-IDs, n-Gramme, Hashes und g-values. Eine Wort- oder
+                Zeichenzerlegung wäre daher
+                <strong>keine SynthID-Erkennung</strong>. Deshalb verwendet die
+                Referenzprüfung einen echten GPT‑2- oder Gemma-Tokenizer
+                beziehungsweise explizit eingegebene Token-IDs.
+              </p>
+            </div>
+            <div class="doc-box">
+              <h3>Was sagt ein negatives Ergebnis?</h3>
+              <p>
+                Nur: Mit
+                <strong
+                  >diesem Tokenizer, diesen Keys und dieser
+                  Konfiguration</strong
+                >
+                wurde kein starkes Referenzsignal gefunden. Es beweist nicht,
+                dass ein Text nicht von Gemini oder einem anderen Google-Modell
+                stammt. Produktive Schlüssel und Konfigurationen können von der
+                veröffentlichten Referenz abweichen.
+              </p>
+            </div>
+          </div>
+
+          <h3>Warum die Positivdemo Token-IDs statt Text verwendet</h3>
+          <div class="doc-box">
+            <p>
+              Ein beliebiger menschlich geschriebener oder nachträglich
+              ausgewählter Text besitzt nicht automatisch ein
+              SynthID-Wasserzeichen. SynthID entsteht
+              <strong>während der Generierung</strong>, indem die
+              Auswahlwahrscheinlichkeiten der nächsten Tokens abhängig von
+              Watermark-Key und Kontext beeinflusst werden.
+            </p>
+            <p>
+              Die eingebaute Positivdemo konstruiert deshalb direkt eine
+              Tokenfolge, deren 5er-n-Gramme für die öffentlichen Referenz-Keys
+              hohe g-values ergeben. Sie testet damit die Detektionspipeline
+              selbst: Hashing → g-values → Context-Mask → Mean/Weighted Mean.
+              Würde man diese Token-IDs einfach als irgendeinen sichtbaren Text
+              ausgeben, wäre das irreführend, weil die Bedeutung der IDs vom
+              verwendeten Tokenizer abhängt.
+            </p>
+          </div>
+
+          <h3>GPT‑2 und Gemma</h3>
+          <div class="doc-grid">
+            <div class="doc-box">
+              <h3>GPT‑2</h3>
+              <p>
+                Die Website liefert das gebündelte GPT-2/r50k-Modul
+                gpt-tokenizer 4.0.0 lokal mit. Vokabular und BPE-Merges sind in
+                diesem Paket enthalten; encoder.json und vocab.bpe werden nicht
+                separat nachgeladen.
+              </p>
+            </div>
+            <div class="doc-box">
+              <h3>Gemma</h3>
+              <p>
+                Gemma verwendet SentencePiece. Das festgelegte Google-Modell
+                wird als lokale Datei mit der Website ausgeliefert und mit einer
+                ebenfalls lokal ausgelieferten WebAssembly-Laufzeit verarbeitet.
+              </p>
+            </div>
+            <div class="doc-box">
+              <h3>BOS-Token</h3>
+              <p>
+                Bei Gemma kann <code>&lt;bos&gt;</code> vorangestellt werden.
+                Das ist standardmäßig aktiv. Für ausgeschnittene
+                Modell-Continuations kann eine andere Tokenfolge korrekt sein.
+              </p>
+            </div>
+            <div class="doc-box">
+              <h3>Gemma ≠ Gemini</h3>
+              <p>
+                Gemma ist ein offenes Google-Modell. Die Verwendung seiner
+                Tokenisierung macht den Test näher an Googles
+                Referenzbeispielen, ist aber kein universeller Gemini-Nachweis.
+              </p>
+            </div>
+          </div>
+
+          <h3>Automatisches Laden und Cache</h3>
+          <p>
+            Die Tokenizer werden beim ersten Einsatz aus den lokalen Dateien
+            dieser Website vorbereitet. Das Gemma-Modell kann in IndexedDB
+            gespeichert werden. GPT-2 enthält Vokabular und Merges im lokalen
+            JavaScript-Paket. Bei der Nutzung werden keine Ressourcen von
+            Drittanbietern geladen.
+          </p>
+
+          <h3>Start über einen lokalen Webserver</h3>
+          <p>
+            Die modularisierte Quellversion benötigt einen lokalen HTTP-Server
+            oder statisches Webhosting. Starten Sie sie mit npm start und öffnen
+            Sie die angezeigte localhost-Adresse. Direktes Öffnen über file://
+            wird für diese Ausgabe nicht unterstützt.
+          </p>
+
+          <h3>Lokale Auslieferung und Cache</h3>
+          <p>
+            Das lokale Gemma-Modell wird nach dem Laden optional in IndexedDB
+            gespeichert. Tokenizer-Laufzeiten und Modell werden mit dieser
+            Website ausgeliefert. Es gibt keine CDN- oder Modell-Downloads von
+            Drittanbietern während der Benutzung.
+          </p>
+          <div class="notice documentation-notice">
+            <p>
+              <strong>Referenz- statt Gemini-Detektor:</strong> Google DeepMind
+              beschreibt das öffentliche Repository ausdrücklich als
+              Referenzimplementierung. Dieser Browser-Port prüft die
+              veröffentlichte Konfiguration; er besitzt keinen Zugang zu
+              internen Google-Schlüsseln und ist daher kein universeller
+              Gemini-Herkunftsnachweis.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Methodische Grenzen</h2>
+          <div class="notice">
+            <p>
+              <strong
+                >Dieser Prototyp kann nicht beweisen, dass ein Text von einer KI
+                stammt.</strong
+              >
+            </p>
+            <p>
+              Er erkennt nur lokale Unicode-Auffälligkeiten und
+              statistische/stilometrische Muster. Ein echtes kryptografisches
+              oder tokenbasiertes Wasserzeichen kann nur erkannt werden, wenn
+              das konkrete Verfahren, die Tokenisierung und ggf. der Schlüssel
+              bekannt sind.
+            </p>
+            <p>
+              Kurze Texte, stark redigierte KI-Texte und formale menschliche
+              Texte sind besonders fehleranfällig.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <template id="template-row"
+      ><tr>
+        <td data-field="first"></td>
+        <td data-field="second"></td>
+        <td data-field="third"></td></tr></template
+    ><template id="template-emptyRow"
+      ><tr>
+        <td colspan="3" data-field="text"></td></tr></template
+    ><template id="template-paragraph"
+      ><p>
+        <strong data-field="label"></strong>
+        <span data-field="text"></span></p></template
+    ><template id="template-verdict"
+      ><span class="badge" data-field="label"></span>
+      <p data-field="text"></p></template
+    ><template id="template-metric"
+      ><div class="metric">
+        <div class="v" data-field="value"></div>
+        <div class="k" data-field="label"></div></div></template
+    ><template id="template-scoreRow"
+      ><tr>
+        <td>
+          <strong data-field="label"></strong><br /><span
+            class="small"
+            data-field="detail"
+          ></span>
+        </td>
+        <td data-field="influence"></td>
+        <td><span class="badge" data-field="delta"></span></td></tr></template
+    ><template id="template-unicodeTable"
+      ><table>
+        <thead>
+          <tr>
+            <th>Position</th>
+            <th>Codepoint</th>
+            <th>Typ</th>
+          </tr>
+        </thead>
+        <tbody></tbody></table></template
+    ><template id="template-marker"
+      ><span class="markerToken" data-field="text"></span></template
+    ><template id="template-spark"><span></span></template
+    ><template id="template-listItem"><li data-field="text"></li></template>
+    <footer class="site-footer">
+      <a href="licenses.html">Lizenzen und Drittanbieter</a>
+    </footer>
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>

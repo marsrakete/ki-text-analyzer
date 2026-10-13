@@ -1,0 +1,26 @@
+{
+  "source": "assets/branding/icon.svg",
+  "maskableSource": "assets/branding/maskable-icon.svg",
+  "outputs": [
+    { "path": "assets/branding/favicon-16.png", "size": 16 },
+    { "path": "assets/branding/favicon-32.png", "size": 32 },
+    {
+      "path": "assets/branding/apple-touch-icon.png",
+      "size": 180,
+      "maskable": true
+    },
+    { "path": "assets/branding/icon-192.png", "size": 192 },
+    { "path": "assets/branding/icon-512.png", "size": 512 },
+    {
+      "path": "assets/branding/maskable-192.png",
+      "size": 192,
+      "maskable": true
+    },
+    {
+      "path": "assets/branding/maskable-512.png",
+      "size": 512,
+      "maskable": true
+    }
+  ],
+  "ico": { "path": "favicon.ico", "sizes": [16, 32, 48] }
+}

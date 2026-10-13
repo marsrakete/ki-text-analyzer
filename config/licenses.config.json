@@ -1,0 +1,141 @@
+{
+  "title": "Lizenzen und Drittanbieter",
+  "description": "Lizenztexte, Herkunft und Hinweise zu den mitgelieferten Komponenten von KI-Text-Analyzer.",
+  "projectLicense": "Apache-2.0",
+  "components": [
+    {
+      "id": "gpt-tokenizer",
+      "name": "gpt-tokenizer",
+      "version": "4.0.0",
+      "license": "MIT",
+      "author": "Copyright (c) 2023-2024 Bazyli Brzoska",
+      "usage": "GPT-2-Tokenisierung in vendor/gpt2.js.",
+      "source": "https://github.com/niieani/gpt-tokenizer",
+      "file": "vendor/licenses/gpt-tokenizer.txt",
+      "changes": "Für GPT-2 gebündelt und minimiert; Tokenisierung unverändert."
+    },
+    {
+      "id": "sentencepiece-js",
+      "name": "sentencepiece-js",
+      "version": "1.3.3",
+      "license": "Apache-2.0",
+      "author": "devilyouwei, Jan Kaul, Ronan Le Meillat und Mitwirkende",
+      "usage": "JavaScript- und WASM-Laufzeit in vendor/sentencepiece.js.",
+      "source": "https://github.com/sctg-development/sentencepiece-js/tree/30916b62bae58f8bb9cd038d3b5e449eee4cae6e",
+      "file": "vendor/licenses/sentencepiece-js.txt",
+      "changes": "Browser-Build: nicht verwendete Node-Dateilader durch Fehler-Stubs ersetzt, Node-Erkennung deaktiviert, Export auf SentencePieceProcessor beschränkt und gebündelt/minimiert."
+    },
+    {
+      "id": "sentencepiece-cpp",
+      "name": "SentencePiece C++",
+      "version": "d8f741853847553169444afc12c00f4bbff3e9ce",
+      "license": "Apache-2.0",
+      "author": "Google und SentencePiece-Mitwirkende",
+      "usage": "Als WASM im veröffentlichten sentencepiece-js-Paket enthalten; die Quelle ist dessen festgelegtes Git-Submodul.",
+      "source": "https://github.com/google/sentencepiece/tree/d8f741853847553169444afc12c00f4bbff3e9ce",
+      "file": "vendor/licenses/sentencepiece-cpp.txt",
+      "changes": "Die upstream-WASM-Ausgabe wird übernommen; der C++-Code wurde hier nicht neu gebaut oder bearbeitet."
+    },
+    {
+      "id": "abseil",
+      "name": "Abseil-Unterkomponenten",
+      "version": "SentencePiece-Submodul d8f7418",
+      "license": "Apache-2.0",
+      "author": "Abseil-/Google-Mitwirkende",
+      "usage": "Drittanbieterbestandteile des SentencePiece-Builds.",
+      "source": "https://github.com/google/sentencepiece/tree/d8f741853847553169444afc12c00f4bbff3e9ce/third_party/absl",
+      "file": "vendor/licenses/abseil.txt",
+      "changes": "Unveränderte Bestandteile der upstream-WASM-Laufzeit."
+    },
+    {
+      "id": "darts-clone",
+      "name": "Darts-clone",
+      "version": "SentencePiece-Submodul d8f7418",
+      "license": "BSD-3-Clause",
+      "author": "Copyright (c) 2008-2011, Susumu Yata",
+      "usage": "Trie-Datenstrukturen der SentencePiece-Laufzeit.",
+      "source": "https://github.com/google/sentencepiece/tree/d8f741853847553169444afc12c00f4bbff3e9ce/third_party/darts_clone",
+      "file": "vendor/licenses/darts-clone.txt",
+      "changes": "Unveränderte Bestandteile der upstream-WASM-Laufzeit."
+    },
+    {
+      "id": "protobuf-lite",
+      "name": "Protobuf-lite",
+      "version": "SentencePiece-Submodul d8f7418",
+      "license": "BSD-3-Clause",
+      "author": "Copyright 2008 Google Inc.",
+      "usage": "Lesen des serialisierten SentencePiece-Tokenizer-Modells.",
+      "source": "https://github.com/google/sentencepiece/tree/d8f741853847553169444afc12c00f4bbff3e9ce/third_party/protobuf-lite",
+      "file": "vendor/licenses/protobuf-lite.txt",
+      "changes": "Unveränderte Bestandteile der upstream-WASM-Laufzeit."
+    },
+    {
+      "id": "buffer",
+      "name": "buffer",
+      "version": "6.0.3",
+      "license": "MIT",
+      "author": "Copyright (c) Feross Aboukhadijeh und weitere Mitwirkende",
+      "usage": "Binär-/Base64-Verarbeitung im SentencePiece-JavaScript-Bundle.",
+      "source": "https://github.com/feross/buffer/tree/v6.0.3",
+      "file": "vendor/licenses/buffer.txt",
+      "changes": "Unverändert gebündelt und minimiert."
+    },
+    {
+      "id": "base64-js",
+      "name": "base64-js",
+      "version": "1.5.1",
+      "license": "MIT",
+      "author": "Copyright (c) 2014 Jameson Little",
+      "usage": "Transitive buffer-Abhängigkeit in vendor/sentencepiece.js.",
+      "source": "https://github.com/beatgammit/base64-js/tree/v1.5.1",
+      "file": "vendor/licenses/base64-js.txt",
+      "changes": "Unverändert gebündelt und minimiert."
+    },
+    {
+      "id": "ieee754",
+      "name": "ieee754",
+      "version": "1.2.1",
+      "license": "BSD-3-Clause",
+      "author": "Copyright 2008 Fair Oaks Labs, Inc.",
+      "usage": "Transitive buffer-Abhängigkeit in vendor/sentencepiece.js.",
+      "source": "https://github.com/feross/ieee754/tree/v1.2.1",
+      "file": "vendor/licenses/ieee754.txt",
+      "changes": "Unverändert gebündelt und minimiert."
+    },
+    {
+      "id": "typescript-helpers",
+      "name": "TypeScript-Laufzeithelfer",
+      "version": "Im sentencepiece-js-Paket 1.3.3 enthalten",
+      "license": "Microsoft-Hinweis, permissiv",
+      "author": "Copyright (c) Microsoft Corporation",
+      "usage": "JavaScript-Helfer des veröffentlichten SentencePiece-Pakets.",
+      "source": "https://github.com/sctg-development/sentencepiece-js/tree/30916b62bae58f8bb9cd038d3b5e449eee4cae6e",
+      "file": "vendor/licenses/typescript-helpers.txt",
+      "changes": "Der originale Hinweis wurde aus dem Paket übernommen; der Helfercode wird minimiert."
+    },
+    {
+      "id": "synthid",
+      "name": "SynthID Text – Referenzlogik",
+      "version": "a6ec02c22ce87177c061643503e14a7cc839dc2b",
+      "license": "Apache-2.0",
+      "author": "Copyright 2026 Google LLC",
+      "usage": "Referenzalgorithmen in src/synthid/engine.js und Originalfunktionen in tests/reference/upstream/.",
+      "source": "https://github.com/google-deepmind/synthid-text/tree/a6ec02c22ce87177c061643503e14a7cc839dc2b",
+      "file": "vendor/licenses/synthid-text.txt",
+      "changes": "JavaScript-Port mit BigInt/int64, Browser-Eingabeprüfung und Ringpuffer für Kontexte. Der zusätzliche z-Wert ist eine lokale Näherung, keine universelle Google-Entscheidungsschwelle."
+    },
+    {
+      "id": "gemma",
+      "name": "Gemma-Tokenizer-Daten",
+      "version": "33b652c465537c6158f9a472ea5700e5e770ad3f",
+      "license": "Repository-Lizenz: Apache-2.0; Zuordnung der Binärdatei offen",
+      "author": "Google",
+      "usage": "assets/tokenizers/gemma.model; separat mitgelieferte Tokenizer-Daten.",
+      "source": "https://github.com/google/gemma_pytorch/blob/33b652c465537c6158f9a472ea5700e5e770ad3f/tokenizer/tokenizer.model",
+      "file": "vendor/licenses/gemma-model.txt",
+      "changes": "Die Datei wurde unverändert übernommen und nur lokal umbenannt. Der beigefügte Lizenztext ist die LICENSE des Herkunftsrepositories, keine abschließende Lizenzfreigabe für die Binärdatei.",
+      "status": "Die genaue Zuordnung der Gemma-Tokenizer-Datei ist noch offen. Eine Apache-2.0-Lizenz des Repositories ersetzt keine Klärung eventuell zusätzlich geltender Gemma-Nutzungsbedingungen. Die Apache-2.0-Lizenz unseres eigenen Codes wird dadurch nicht auf diese Datei ausgedehnt.",
+      "terms": "https://ai.google.dev/gemma/terms"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">KI-Text-Analyzer</title>
+  <desc id="desc">Helles Textblatt mit türkisfarbener Analyse-Lupe auf indigoblauem Hintergrund.</desc>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#354fff"/><stop offset="1" stop-color="#17235d"/>
+    </linearGradient>
+    <linearGradient id="lens" x2="1" y2="1">
+      <stop stop-color="#82f1d8"/><stop offset="1" stop-color="#26cbb7"/>
+    </linearGradient>
+    <symbol id="mark" viewBox="0 0 512 512">
+      <path d="M154 106h110l72 72v182a22 22 0 0 1-22 22H154a22 22 0 0 1-22-22V128a22 22 0 0 1 22-22Z" fill="#fff"/>
+      <path d="M264 106v56a16 16 0 0 0 16 16h56" fill="#c9d3ff"/>
+      <path d="M178 206h94M178 249h63M178 292h42" fill="none" stroke="#6477cd" stroke-width="20" stroke-linecap="round"/>
+      <path d="m354 350 44 44" fill="none" stroke="#82f1d8" stroke-width="34" stroke-linecap="round"/>
+      <circle cx="302" cy="298" r="72" fill="#15245b" stroke="url(#lens)" stroke-width="24"/>
+      <path d="M268 308v-18m34 32v-49m34 35v-27" fill="none" stroke="#f0fffb" stroke-width="16" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#background)"/>
+  <use href="#mark"/>
+</svg>

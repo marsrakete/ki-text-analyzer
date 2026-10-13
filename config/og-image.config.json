@@ -1,0 +1,13 @@
+{
+  "source": "assets/branding/og-image.svg",
+  "render": {
+    "width": 1200,
+    "height": 630,
+    "loadSystemFonts": true,
+    "background": "#f5f7fa"
+  },
+  "outputs": [
+    { "format": "png", "path": "assets/branding/og-image.png" },
+    { "format": "jpeg", "path": "og-image.jpg", "quality": 92 }
+  ]
+}

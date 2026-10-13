@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Lizenzen und Drittanbieter – KI-Text-Analyzer</title>
+    <meta
+      name="description"
+      content="Lizenztexte, Herkunft und Änderungshinweise für KI-Text-Analyzer."
+    />
+    <link rel="stylesheet" href="styles/app.css" />
+    <link rel="icon" href="assets/branding/icon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <main class="license-page">
+      <p><a href="./">← Zurück zum Text-Analyzer</a></p>
+      <h1>Lizenzen und Drittanbieter</h1>
+      <p>
+        Unser eigener Anwendungscode steht unter
+        <a href="LICENSE">Apache-2.0</a>. Mitgelieferte Fremdkomponenten
+        behalten ihre jeweiligen Lizenzen und Copyright-Hinweise.
+      </p>
+      <p class="small">
+        Diese Beilage dokumentiert Herkunft, Verwendung und Änderungen. Die
+        vollständigen Originaltexte sind unten lesbar und als Dateien verlinkt.
+        Hinweise zur Gemma-Datei stehen im entsprechenden Eintrag.
+      </p>
+      <section
+        id="license-components"
+        aria-label="Mitgelieferte Komponenten"
+      ></section>
+      <section class="card">
+        <h2>Werkzeuge für die Entwicklung</h2>
+        <p>
+          Resvg (MPL-2.0), Sharp (Apache-2.0), Esbuild sowie unsere Test- und
+          Formatierungswerkzeuge werden für Entwicklung und Build verwendet. Sie
+          werden nicht als Teil der Website an den Browser ausgeliefert. Die
+          Grafiken enthalten keinen Code dieser Werkzeuge.
+        </p>
+        <p>
+          Wenn Entwicklungswerkzeuge oder native Pakete selbst weitergegeben
+          werden, gelten deren eigene Lizenz- und Quellcodepflichten. Die
+          Paketversionen stehen in <code>package-lock.json</code>.
+        </p>
+      </section>
+    </main>
+    <template id="license-entry">
+      <article class="card license-entry">
+        <h2 data-field="name"></h2>
+        <p class="small">
+          <span data-field="version"></span> ·
+          <strong data-field="license"></strong>
+        </p>
+        <p data-field="author"></p>
+        <p data-field="usage"></p>
+        <p><strong>Änderungen:</strong> <span data-field="changes"></span></p>
+        <p>
+          <a data-source>Originalprojekt und festgelegte Quelle</a> ·
+          <a data-license>Lizenztext als Datei</a>
+        </p>
+        <div class="calloutWarn" data-status hidden>
+          <p data-field="status"></p>
+          <p><a data-terms>Gemma-Nutzungsbedingungen von Google</a></p>
+        </div>
+        <details>
+          <summary>Vollständigen Original-Lizenztext lesen</summary>
+          <pre class="license-text" data-field="text"></pre>
+        </details>
+      </article>
+    </template>
+  </body>
+</html>

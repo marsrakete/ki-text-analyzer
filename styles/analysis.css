@@ -1,0 +1,94 @@
+.subscore-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+@media (max-width: 850px) {
+  .subscore-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 520px) {
+  .subscore-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.subscore {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+  background: #fbfcfe;
+}
+.subscore .num {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+}
+.subscore .name {
+  font-weight: 700;
+  margin-top: 6px;
+}
+.subscore .desc {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.confidenceBox {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fbfcfe;
+}
+.confidenceBox strong {
+  font-size: 18px;
+}
+.forensic {
+  border-left: 5px solid var(--accent);
+  background: #f5f7ff;
+  padding: 14px 16px;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+.markerText {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  background: #101827;
+  color: #e5e7eb;
+  padding: 14px;
+  border-radius: 10px;
+  max-height: 320px;
+  overflow: auto;
+}
+.markerToken {
+  display: inline-block;
+  padding: 0 4px;
+  margin: 0 1px;
+  border-radius: 4px;
+  background: #7c2d12;
+  color: #fff;
+  font-weight: 700;
+}
+.markerLegend {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+.markerLegend span {
+  font-size: 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 8px;
+  background: #fff;
+}
+
+.score-bar-space {
+  margin: 14px 0 6px;
+}

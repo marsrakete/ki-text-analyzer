@@ -1,0 +1,93 @@
+.synthGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 14px 0;
+}
+@media (max-width: 850px) {
+  .synthGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 520px) {
+  .synthGrid {
+    grid-template-columns: 1fr;
+  }
+}
+.synthStatus {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+  background: #fbfcfe;
+}
+.synthStatus strong {
+  display: block;
+  font-size: 22px;
+  margin-top: 3px;
+}
+.fileRow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px 0;
+}
+.fileRow label {
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  padding: 8px 10px;
+  background: #fff;
+}
+.fileRow input[type="file"] {
+  max-width: 250px;
+}
+.synthConfig {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+@media (max-width: 700px) {
+  .synthConfig {
+    grid-template-columns: 1fr;
+  }
+}
+.synthConfig textarea {
+  min-height: 90px;
+}
+.synthConfig input[type="number"] {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #b9c5d1;
+  border-radius: 8px;
+}
+.calloutWarn {
+  border-left: 4px solid var(--warn);
+  padding: 10px 12px;
+  background: #fff8e8;
+  border-radius: 6px;
+}
+.calloutGood {
+  border-left: 4px solid var(--good);
+  padding: 10px 12px;
+  background: #effaf4;
+  border-radius: 6px;
+}
+
+.synth-config-space {
+  margin-top: 12px;
+}
+.tokenizer-select {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #b9c5d1;
+  border-radius: 8px;
+}
+.bos-option {
+  display: inline-flex;
+  gap: 7px;
+  align-items: center;
+  margin-top: 9px;
+}
+.synth-keys-field {
+  grid-column: 1/-1;
+}
