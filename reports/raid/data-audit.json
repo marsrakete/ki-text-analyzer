@@ -1,0 +1,528 @@
+{
+  "checked": "2026-10-14",
+  "source": "https://dataset.raid-bench.xyz/extra_none.csv",
+  "complete": true,
+  "rows": 169925,
+  "fields": [
+    "id",
+    "adv_source_id",
+    "source_id",
+    "model",
+    "decoding",
+    "repetition_penalty",
+    "attack",
+    "domain",
+    "title",
+    "prompt",
+    "generation"
+  ],
+  "counts": [
+    {
+      "domain": "code",
+      "model": "chatgpt",
+      "attack": "none",
+      "rows": 1840
+    },
+    {
+      "domain": "code",
+      "model": "cohere",
+      "attack": "none",
+      "rows": 1840
+    },
+    {
+      "domain": "code",
+      "model": "cohere-chat",
+      "attack": "none",
+      "rows": 1840
+    },
+    {
+      "domain": "code",
+      "model": "gpt2",
+      "attack": "none",
+      "rows": 3680
+    },
+    {
+      "domain": "code",
+      "model": "gpt3",
+      "attack": "none",
+      "rows": 1840
+    },
+    {
+      "domain": "code",
+      "model": "gpt4",
+      "attack": "none",
+      "rows": 1840
+    },
+    {
+      "domain": "code",
+      "model": "human",
+      "attack": "none",
+      "rows": 920
+    },
+    {
+      "domain": "code",
+      "model": "llama-chat",
+      "attack": "none",
+      "rows": 3680
+    },
+    {
+      "domain": "code",
+      "model": "mistral",
+      "attack": "none",
+      "rows": 3680
+    },
+    {
+      "domain": "code",
+      "model": "mistral-chat",
+      "attack": "none",
+      "rows": 3680
+    },
+    {
+      "domain": "code",
+      "model": "mpt",
+      "attack": "none",
+      "rows": 3680
+    },
+    {
+      "domain": "code",
+      "model": "mpt-chat",
+      "attack": "none",
+      "rows": 3680
+    },
+    {
+      "domain": "czech",
+      "model": "chatgpt",
+      "attack": "none",
+      "rows": 3930
+    },
+    {
+      "domain": "czech",
+      "model": "cohere",
+      "attack": "none",
+      "rows": 3930
+    },
+    {
+      "domain": "czech",
+      "model": "cohere-chat",
+      "attack": "none",
+      "rows": 3930
+    },
+    {
+      "domain": "czech",
+      "model": "gpt2",
+      "attack": "none",
+      "rows": 7860
+    },
+    {
+      "domain": "czech",
+      "model": "gpt3",
+      "attack": "none",
+      "rows": 3930
+    },
+    {
+      "domain": "czech",
+      "model": "gpt4",
+      "attack": "none",
+      "rows": 3930
+    },
+    {
+      "domain": "czech",
+      "model": "human",
+      "attack": "none",
+      "rows": 1965
+    },
+    {
+      "domain": "czech",
+      "model": "llama-chat",
+      "attack": "none",
+      "rows": 7860
+    },
+    {
+      "domain": "czech",
+      "model": "mistral",
+      "attack": "none",
+      "rows": 7860
+    },
+    {
+      "domain": "czech",
+      "model": "mistral-chat",
+      "attack": "none",
+      "rows": 7860
+    },
+    {
+      "domain": "czech",
+      "model": "mpt",
+      "attack": "none",
+      "rows": 7860
+    },
+    {
+      "domain": "czech",
+      "model": "mpt-chat",
+      "attack": "none",
+      "rows": 7860
+    },
+    {
+      "domain": "german",
+      "model": "chatgpt",
+      "attack": "none",
+      "rows": 3940
+    },
+    {
+      "domain": "german",
+      "model": "cohere",
+      "attack": "none",
+      "rows": 3940
+    },
+    {
+      "domain": "german",
+      "model": "cohere-chat",
+      "attack": "none",
+      "rows": 3940
+    },
+    {
+      "domain": "german",
+      "model": "gpt2",
+      "attack": "none",
+      "rows": 7880
+    },
+    {
+      "domain": "german",
+      "model": "gpt3",
+      "attack": "none",
+      "rows": 3940
+    },
+    {
+      "domain": "german",
+      "model": "gpt4",
+      "attack": "none",
+      "rows": 3940
+    },
+    {
+      "domain": "german",
+      "model": "human",
+      "attack": "none",
+      "rows": 1970
+    },
+    {
+      "domain": "german",
+      "model": "llama-chat",
+      "attack": "none",
+      "rows": 7880
+    },
+    {
+      "domain": "german",
+      "model": "mistral",
+      "attack": "none",
+      "rows": 7880
+    },
+    {
+      "domain": "german",
+      "model": "mistral-chat",
+      "attack": "none",
+      "rows": 7880
+    },
+    {
+      "domain": "german",
+      "model": "mpt",
+      "attack": "none",
+      "rows": 7880
+    },
+    {
+      "domain": "german",
+      "model": "mpt-chat",
+      "attack": "none",
+      "rows": 7880
+    }
+  ],
+  "german": {
+    "unique_sources": 1970,
+    "empty_texts": 0,
+    "sources_with_human_chatgpt_gpt4": 1970,
+    "characters_by_model": {
+      "chatgpt": {
+        "min": 609,
+        "median": 1909.0,
+        "max": 2919,
+        "rows": 3940
+      },
+      "cohere": {
+        "min": 32,
+        "median": 1528.0,
+        "max": 2828,
+        "rows": 3940
+      },
+      "cohere-chat": {
+        "min": 29,
+        "median": 1416.0,
+        "max": 2934,
+        "rows": 3940
+      },
+      "gpt2": {
+        "min": 1,
+        "median": 1328.0,
+        "max": 3057,
+        "rows": 7880
+      },
+      "gpt3": {
+        "min": 50,
+        "median": 831.0,
+        "max": 2596,
+        "rows": 3940
+      },
+      "gpt4": {
+        "min": 1141,
+        "median": 1870.0,
+        "max": 2249,
+        "rows": 3940
+      },
+      "human": {
+        "min": 1000,
+        "median": 1311.0,
+        "max": 1599,
+        "rows": 1970
+      },
+      "llama-chat": {
+        "min": 407,
+        "median": 1727.0,
+        "max": 2584,
+        "rows": 7880
+      },
+      "mistral": {
+        "min": 101,
+        "median": 1573.0,
+        "max": 3023,
+        "rows": 7880
+      },
+      "mistral-chat": {
+        "min": 25,
+        "median": 1499.5,
+        "max": 2559,
+        "rows": 7880
+      },
+      "mpt": {
+        "min": 12,
+        "median": 1463.0,
+        "max": 8273,
+        "rows": 7880
+      },
+      "mpt-chat": {
+        "min": 14,
+        "median": 1255.0,
+        "max": 3112,
+        "rows": 7880
+      }
+    },
+    "settings": [
+      {
+        "model": "chatgpt",
+        "decoding": "greedy",
+        "repetition_penalty": "no",
+        "rows": 1970
+      },
+      {
+        "model": "chatgpt",
+        "decoding": "sampling",
+        "repetition_penalty": "no",
+        "rows": 1970
+      },
+      {
+        "model": "cohere",
+        "decoding": "greedy",
+        "repetition_penalty": "no",
+        "rows": 1970
+      },
+      {
+        "model": "cohere",
+        "decoding": "sampling",
+        "repetition_penalty": "no",
+        "rows": 1970
+      },
+      {
+        "model": "cohere-chat",
+        "decoding": "greedy",
+        "repetition_penalty": "no",
+        "rows": 1970
+      },
+      {
+        "model": "cohere-chat",
+        "decoding": "sampling",
+        "repetition_penalty": "no",
+        "rows": 1970
+      },
+      {
+        "model": "gpt2",
+        "decoding": "greedy",
+        "repetition_penalty": "no",
+        "rows": 1970
+      },
+      {
+        "model": "gpt2",
+        "decoding": "greedy",
+        "repetition_penalty": "yes",
+        "rows": 1970
+      },
+      {
+        "model": "gpt2",
+        "decoding": "sampling",
+        "repetition_penalty": "no",
+        "rows": 1970
+      },
+      {
+        "model": "gpt2",
+        "decoding": "sampling",
+        "repetition_penalty": "yes",
+        "rows": 1970
+      },
+      {
+        "model": "gpt3",
+        "decoding": "greedy",
+        "repetition_penalty": "no",
+        "rows": 1970
+      },
+      {
+        "model": "gpt3",
+        "decoding": "sampling",
+        "repetition_penalty": "no",
+        "rows": 1970
+      },
+      {
+        "model": "gpt4",
+        "decoding": "greedy",
+        "repetition_penalty": "no",
+        "rows": 1970
+      },
+      {
+        "model": "gpt4",
+        "decoding": "sampling",
+        "repetition_penalty": "no",
+        "rows": 1970
+      },
+      {
+        "model": "human",
+        "decoding": "",
+        "repetition_penalty": "",
+        "rows": 1970
+      },
+      {
+        "model": "llama-chat",
+        "decoding": "greedy",
+        "repetition_penalty": "no",
+        "rows": 1970
+      },
+      {
+        "model": "llama-chat",
+        "decoding": "greedy",
+        "repetition_penalty": "yes",
+        "rows": 1970
+      },
+      {
+        "model": "llama-chat",
+        "decoding": "sampling",
+        "repetition_penalty": "no",
+        "rows": 1970
+      },
+      {
+        "model": "llama-chat",
+        "decoding": "sampling",
+        "repetition_penalty": "yes",
+        "rows": 1970
+      },
+      {
+        "model": "mistral",
+        "decoding": "greedy",
+        "repetition_penalty": "no",
+        "rows": 1970
+      },
+      {
+        "model": "mistral",
+        "decoding": "greedy",
+        "repetition_penalty": "yes",
+        "rows": 1970
+      },
+      {
+        "model": "mistral",
+        "decoding": "sampling",
+        "repetition_penalty": "no",
+        "rows": 1970
+      },
+      {
+        "model": "mistral",
+        "decoding": "sampling",
+        "repetition_penalty": "yes",
+        "rows": 1970
+      },
+      {
+        "model": "mistral-chat",
+        "decoding": "greedy",
+        "repetition_penalty": "no",
+        "rows": 1970
+      },
+      {
+        "model": "mistral-chat",
+        "decoding": "greedy",
+        "repetition_penalty": "yes",
+        "rows": 1970
+      },
+      {
+        "model": "mistral-chat",
+        "decoding": "sampling",
+        "repetition_penalty": "no",
+        "rows": 1970
+      },
+      {
+        "model": "mistral-chat",
+        "decoding": "sampling",
+        "repetition_penalty": "yes",
+        "rows": 1970
+      },
+      {
+        "model": "mpt",
+        "decoding": "greedy",
+        "repetition_penalty": "no",
+        "rows": 1970
+      },
+      {
+        "model": "mpt",
+        "decoding": "greedy",
+        "repetition_penalty": "yes",
+        "rows": 1970
+      },
+      {
+        "model": "mpt",
+        "decoding": "sampling",
+        "repetition_penalty": "no",
+        "rows": 1970
+      },
+      {
+        "model": "mpt",
+        "decoding": "sampling",
+        "repetition_penalty": "yes",
+        "rows": 1970
+      },
+      {
+        "model": "mpt-chat",
+        "decoding": "greedy",
+        "repetition_penalty": "no",
+        "rows": 1970
+      },
+      {
+        "model": "mpt-chat",
+        "decoding": "greedy",
+        "repetition_penalty": "yes",
+        "rows": 1970
+      },
+      {
+        "model": "mpt-chat",
+        "decoding": "sampling",
+        "repetition_penalty": "no",
+        "rows": 1970
+      },
+      {
+        "model": "mpt-chat",
+        "decoding": "sampling",
+        "repetition_penalty": "yes",
+        "rows": 1970
+      }
+    ]
+  }
+}

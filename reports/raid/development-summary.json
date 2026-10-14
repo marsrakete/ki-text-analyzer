@@ -1,0 +1,600 @@
+{
+  "partition": "development",
+  "topics": 250,
+  "texts": 750,
+  "selectionSeed": "ki-text-analyzer-raid-v1-2026-10-14",
+  "sourceHashes": {
+    "src/analysis/analyze.js": "ed65fb795fb97ea39d292c1cacbd190e2b101ed3c184557c0de99d8069c8418a",
+    "src/analysis/metrics.js": "fe8572ae3a41e02aeeec55c629d30ba8fef16d31bf5ffe48332b97888804a22e",
+    "src/analysis/scoring.js": "5f8fa07e5a54638dd0c33dee8af1414de06990125b03014e9f645d924d18353d",
+    "src/analysis/unicode.js": "991340505774e9c1e46566fa0057bccf3b446d6710bb54c397ac33967bec5400",
+    "src/shared/text.js": "2b857d5ca93ba20500f673d2e591e80eb1dbee27ace570c407f058cc0404a0c7",
+    "src/shared/statistics.js": "6d1af583a05703b65dc0a5be684e27802c869340e0109edcc81ee7f30cfa5420",
+    "src/content/analysis-de.js": "247b98beacaae1352f2ad3cac121d1bfec803d8f4af3102e8bd8edbeb5b29c9a",
+    "src/content/reference-data.js": "6b2947e37455edf65a6e860c8765d73b527387b8a484b2e86e38b5313b3be079"
+  },
+  "models": {
+    "human": {
+      "n": 250,
+      "min": 36,
+      "q25": 50,
+      "median": 53,
+      "q75": 58,
+      "max": 77,
+      "thresholds": {
+        "60": {
+          "count": 54,
+          "rate": 0.216
+        },
+        "78": {
+          "count": 0,
+          "rate": 0
+        }
+      }
+    },
+    "chatgpt": {
+      "n": 250,
+      "min": 54,
+      "q25": 72,
+      "median": 76,
+      "q75": 80,
+      "max": 93,
+      "thresholds": {
+        "60": {
+          "count": 245,
+          "rate": 0.98
+        },
+        "78": {
+          "count": 87,
+          "rate": 0.348
+        }
+      }
+    },
+    "gpt4": {
+      "n": 250,
+      "min": 54,
+      "q25": 66,
+      "median": 72,
+      "q75": 76,
+      "max": 95,
+      "thresholds": {
+        "60": {
+          "count": 239,
+          "rate": 0.956
+        },
+        "78": {
+          "count": 48,
+          "rate": 0.192
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "chatgpt": {
+      "auroc": 0.972472,
+      "pairedScores": {
+        "higher": 240,
+        "equal": 0,
+        "lower": 10
+      }
+    },
+    "gpt4": {
+      "auroc": 0.953192,
+      "pairedScores": {
+        "higher": 238,
+        "equal": 3,
+        "lower": 9
+      }
+    }
+  },
+  "lengthGroups": {
+    "under150": {
+      "human": {
+        "n": 53,
+        "min": 40,
+        "q25": 47,
+        "median": 50,
+        "q75": 52,
+        "max": 61,
+        "thresholds": {
+          "60": {
+            "count": 2,
+            "rate": 0.03773584905660377
+          },
+          "78": {
+            "count": 0,
+            "rate": 0
+          }
+        }
+      },
+      "chatgpt": {
+        "n": 1,
+        "min": 54,
+        "q25": 54,
+        "median": 54,
+        "q75": 54,
+        "max": 54,
+        "thresholds": {
+          "60": {
+            "count": 0,
+            "rate": 0
+          },
+          "78": {
+            "count": 0,
+            "rate": 0
+          }
+        }
+      },
+      "gpt4": {
+        "n": 0,
+        "min": null,
+        "q25": null,
+        "median": null,
+        "q75": null,
+        "max": null,
+        "thresholds": {
+          "60": {
+            "count": 0,
+            "rate": null
+          },
+          "78": {
+            "count": 0,
+            "rate": null
+          }
+        }
+      },
+      "auroc": {
+        "chatgpt": 0.8584905660377359,
+        "gpt4": null
+      }
+    },
+    "150to199": {
+      "human": {
+        "n": 148,
+        "min": 36,
+        "q25": 51,
+        "median": 54,
+        "q75": 58,
+        "max": 74,
+        "thresholds": {
+          "60": {
+            "count": 32,
+            "rate": 0.21621621621621623
+          },
+          "78": {
+            "count": 0,
+            "rate": 0
+          }
+        }
+      },
+      "chatgpt": {
+        "n": 0,
+        "min": null,
+        "q25": null,
+        "median": null,
+        "q75": null,
+        "max": null,
+        "thresholds": {
+          "60": {
+            "count": 0,
+            "rate": null
+          },
+          "78": {
+            "count": 0,
+            "rate": null
+          }
+        }
+      },
+      "gpt4": {
+        "n": 0,
+        "min": null,
+        "q25": null,
+        "median": null,
+        "q75": null,
+        "max": null,
+        "thresholds": {
+          "60": {
+            "count": 0,
+            "rate": null
+          },
+          "78": {
+            "count": 0,
+            "rate": null
+          }
+        }
+      },
+      "auroc": {
+        "chatgpt": null,
+        "gpt4": null
+      }
+    },
+    "200to249": {
+      "human": {
+        "n": 49,
+        "min": 45,
+        "q25": 52,
+        "median": 57,
+        "q75": 62,
+        "max": 77,
+        "thresholds": {
+          "60": {
+            "count": 20,
+            "rate": 0.40816326530612246
+          },
+          "78": {
+            "count": 0,
+            "rate": 0
+          }
+        }
+      },
+      "chatgpt": {
+        "n": 62,
+        "min": 60,
+        "q25": 69,
+        "median": 73,
+        "q75": 77,
+        "max": 90,
+        "thresholds": {
+          "60": {
+            "count": 62,
+            "rate": 1
+          },
+          "78": {
+            "count": 15,
+            "rate": 0.24193548387096775
+          }
+        }
+      },
+      "gpt4": {
+        "n": 111,
+        "min": 54,
+        "q25": 67,
+        "median": 73,
+        "q75": 76,
+        "max": 93,
+        "thresholds": {
+          "60": {
+            "count": 108,
+            "rate": 0.972972972972973
+          },
+          "78": {
+            "count": 15,
+            "rate": 0.13513513513513514
+          }
+        }
+      },
+      "auroc": {
+        "chatgpt": 0.9540816326530612,
+        "gpt4": 0.9341790770362199
+      }
+    },
+    "250plus": {
+      "human": {
+        "n": 0,
+        "min": null,
+        "q25": null,
+        "median": null,
+        "q75": null,
+        "max": null,
+        "thresholds": {
+          "60": {
+            "count": 0,
+            "rate": null
+          },
+          "78": {
+            "count": 0,
+            "rate": null
+          }
+        }
+      },
+      "chatgpt": {
+        "n": 187,
+        "min": 56,
+        "q25": 72,
+        "median": 76,
+        "q75": 81,
+        "max": 93,
+        "thresholds": {
+          "60": {
+            "count": 183,
+            "rate": 0.9786096256684492
+          },
+          "78": {
+            "count": 72,
+            "rate": 0.3850267379679144
+          }
+        }
+      },
+      "gpt4": {
+        "n": 139,
+        "min": 57,
+        "q25": 66,
+        "median": 72,
+        "q75": 77,
+        "max": 95,
+        "thresholds": {
+          "60": {
+            "count": 131,
+            "rate": 0.9424460431654677
+          },
+          "78": {
+            "count": 33,
+            "rate": 0.23741007194244604
+          }
+        }
+      },
+      "auroc": {
+        "chatgpt": null,
+        "gpt4": null
+      }
+    }
+  },
+  "contributions": {
+    "Neutraler Ausgangswert": {
+      "human": {
+        "n": 250,
+        "totalDelta": 0
+      },
+      "chatgpt": {
+        "n": 250,
+        "totalDelta": 0
+      },
+      "gpt4": {
+        "n": 250,
+        "totalDelta": 0
+      }
+    },
+    "Hohe lexikalische Vielfalt": {
+      "human": {
+        "n": 178,
+        "totalDelta": -890
+      },
+      "gpt4": {
+        "n": 30,
+        "totalDelta": -150
+      },
+      "chatgpt": {
+        "n": 2,
+        "totalDelta": -10
+      }
+    },
+    "Hohe Vielfalt bei Satzanfängen": {
+      "human": {
+        "n": 89,
+        "totalDelta": -178
+      },
+      "chatgpt": {
+        "n": 14,
+        "totalDelta": -28
+      },
+      "gpt4": {
+        "n": 22,
+        "totalDelta": -44
+      }
+    },
+    "Erhöhte Zeichenfolgen-Wiederholung": {
+      "human": {
+        "n": 196,
+        "totalDelta": 392
+      },
+      "chatgpt": {
+        "n": 249,
+        "totalDelta": 498
+      },
+      "gpt4": {
+        "n": 250,
+        "totalDelta": 500
+      }
+    },
+    "Sehr gleichmäßige Satzlängen": {
+      "chatgpt": {
+        "n": 176,
+        "totalDelta": 2288
+      },
+      "gpt4": {
+        "n": 143,
+        "totalDelta": 1859
+      },
+      "human": {
+        "n": 1,
+        "totalDelta": 13
+      }
+    },
+    "Sehr glatte Interpunktion": {
+      "chatgpt": {
+        "n": 227,
+        "totalDelta": 908
+      },
+      "gpt4": {
+        "n": 238,
+        "totalDelta": 952
+      },
+      "human": {
+        "n": 87,
+        "totalDelta": 348
+      }
+    },
+    "Wiederholte Satzanfänge": {
+      "chatgpt": {
+        "n": 158,
+        "totalDelta": 632
+      },
+      "gpt4": {
+        "n": 118,
+        "totalDelta": 472
+      },
+      "human": {
+        "n": 23,
+        "totalDelta": 92
+      }
+    },
+    "Konstante lokale Burstiness": {
+      "chatgpt": {
+        "n": 116,
+        "totalDelta": 348
+      },
+      "gpt4": {
+        "n": 115,
+        "totalDelta": 345
+      },
+      "human": {
+        "n": 20,
+        "totalDelta": 60
+      }
+    },
+    "Wiederholte 3-Wort-Folgen": {
+      "gpt4": {
+        "n": 32,
+        "totalDelta": 256
+      },
+      "chatgpt": {
+        "n": 87,
+        "totalDelta": 696
+      },
+      "human": {
+        "n": 51,
+        "totalDelta": 408
+      }
+    },
+    "Sehr gleichmäßige Absatzlängen": {
+      "gpt4": {
+        "n": 98,
+        "totalDelta": 294
+      },
+      "chatgpt": {
+        "n": 12,
+        "totalDelta": 36
+      }
+    },
+    "Konstanter Entropieverlauf": {
+      "gpt4": {
+        "n": 79,
+        "totalDelta": 237
+      },
+      "human": {
+        "n": 66,
+        "totalDelta": 198
+      },
+      "chatgpt": {
+        "n": 92,
+        "totalDelta": 276
+      }
+    },
+    "Relativ gleichmäßige Satzlängen": {
+      "human": {
+        "n": 90,
+        "totalDelta": 540
+      },
+      "gpt4": {
+        "n": 98,
+        "totalDelta": 588
+      },
+      "chatgpt": {
+        "n": 68,
+        "totalDelta": 408
+      }
+    },
+    "Regelmäßiger Satzrhythmus": {
+      "human": {
+        "n": 4,
+        "totalDelta": 8
+      },
+      "gpt4": {
+        "n": 5,
+        "totalDelta": 10
+      },
+      "chatgpt": {
+        "n": 2,
+        "totalDelta": 4
+      }
+    },
+    "Geringere Bigramm-Diversität": {
+      "gpt4": {
+        "n": 4,
+        "totalDelta": 12
+      },
+      "chatgpt": {
+        "n": 22,
+        "totalDelta": 66
+      },
+      "human": {
+        "n": 2,
+        "totalDelta": 6
+      }
+    },
+    "Erhöhte Bigramm-Wiederholung": {
+      "gpt4": {
+        "n": 7,
+        "totalDelta": 21
+      },
+      "chatgpt": {
+        "n": 41,
+        "totalDelta": 123
+      },
+      "human": {
+        "n": 6,
+        "totalDelta": 18
+      }
+    },
+    "Mehrere Strukturwörter": {
+      "human": {
+        "n": 18,
+        "totalDelta": 108
+      },
+      "chatgpt": {
+        "n": 8,
+        "totalDelta": 48
+      },
+      "gpt4": {
+        "n": 7,
+        "totalDelta": 42
+      }
+    },
+    "Stark strukturierter Aufbau": {
+      "chatgpt": {
+        "n": 8,
+        "totalDelta": 32
+      },
+      "gpt4": {
+        "n": 7,
+        "totalDelta": 28
+      }
+    },
+    "Längenkorrektur": {
+      "human": {
+        "n": 53,
+        "totalDelta": 9.000000000000036
+      },
+      "chatgpt": {
+        "n": 1,
+        "totalDelta": -1.7999999999999972
+      }
+    },
+    "Stark variierende Satzlängen": {
+      "human": {
+        "n": 6,
+        "totalDelta": -54
+      },
+      "chatgpt": {
+        "n": 1,
+        "totalDelta": -9
+      }
+    },
+    "Generische KI-Phrase": {
+      "chatgpt": {
+        "n": 11,
+        "totalDelta": 77
+      },
+      "gpt4": {
+        "n": 14,
+        "totalDelta": 98
+      }
+    },
+    "Mehrere generische KI-Phrasen": {
+      "gpt4": {
+        "n": 1,
+        "totalDelta": 15
+      }
+    }
+  }
+}

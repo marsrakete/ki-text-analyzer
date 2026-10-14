@@ -1,0 +1,2350 @@
+{
+  "partition": "development",
+  "humanCount": 250,
+  "falsePositiveThreshold": 60,
+  "falsePositiveCount": 54,
+  "frequencies": [
+    {
+      "label": "Wiederholte 3-Wort-Folgen",
+      "falsePositive": {
+        "n": 28,
+        "totalDelta": 224,
+        "meanDelta": 4.148148148148148
+      },
+      "otherHuman": {
+        "n": 23,
+        "totalDelta": 184,
+        "meanDelta": 0.9387755102040817
+      },
+      "chatgpt": {
+        "n": 87,
+        "totalDelta": 696,
+        "meanDelta": 2.784
+      },
+      "gpt4": {
+        "n": 32,
+        "totalDelta": 256,
+        "meanDelta": 1.024
+      }
+    },
+    {
+      "label": "Relativ gleichmäßige Satzlängen",
+      "falsePositive": {
+        "n": 34,
+        "totalDelta": 204,
+        "meanDelta": 3.7777777777777777
+      },
+      "otherHuman": {
+        "n": 56,
+        "totalDelta": 336,
+        "meanDelta": 1.7142857142857142
+      },
+      "chatgpt": {
+        "n": 68,
+        "totalDelta": 408,
+        "meanDelta": 1.632
+      },
+      "gpt4": {
+        "n": 98,
+        "totalDelta": 588,
+        "meanDelta": 2.352
+      }
+    },
+    {
+      "label": "Sehr glatte Interpunktion",
+      "falsePositive": {
+        "n": 40,
+        "totalDelta": 160,
+        "meanDelta": 2.962962962962963
+      },
+      "otherHuman": {
+        "n": 47,
+        "totalDelta": 188,
+        "meanDelta": 0.9591836734693877
+      },
+      "chatgpt": {
+        "n": 227,
+        "totalDelta": 908,
+        "meanDelta": 3.632
+      },
+      "gpt4": {
+        "n": 238,
+        "totalDelta": 952,
+        "meanDelta": 3.808
+      }
+    },
+    {
+      "label": "Erhöhte Zeichenfolgen-Wiederholung",
+      "falsePositive": {
+        "n": 52,
+        "totalDelta": 104,
+        "meanDelta": 1.9259259259259258
+      },
+      "otherHuman": {
+        "n": 144,
+        "totalDelta": 288,
+        "meanDelta": 1.469387755102041
+      },
+      "chatgpt": {
+        "n": 249,
+        "totalDelta": 498,
+        "meanDelta": 1.992
+      },
+      "gpt4": {
+        "n": 250,
+        "totalDelta": 500,
+        "meanDelta": 2
+      }
+    },
+    {
+      "label": "Wiederholte Satzanfänge",
+      "falsePositive": {
+        "n": 17,
+        "totalDelta": 68,
+        "meanDelta": 1.2592592592592593
+      },
+      "otherHuman": {
+        "n": 6,
+        "totalDelta": 24,
+        "meanDelta": 0.12244897959183673
+      },
+      "chatgpt": {
+        "n": 158,
+        "totalDelta": 632,
+        "meanDelta": 2.528
+      },
+      "gpt4": {
+        "n": 118,
+        "totalDelta": 472,
+        "meanDelta": 1.888
+      }
+    },
+    {
+      "label": "Konstanter Entropieverlauf",
+      "falsePositive": {
+        "n": 19,
+        "totalDelta": 57,
+        "meanDelta": 1.0555555555555556
+      },
+      "otherHuman": {
+        "n": 47,
+        "totalDelta": 141,
+        "meanDelta": 0.7193877551020408
+      },
+      "chatgpt": {
+        "n": 92,
+        "totalDelta": 276,
+        "meanDelta": 1.104
+      },
+      "gpt4": {
+        "n": 79,
+        "totalDelta": 237,
+        "meanDelta": 0.948
+      }
+    },
+    {
+      "label": "Konstante lokale Burstiness",
+      "falsePositive": {
+        "n": 9,
+        "totalDelta": 27,
+        "meanDelta": 0.5
+      },
+      "otherHuman": {
+        "n": 11,
+        "totalDelta": 33,
+        "meanDelta": 0.1683673469387755
+      },
+      "chatgpt": {
+        "n": 116,
+        "totalDelta": 348,
+        "meanDelta": 1.392
+      },
+      "gpt4": {
+        "n": 115,
+        "totalDelta": 345,
+        "meanDelta": 1.38
+      }
+    },
+    {
+      "label": "Mehrere Strukturwörter",
+      "falsePositive": {
+        "n": 4,
+        "totalDelta": 24,
+        "meanDelta": 0.4444444444444444
+      },
+      "otherHuman": {
+        "n": 14,
+        "totalDelta": 84,
+        "meanDelta": 0.42857142857142855
+      },
+      "chatgpt": {
+        "n": 8,
+        "totalDelta": 48,
+        "meanDelta": 0.192
+      },
+      "gpt4": {
+        "n": 7,
+        "totalDelta": 42,
+        "meanDelta": 0.168
+      }
+    },
+    {
+      "label": "Erhöhte Bigramm-Wiederholung",
+      "falsePositive": {
+        "n": 6,
+        "totalDelta": 18,
+        "meanDelta": 0.3333333333333333
+      },
+      "otherHuman": {
+        "n": 0,
+        "totalDelta": 0,
+        "meanDelta": 0
+      },
+      "chatgpt": {
+        "n": 41,
+        "totalDelta": 123,
+        "meanDelta": 0.492
+      },
+      "gpt4": {
+        "n": 7,
+        "totalDelta": 21,
+        "meanDelta": 0.084
+      }
+    },
+    {
+      "label": "Sehr gleichmäßige Satzlängen",
+      "falsePositive": {
+        "n": 1,
+        "totalDelta": 13,
+        "meanDelta": 0.24074074074074073
+      },
+      "otherHuman": {
+        "n": 0,
+        "totalDelta": 0,
+        "meanDelta": 0
+      },
+      "chatgpt": {
+        "n": 176,
+        "totalDelta": 2288,
+        "meanDelta": 9.152
+      },
+      "gpt4": {
+        "n": 143,
+        "totalDelta": 1859,
+        "meanDelta": 7.436
+      }
+    },
+    {
+      "label": "Geringere Bigramm-Diversität",
+      "falsePositive": {
+        "n": 2,
+        "totalDelta": 6,
+        "meanDelta": 0.1111111111111111
+      },
+      "otherHuman": {
+        "n": 0,
+        "totalDelta": 0,
+        "meanDelta": 0
+      },
+      "chatgpt": {
+        "n": 22,
+        "totalDelta": 66,
+        "meanDelta": 0.264
+      },
+      "gpt4": {
+        "n": 4,
+        "totalDelta": 12,
+        "meanDelta": 0.048
+      }
+    },
+    {
+      "label": "Regelmäßiger Satzrhythmus",
+      "falsePositive": {
+        "n": 1,
+        "totalDelta": 2,
+        "meanDelta": 0.037037037037037035
+      },
+      "otherHuman": {
+        "n": 3,
+        "totalDelta": 6,
+        "meanDelta": 0.030612244897959183
+      },
+      "chatgpt": {
+        "n": 2,
+        "totalDelta": 4,
+        "meanDelta": 0.016
+      },
+      "gpt4": {
+        "n": 5,
+        "totalDelta": 10,
+        "meanDelta": 0.04
+      }
+    },
+    {
+      "label": "Neutraler Ausgangswert",
+      "falsePositive": {
+        "n": 0,
+        "totalDelta": 0,
+        "meanDelta": 0
+      },
+      "otherHuman": {
+        "n": 0,
+        "totalDelta": 0,
+        "meanDelta": 0
+      },
+      "chatgpt": {
+        "n": 0,
+        "totalDelta": 0,
+        "meanDelta": 0
+      },
+      "gpt4": {
+        "n": 0,
+        "totalDelta": 0,
+        "meanDelta": 0
+      }
+    },
+    {
+      "label": "Sehr gleichmäßige Absatzlängen",
+      "falsePositive": {
+        "n": 0,
+        "totalDelta": 0,
+        "meanDelta": 0
+      },
+      "otherHuman": {
+        "n": 0,
+        "totalDelta": 0,
+        "meanDelta": 0
+      },
+      "chatgpt": {
+        "n": 12,
+        "totalDelta": 36,
+        "meanDelta": 0.144
+      },
+      "gpt4": {
+        "n": 98,
+        "totalDelta": 294,
+        "meanDelta": 1.176
+      }
+    },
+    {
+      "label": "Stark strukturierter Aufbau",
+      "falsePositive": {
+        "n": 0,
+        "totalDelta": 0,
+        "meanDelta": 0
+      },
+      "otherHuman": {
+        "n": 0,
+        "totalDelta": 0,
+        "meanDelta": 0
+      },
+      "chatgpt": {
+        "n": 8,
+        "totalDelta": 32,
+        "meanDelta": 0.128
+      },
+      "gpt4": {
+        "n": 7,
+        "totalDelta": 28,
+        "meanDelta": 0.112
+      }
+    },
+    {
+      "label": "Stark variierende Satzlängen",
+      "falsePositive": {
+        "n": 0,
+        "totalDelta": 0,
+        "meanDelta": 0
+      },
+      "otherHuman": {
+        "n": 0,
+        "totalDelta": -54,
+        "meanDelta": -0.2755102040816326
+      },
+      "chatgpt": {
+        "n": 0,
+        "totalDelta": -9,
+        "meanDelta": -0.036
+      },
+      "gpt4": {
+        "n": 0,
+        "totalDelta": 0,
+        "meanDelta": 0
+      }
+    },
+    {
+      "label": "Generische KI-Phrase",
+      "falsePositive": {
+        "n": 0,
+        "totalDelta": 0,
+        "meanDelta": 0
+      },
+      "otherHuman": {
+        "n": 0,
+        "totalDelta": 0,
+        "meanDelta": 0
+      },
+      "chatgpt": {
+        "n": 11,
+        "totalDelta": 77,
+        "meanDelta": 0.308
+      },
+      "gpt4": {
+        "n": 14,
+        "totalDelta": 98,
+        "meanDelta": 0.392
+      }
+    },
+    {
+      "label": "Mehrere generische KI-Phrasen",
+      "falsePositive": {
+        "n": 0,
+        "totalDelta": 0,
+        "meanDelta": 0
+      },
+      "otherHuman": {
+        "n": 0,
+        "totalDelta": 0,
+        "meanDelta": 0
+      },
+      "chatgpt": {
+        "n": 0,
+        "totalDelta": 0,
+        "meanDelta": 0
+      },
+      "gpt4": {
+        "n": 1,
+        "totalDelta": 15,
+        "meanDelta": 0.06
+      }
+    },
+    {
+      "label": "Längenkorrektur",
+      "falsePositive": {
+        "n": 0,
+        "totalDelta": -8.700000000000003,
+        "meanDelta": -0.16111111111111118
+      },
+      "otherHuman": {
+        "n": 25,
+        "totalDelta": 17.70000000000004,
+        "meanDelta": 0.09030612244897979
+      },
+      "chatgpt": {
+        "n": 0,
+        "totalDelta": -1.7999999999999972,
+        "meanDelta": -0.0071999999999999885
+      },
+      "gpt4": {
+        "n": 0,
+        "totalDelta": 0,
+        "meanDelta": 0
+      }
+    },
+    {
+      "label": "Hohe Vielfalt bei Satzanfängen",
+      "falsePositive": {
+        "n": 0,
+        "totalDelta": -22,
+        "meanDelta": -0.4074074074074074
+      },
+      "otherHuman": {
+        "n": 0,
+        "totalDelta": -156,
+        "meanDelta": -0.7959183673469388
+      },
+      "chatgpt": {
+        "n": 0,
+        "totalDelta": -28,
+        "meanDelta": -0.112
+      },
+      "gpt4": {
+        "n": 0,
+        "totalDelta": -44,
+        "meanDelta": -0.176
+      }
+    },
+    {
+      "label": "Hohe lexikalische Vielfalt",
+      "falsePositive": {
+        "n": 0,
+        "totalDelta": -85,
+        "meanDelta": -1.5740740740740742
+      },
+      "otherHuman": {
+        "n": 0,
+        "totalDelta": -805,
+        "meanDelta": -4.107142857142857
+      },
+      "chatgpt": {
+        "n": 0,
+        "totalDelta": -10,
+        "meanDelta": -0.04
+      },
+      "gpt4": {
+        "n": 0,
+        "totalDelta": -150,
+        "meanDelta": -0.6
+      }
+    }
+  ],
+  "ablations": [
+    {
+      "removedRule": "Wiederholte 3-Wort-Folgen",
+      "groups": {
+        "human": {
+          "n": 250,
+          "originalAt60": 54,
+          "withoutRuleAt60": 39
+        },
+        "chatgpt": {
+          "n": 250,
+          "originalAt60": 245,
+          "withoutRuleAt60": 244
+        },
+        "gpt4": {
+          "n": 250,
+          "originalAt60": 239,
+          "withoutRuleAt60": 239
+        }
+      }
+    },
+    {
+      "removedRule": "Relativ gleichmäßige Satzlängen",
+      "groups": {
+        "human": {
+          "n": 250,
+          "originalAt60": 54,
+          "withoutRuleAt60": 29
+        },
+        "chatgpt": {
+          "n": 250,
+          "originalAt60": 245,
+          "withoutRuleAt60": 230
+        },
+        "gpt4": {
+          "n": 250,
+          "originalAt60": 239,
+          "withoutRuleAt60": 204
+        }
+      }
+    },
+    {
+      "removedRule": "Sehr glatte Interpunktion",
+      "groups": {
+        "human": {
+          "n": 250,
+          "originalAt60": 54,
+          "withoutRuleAt60": 34
+        },
+        "chatgpt": {
+          "n": 250,
+          "originalAt60": 245,
+          "withoutRuleAt60": 233
+        },
+        "gpt4": {
+          "n": 250,
+          "originalAt60": 239,
+          "withoutRuleAt60": 218
+        }
+      }
+    },
+    {
+      "removedRule": "Erhöhte Zeichenfolgen-Wiederholung",
+      "groups": {
+        "human": {
+          "n": 250,
+          "originalAt60": 54,
+          "withoutRuleAt60": 40
+        },
+        "chatgpt": {
+          "n": 250,
+          "originalAt60": 245,
+          "withoutRuleAt60": 243
+        },
+        "gpt4": {
+          "n": 250,
+          "originalAt60": 239,
+          "withoutRuleAt60": 232
+        }
+      }
+    },
+    {
+      "removedRule": "Wiederholte Satzanfänge",
+      "groups": {
+        "human": {
+          "n": 250,
+          "originalAt60": 54,
+          "withoutRuleAt60": 48
+        },
+        "chatgpt": {
+          "n": 250,
+          "originalAt60": 245,
+          "withoutRuleAt60": 243
+        },
+        "gpt4": {
+          "n": 250,
+          "originalAt60": 239,
+          "withoutRuleAt60": 235
+        }
+      }
+    },
+    {
+      "removedRule": "Konstanter Entropieverlauf",
+      "groups": {
+        "human": {
+          "n": 250,
+          "originalAt60": 54,
+          "withoutRuleAt60": 49
+        },
+        "chatgpt": {
+          "n": 250,
+          "originalAt60": 245,
+          "withoutRuleAt60": 245
+        },
+        "gpt4": {
+          "n": 250,
+          "originalAt60": 239,
+          "withoutRuleAt60": 238
+        }
+      }
+    },
+    {
+      "removedRule": "Konstante lokale Burstiness",
+      "groups": {
+        "human": {
+          "n": 250,
+          "originalAt60": 54,
+          "withoutRuleAt60": 50
+        },
+        "chatgpt": {
+          "n": 250,
+          "originalAt60": 245,
+          "withoutRuleAt60": 245
+        },
+        "gpt4": {
+          "n": 250,
+          "originalAt60": 239,
+          "withoutRuleAt60": 237
+        }
+      }
+    },
+    {
+      "removedRule": "Mehrere Strukturwörter",
+      "groups": {
+        "human": {
+          "n": 250,
+          "originalAt60": 54,
+          "withoutRuleAt60": 52
+        },
+        "chatgpt": {
+          "n": 250,
+          "originalAt60": 245,
+          "withoutRuleAt60": 245
+        },
+        "gpt4": {
+          "n": 250,
+          "originalAt60": 239,
+          "withoutRuleAt60": 239
+        }
+      }
+    },
+    {
+      "removedRule": "Erhöhte Bigramm-Wiederholung",
+      "groups": {
+        "human": {
+          "n": 250,
+          "originalAt60": 54,
+          "withoutRuleAt60": 54
+        },
+        "chatgpt": {
+          "n": 250,
+          "originalAt60": 245,
+          "withoutRuleAt60": 245
+        },
+        "gpt4": {
+          "n": 250,
+          "originalAt60": 239,
+          "withoutRuleAt60": 239
+        }
+      }
+    },
+    {
+      "removedRule": "Sehr gleichmäßige Satzlängen",
+      "groups": {
+        "human": {
+          "n": 250,
+          "originalAt60": 54,
+          "withoutRuleAt60": 53
+        },
+        "chatgpt": {
+          "n": 250,
+          "originalAt60": 245,
+          "withoutRuleAt60": 211
+        },
+        "gpt4": {
+          "n": 250,
+          "originalAt60": 239,
+          "withoutRuleAt60": 197
+        }
+      }
+    },
+    {
+      "removedRule": "Geringere Bigramm-Diversität",
+      "groups": {
+        "human": {
+          "n": 250,
+          "originalAt60": 54,
+          "withoutRuleAt60": 54
+        },
+        "chatgpt": {
+          "n": 250,
+          "originalAt60": 245,
+          "withoutRuleAt60": 245
+        },
+        "gpt4": {
+          "n": 250,
+          "originalAt60": 239,
+          "withoutRuleAt60": 239
+        }
+      }
+    },
+    {
+      "removedRule": "Regelmäßiger Satzrhythmus",
+      "groups": {
+        "human": {
+          "n": 250,
+          "originalAt60": 54,
+          "withoutRuleAt60": 54
+        },
+        "chatgpt": {
+          "n": 250,
+          "originalAt60": 245,
+          "withoutRuleAt60": 245
+        },
+        "gpt4": {
+          "n": 250,
+          "originalAt60": 239,
+          "withoutRuleAt60": 239
+        }
+      }
+    }
+  ],
+  "lengthMatches": {
+    "chatgpt": {
+      "method": "one-to-one sorted-word-count matching, no reuse, absolute word-count gap at most 10; topics may differ",
+      "pairs": [
+        {
+          "humanId": "13f5ed17-f549-450f-8ceb-2a33bd46a172",
+          "aiId": "fd8a7f12-ba55-4643-926b-2833f4a2872a",
+          "humanWords": 203,
+          "aiWords": 213,
+          "humanScore": 55,
+          "aiScore": 80
+        },
+        {
+          "humanId": "8cc7464b-7b7f-4804-8020-f230aa6afc98",
+          "aiId": "a5c4fe6a-b654-45e1-a237-1b2a9b878b79",
+          "humanWords": 208,
+          "aiWords": 218,
+          "humanScore": 51,
+          "aiScore": 67
+        },
+        {
+          "humanId": "104087e9-041c-41f4-b35c-a1a2926a948f",
+          "aiId": "bfdbc083-2735-471a-b09c-d1004c24eae4",
+          "humanWords": 210,
+          "aiWords": 220,
+          "humanScore": 52,
+          "aiScore": 62
+        },
+        {
+          "humanId": "1b2c9f5f-8ca3-4991-807a-e028574ce1e7",
+          "aiId": "71bf6af0-9054-418e-897b-1b92251a6691",
+          "humanWords": 215,
+          "aiWords": 225,
+          "humanScore": 67,
+          "aiScore": 75
+        },
+        {
+          "humanId": "3f2f5144-8b3f-4500-9c14-e4593a1996d0",
+          "aiId": "9b427923-6947-4c35-920e-d6a28e5801fd",
+          "humanWords": 216,
+          "aiWords": 226,
+          "humanScore": 49,
+          "aiScore": 81
+        },
+        {
+          "humanId": "cffced5f-a47e-40c8-9e13-4c696928de77",
+          "aiId": "ca866fd1-ae71-4147-ab15-cda185f2499d",
+          "humanWords": 217,
+          "aiWords": 227,
+          "humanScore": 45,
+          "aiScore": 76
+        },
+        {
+          "humanId": "4d4800af-e00e-4faa-bb4f-72b52f5c1b3a",
+          "aiId": "33707dee-9dec-4a64-af74-fd4b8cb9d693",
+          "humanWords": 219,
+          "aiWords": 228,
+          "humanScore": 48,
+          "aiScore": 76
+        },
+        {
+          "humanId": "e849309b-8e23-44d4-ac5c-5ef169108d33",
+          "aiId": "5b9b5785-d1f2-4b85-a6e6-e7fa39d77fea",
+          "humanWords": 219,
+          "aiWords": 229,
+          "humanScore": 56,
+          "aiScore": 64
+        },
+        {
+          "humanId": "0b3ac6eb-daab-4e9a-a850-fa07b714d8c7",
+          "aiId": "a9c276be-101e-40d0-a321-6985f6591c9f",
+          "humanWords": 221,
+          "aiWords": 230,
+          "humanScore": 62,
+          "aiScore": 65
+        },
+        {
+          "humanId": "537fca16-6d40-4e15-9775-c812bc8aac31",
+          "aiId": "c7123927-1b8c-4ea8-a44f-ccf49cfd5c87",
+          "humanWords": 224,
+          "aiWords": 231,
+          "humanScore": 59,
+          "aiScore": 81
+        },
+        {
+          "humanId": "f7fa4f06-bc14-4004-87e1-fb747cdcecf7",
+          "aiId": "deec03b9-d804-4d00-aaa9-699464cd9b6e",
+          "humanWords": 224,
+          "aiWords": 232,
+          "humanScore": 59,
+          "aiScore": 70
+        },
+        {
+          "humanId": "11e2c217-8569-4eed-9e76-e8f7763726c8",
+          "aiId": "d6948d4d-6138-4267-b605-9e7f63f95afc",
+          "humanWords": 225,
+          "aiWords": 234,
+          "humanScore": 65,
+          "aiScore": 79
+        },
+        {
+          "humanId": "4f40e77a-0964-4574-8cb5-342138c6fdf9",
+          "aiId": "d8b69b93-e644-41bc-8c6d-db16ee3a26d4",
+          "humanWords": 229,
+          "aiWords": 234,
+          "humanScore": 77,
+          "aiScore": 84
+        },
+        {
+          "humanId": "f0630632-09b2-4a0a-8ea3-a4afb42975d6",
+          "aiId": "6fcb9511-7460-4b30-98b3-5e2a419e356c",
+          "humanWords": 230,
+          "aiWords": 235,
+          "humanScore": 55,
+          "aiScore": 62
+        }
+      ]
+    },
+    "gpt4": {
+      "method": "one-to-one sorted-word-count matching, no reuse, absolute word-count gap at most 10; topics may differ",
+      "pairs": [
+        {
+          "humanId": "73b2fde8-2a65-4fc6-af2f-7b87fcbe0c6b",
+          "aiId": "c6818b8b-8357-4e79-953a-36d92b2e2b30",
+          "humanWords": 200,
+          "aiWords": 210,
+          "humanScore": 55,
+          "aiScore": 76
+        },
+        {
+          "humanId": "a6609469-febf-4025-8950-58ed9f6b8c98",
+          "aiId": "fa6e247b-e6d7-4a58-93ea-f1e8a8e186c0",
+          "humanWords": 205,
+          "aiWords": 215,
+          "humanScore": 64,
+          "aiScore": 60
+        },
+        {
+          "humanId": "733f58bd-f8a7-46a2-8960-1191e347100f",
+          "aiId": "9cccb6fe-7a45-40a1-aa42-82ac76780ee3",
+          "humanWords": 209,
+          "aiWords": 219,
+          "humanScore": 60,
+          "aiScore": 67
+        },
+        {
+          "humanId": "0d58dcdd-0042-483a-a336-5e022063023b",
+          "aiId": "ed5d94b1-3173-4d26-bb81-f352e201d065",
+          "humanWords": 211,
+          "aiWords": 221,
+          "humanScore": 45,
+          "aiScore": 77
+        },
+        {
+          "humanId": "75b5c416-07ba-47a5-8700-ceca7f328e13",
+          "aiId": "603cb850-15d9-4b43-a307-0fcf8cc9edf7",
+          "humanWords": 212,
+          "aiWords": 222,
+          "humanScore": 68,
+          "aiScore": 69
+        },
+        {
+          "humanId": "883b11ae-023b-431e-8e26-f795045fc144",
+          "aiId": "f7a13f74-18bc-46b5-a4db-4d710747f1cf",
+          "humanWords": 212,
+          "aiWords": 222,
+          "humanScore": 60,
+          "aiScore": 73
+        },
+        {
+          "humanId": "2c2eab5a-1da3-46e2-91f9-d3834dbf96a9",
+          "aiId": "15adb443-8441-49f2-8435-07f94df88b23",
+          "humanWords": 213,
+          "aiWords": 223,
+          "humanScore": 56,
+          "aiScore": 62
+        },
+        {
+          "humanId": "778d8f28-84f2-44a8-9baa-05c1d57d02e7",
+          "aiId": "96c38f03-7c86-48c8-bf2b-cbcb082a300d",
+          "humanWords": 213,
+          "aiWords": 223,
+          "humanScore": 56,
+          "aiScore": 83
+        },
+        {
+          "humanId": "1b2c9f5f-8ca3-4991-807a-e028574ce1e7",
+          "aiId": "d055c9c1-34f0-4c5e-842b-68423274531e",
+          "humanWords": 215,
+          "aiWords": 224,
+          "humanScore": 67,
+          "aiScore": 77
+        },
+        {
+          "humanId": "4d4800af-e00e-4faa-bb4f-72b52f5c1b3a",
+          "aiId": "aaf27c0d-fdad-4e9b-bc0a-82fc39b00e7d",
+          "humanWords": 219,
+          "aiWords": 228,
+          "humanScore": 48,
+          "aiScore": 81
+        },
+        {
+          "humanId": "e849309b-8e23-44d4-ac5c-5ef169108d33",
+          "aiId": "2877cbb5-7ff7-40d5-9c92-af1e4851504a",
+          "humanWords": 219,
+          "aiWords": 229,
+          "humanScore": 56,
+          "aiScore": 58
+        },
+        {
+          "humanId": "0b3ac6eb-daab-4e9a-a850-fa07b714d8c7",
+          "aiId": "74bff677-dd8f-4923-9b9a-a8178adcd172",
+          "humanWords": 221,
+          "aiWords": 230,
+          "humanScore": 62,
+          "aiScore": 65
+        },
+        {
+          "humanId": "537fca16-6d40-4e15-9775-c812bc8aac31",
+          "aiId": "c630e048-4b74-4708-aa31-10f70661f2d0",
+          "humanWords": 224,
+          "aiWords": 230,
+          "humanScore": 59,
+          "aiScore": 76
+        },
+        {
+          "humanId": "f7fa4f06-bc14-4004-87e1-fb747cdcecf7",
+          "aiId": "02bccded-b740-4d23-844b-bf27027649ea",
+          "humanWords": 224,
+          "aiWords": 231,
+          "humanScore": 59,
+          "aiScore": 72
+        },
+        {
+          "humanId": "11e2c217-8569-4eed-9e76-e8f7763726c8",
+          "aiId": "96f597f7-8cfb-453c-9cb8-513375b711fc",
+          "humanWords": 225,
+          "aiWords": 231,
+          "humanScore": 65,
+          "aiScore": 72
+        },
+        {
+          "humanId": "4f40e77a-0964-4574-8cb5-342138c6fdf9",
+          "aiId": "422db799-3f07-405c-a256-e55bdf0e20ca",
+          "humanWords": 229,
+          "aiWords": 232,
+          "humanScore": 77,
+          "aiScore": 64
+        },
+        {
+          "humanId": "f0630632-09b2-4a0a-8ea3-a4afb42975d6",
+          "aiId": "4be20b0e-9e10-4011-9a5f-5363673ab385",
+          "humanWords": 230,
+          "aiWords": 232,
+          "humanScore": 55,
+          "aiScore": 68
+        }
+      ]
+    }
+  },
+  "falsePositives": [
+    {
+      "id": "196b1ba6-ceb0-4d56-9cae-c178849b0ccd",
+      "source_id": "196b1ba6-ceb0-4d56-9cae-c178849b0ccd",
+      "words": 150,
+      "score": 60,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Wiederholte Satzanfänge",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstanter Entropieverlauf",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "aafb0eb0-22ed-41e9-8ab5-d6200def6f03",
+      "source_id": "aafb0eb0-22ed-41e9-8ab5-d6200def6f03",
+      "words": 194,
+      "score": 73,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstanter Entropieverlauf",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "b2e158bb-adfb-4505-9ef6-949aa6ea565f",
+      "source_id": "b2e158bb-adfb-4505-9ef6-949aa6ea565f",
+      "words": 190,
+      "score": 74,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Mehrere Strukturwörter",
+          "delta": 6
+        },
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Regelmäßiger Satzrhythmus",
+          "delta": 2
+        },
+        {
+          "label": "Konstanter Entropieverlauf",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "1cd84869-6ba4-4224-b38d-55ca55a91e5c",
+      "source_id": "1cd84869-6ba4-4224-b38d-55ca55a91e5c",
+      "words": 197,
+      "score": 63,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstanter Entropieverlauf",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "68776623-4f52-439f-9897-b74aac53cb3f",
+      "source_id": "68776623-4f52-439f-9897-b74aac53cb3f",
+      "words": 141,
+      "score": 61,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Mehrere Strukturwörter",
+          "delta": 6
+        },
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        }
+      ]
+    },
+    {
+      "id": "2021e7c1-d223-4011-8f45-ab3e68a3de9d",
+      "source_id": "2021e7c1-d223-4011-8f45-ab3e68a3de9d",
+      "words": 196,
+      "score": 74,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Mehrere Strukturwörter",
+          "delta": 6
+        },
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstanter Entropieverlauf",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "be86ab82-35ad-465d-94b8-905febe37ca8",
+      "source_id": "be86ab82-35ad-465d-94b8-905febe37ca8",
+      "words": 202,
+      "score": 64,
+      "positiveRules": [
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        }
+      ]
+    },
+    {
+      "id": "2ab6158a-ab91-48c3-a709-4cb221eb8411",
+      "source_id": "2ab6158a-ab91-48c3-a709-4cb221eb8411",
+      "words": 202,
+      "score": 62,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        }
+      ]
+    },
+    {
+      "id": "3abc1198-4cc9-4b79-8be3-9e2aceba44b2",
+      "source_id": "3abc1198-4cc9-4b79-8be3-9e2aceba44b2",
+      "words": 157,
+      "score": 73,
+      "positiveRules": [
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Wiederholte Satzanfänge",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Geringere Bigramm-Diversität",
+          "delta": 3
+        },
+        {
+          "label": "Erhöhte Bigramm-Wiederholung",
+          "delta": 3
+        },
+        {
+          "label": "Konstanter Entropieverlauf",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "4bb9d160-6e0c-43db-97d1-5752bdb4a9e4",
+      "source_id": "4bb9d160-6e0c-43db-97d1-5752bdb4a9e4",
+      "words": 193,
+      "score": 65,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstanter Entropieverlauf",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "8254a3ee-5b0a-43cf-9e80-7d1040ce536c",
+      "source_id": "8254a3ee-5b0a-43cf-9e80-7d1040ce536c",
+      "words": 216,
+      "score": 62,
+      "positiveRules": [
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstante lokale Burstiness",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "b7f270b9-e47c-4026-b00e-57520f59361c",
+      "source_id": "b7f270b9-e47c-4026-b00e-57520f59361c",
+      "words": 174,
+      "score": 61,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        }
+      ]
+    },
+    {
+      "id": "e930641c-e08e-4163-8db6-ac67902acb1b",
+      "source_id": "e930641c-e08e-4163-8db6-ac67902acb1b",
+      "words": 196,
+      "score": 62,
+      "positiveRules": [
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstanter Entropieverlauf",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "0254bcda-d737-4a8e-9eff-03785fd87ac3",
+      "source_id": "0254bcda-d737-4a8e-9eff-03785fd87ac3",
+      "words": 190,
+      "score": 61,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Wiederholte Satzanfänge",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        }
+      ]
+    },
+    {
+      "id": "67504e9a-466e-4eac-9c04-92caea259260",
+      "source_id": "67504e9a-466e-4eac-9c04-92caea259260",
+      "words": 171,
+      "score": 65,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Wiederholte Satzanfänge",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstante lokale Burstiness",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "c83ddbb8-ed0b-4c29-a6fb-5798b584ac63",
+      "source_id": "c83ddbb8-ed0b-4c29-a6fb-5798b584ac63",
+      "words": 196,
+      "score": 64,
+      "positiveRules": [
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        }
+      ]
+    },
+    {
+      "id": "65ad9335-c137-47b0-b160-1f7de9b65ad5",
+      "source_id": "65ad9335-c137-47b0-b160-1f7de9b65ad5",
+      "words": 154,
+      "score": 64,
+      "positiveRules": [
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Geringere Bigramm-Diversität",
+          "delta": 3
+        },
+        {
+          "label": "Erhöhte Bigramm-Wiederholung",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "883b11ae-023b-431e-8e26-f795045fc144",
+      "source_id": "883b11ae-023b-431e-8e26-f795045fc144",
+      "words": 212,
+      "score": 60,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        }
+      ]
+    },
+    {
+      "id": "69d62f75-6129-4a50-96fc-01a3583b999d",
+      "source_id": "69d62f75-6129-4a50-96fc-01a3583b999d",
+      "words": 186,
+      "score": 72,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Wiederholte Satzanfänge",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstanter Entropieverlauf",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "4f40e77a-0964-4574-8cb5-342138c6fdf9",
+      "source_id": "4f40e77a-0964-4574-8cb5-342138c6fdf9",
+      "words": 229,
+      "score": 77,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Wiederholte Satzanfänge",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstanter Entropieverlauf",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "62a82370-24f8-4738-a4ae-017186d24931",
+      "source_id": "62a82370-24f8-4738-a4ae-017186d24931",
+      "words": 215,
+      "score": 60,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        }
+      ]
+    },
+    {
+      "id": "f0f4b462-d5f7-467f-aed1-a75ce5d46190",
+      "source_id": "f0f4b462-d5f7-467f-aed1-a75ce5d46190",
+      "words": 170,
+      "score": 62,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Mehrere Strukturwörter",
+          "delta": 6
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstante lokale Burstiness",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "62bb1937-c902-48fb-a8ea-9e4a074ac7cc",
+      "source_id": "62bb1937-c902-48fb-a8ea-9e4a074ac7cc",
+      "words": 203,
+      "score": 60,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        }
+      ]
+    },
+    {
+      "id": "3d90efc4-ca65-4679-ba83-a89ba7842f2a",
+      "source_id": "3d90efc4-ca65-4679-ba83-a89ba7842f2a",
+      "words": 179,
+      "score": 69,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstanter Entropieverlauf",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "05a06c02-7975-4c7d-a1b5-78386112c37e",
+      "source_id": "05a06c02-7975-4c7d-a1b5-78386112c37e",
+      "words": 141,
+      "score": 60,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        }
+      ]
+    },
+    {
+      "id": "4e000e34-b2bf-4144-ad7e-97ec71dd09c7",
+      "source_id": "4e000e34-b2bf-4144-ad7e-97ec71dd09c7",
+      "words": 194,
+      "score": 70,
+      "positiveRules": [
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Erhöhte Bigramm-Wiederholung",
+          "delta": 3
+        },
+        {
+          "label": "Konstanter Entropieverlauf",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "3e164e5a-6dff-429d-900d-fb0612c414e5",
+      "source_id": "3e164e5a-6dff-429d-900d-fb0612c414e5",
+      "words": 197,
+      "score": 65,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstanter Entropieverlauf",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "f8ac6085-e169-4860-b855-16d247a27637",
+      "source_id": "f8ac6085-e169-4860-b855-16d247a27637",
+      "words": 208,
+      "score": 63,
+      "positiveRules": [
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Wiederholte Satzanfänge",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstante lokale Burstiness",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "bc3ce6c3-61ef-44ca-941e-b79cb3999a84",
+      "source_id": "bc3ce6c3-61ef-44ca-941e-b79cb3999a84",
+      "words": 179,
+      "score": 69,
+      "positiveRules": [
+        {
+          "label": "Sehr gleichmäßige Satzlängen",
+          "delta": 13
+        },
+        {
+          "label": "Wiederholte Satzanfänge",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        }
+      ]
+    },
+    {
+      "id": "a6609469-febf-4025-8950-58ed9f6b8c98",
+      "source_id": "a6609469-febf-4025-8950-58ed9f6b8c98",
+      "words": 205,
+      "score": 64,
+      "positiveRules": [
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        }
+      ]
+    },
+    {
+      "id": "a1d3c85d-e0bb-40ad-910d-fe8031ad82c8",
+      "source_id": "a1d3c85d-e0bb-40ad-910d-fe8031ad82c8",
+      "words": 166,
+      "score": 64,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstante lokale Burstiness",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "01d1f703-47bd-4295-aa7e-16df4c768c8c",
+      "source_id": "01d1f703-47bd-4295-aa7e-16df4c768c8c",
+      "words": 198,
+      "score": 60,
+      "positiveRules": [
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Wiederholte Satzanfänge",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        }
+      ]
+    },
+    {
+      "id": "ee043991-9dd0-4df9-8610-1be091d5ab9f",
+      "source_id": "ee043991-9dd0-4df9-8610-1be091d5ab9f",
+      "words": 191,
+      "score": 60,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstanter Entropieverlauf",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "fe2a6053-3278-48d4-8e51-565102eed901",
+      "source_id": "fe2a6053-3278-48d4-8e51-565102eed901",
+      "words": 207,
+      "score": 60,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        }
+      ]
+    },
+    {
+      "id": "71d36e40-20ff-4157-9414-e864d21283f7",
+      "source_id": "71d36e40-20ff-4157-9414-e864d21283f7",
+      "words": 199,
+      "score": 74,
+      "positiveRules": [
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Wiederholte Satzanfänge",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Erhöhte Bigramm-Wiederholung",
+          "delta": 3
+        },
+        {
+          "label": "Konstanter Entropieverlauf",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "1b2c9f5f-8ca3-4991-807a-e028574ce1e7",
+      "source_id": "1b2c9f5f-8ca3-4991-807a-e028574ce1e7",
+      "words": 215,
+      "score": 67,
+      "positiveRules": [
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Erhöhte Bigramm-Wiederholung",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "63a47829-581e-40e4-b2a1-b9d9a430b69a",
+      "source_id": "63a47829-581e-40e4-b2a1-b9d9a430b69a",
+      "words": 195,
+      "score": 60,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstanter Entropieverlauf",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "9e630a75-aa14-46ec-8204-b8cb1f268dd5",
+      "source_id": "9e630a75-aa14-46ec-8204-b8cb1f268dd5",
+      "words": 171,
+      "score": 63,
+      "positiveRules": [
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Erhöhte Bigramm-Wiederholung",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "0b3ac6eb-daab-4e9a-a850-fa07b714d8c7",
+      "source_id": "0b3ac6eb-daab-4e9a-a850-fa07b714d8c7",
+      "words": 221,
+      "score": 62,
+      "positiveRules": [
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        }
+      ]
+    },
+    {
+      "id": "23d3928b-b601-4c84-af56-d86614a8c6a4",
+      "source_id": "23d3928b-b601-4c84-af56-d86614a8c6a4",
+      "words": 195,
+      "score": 71,
+      "positiveRules": [
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Wiederholte Satzanfänge",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstanter Entropieverlauf",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "49e954ce-fe6d-4fdc-8833-d225a9ac2512",
+      "source_id": "49e954ce-fe6d-4fdc-8833-d225a9ac2512",
+      "words": 160,
+      "score": 64,
+      "positiveRules": [
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Wiederholte Satzanfänge",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        }
+      ]
+    },
+    {
+      "id": "9fc22935-989b-4946-915b-75fafbbae41e",
+      "source_id": "9fc22935-989b-4946-915b-75fafbbae41e",
+      "words": 216,
+      "score": 65,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstanter Entropieverlauf",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "06d9116a-4a04-4b55-a04d-73933f79e308",
+      "source_id": "06d9116a-4a04-4b55-a04d-73933f79e308",
+      "words": 199,
+      "score": 68,
+      "positiveRules": [
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Wiederholte Satzanfänge",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        }
+      ]
+    },
+    {
+      "id": "55e06f28-f958-4046-9ee7-ce44b63a2f9e",
+      "source_id": "55e06f28-f958-4046-9ee7-ce44b63a2f9e",
+      "words": 198,
+      "score": 69,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Wiederholte Satzanfänge",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        }
+      ]
+    },
+    {
+      "id": "733f58bd-f8a7-46a2-8960-1191e347100f",
+      "source_id": "733f58bd-f8a7-46a2-8960-1191e347100f",
+      "words": 209,
+      "score": 60,
+      "positiveRules": [
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Wiederholte Satzanfänge",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        }
+      ]
+    },
+    {
+      "id": "606549cd-4306-4ffb-b78b-04d55d055d46",
+      "source_id": "606549cd-4306-4ffb-b78b-04d55d055d46",
+      "words": 191,
+      "score": 60,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstanter Entropieverlauf",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "4fd6b3ad-958b-4f41-bcdf-94bdcb2a8d9e",
+      "source_id": "4fd6b3ad-958b-4f41-bcdf-94bdcb2a8d9e",
+      "words": 181,
+      "score": 60,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstante lokale Burstiness",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "60f2c858-2ffe-4499-a1e4-0d7a45fb6b04",
+      "source_id": "60f2c858-2ffe-4499-a1e4-0d7a45fb6b04",
+      "words": 202,
+      "score": 63,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstante lokale Burstiness",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "75b5c416-07ba-47a5-8700-ceca7f328e13",
+      "source_id": "75b5c416-07ba-47a5-8700-ceca7f328e13",
+      "words": 212,
+      "score": 68,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        }
+      ]
+    },
+    {
+      "id": "11e2c217-8569-4eed-9e76-e8f7763726c8",
+      "source_id": "11e2c217-8569-4eed-9e76-e8f7763726c8",
+      "words": 225,
+      "score": 65,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstante lokale Burstiness",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "66bc15fd-ad19-4f0e-8aa4-32012aec9ea3",
+      "source_id": "66bc15fd-ad19-4f0e-8aa4-32012aec9ea3",
+      "words": 156,
+      "score": 62,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Wiederholte 3-Wort-Folgen",
+          "delta": 8
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        },
+        {
+          "label": "Konstante lokale Burstiness",
+          "delta": 3
+        }
+      ]
+    },
+    {
+      "id": "9be356b5-06ce-4658-be9c-d8fe6900ce36",
+      "source_id": "9be356b5-06ce-4658-be9c-d8fe6900ce36",
+      "words": 211,
+      "score": 62,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        }
+      ]
+    },
+    {
+      "id": "d004e3a4-3dcc-477c-9411-9746111ddaa1",
+      "source_id": "d004e3a4-3dcc-477c-9411-9746111ddaa1",
+      "words": 205,
+      "score": 66,
+      "positiveRules": [
+        {
+          "label": "Relativ gleichmäßige Satzlängen",
+          "delta": 6
+        },
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Wiederholte Satzanfänge",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        }
+      ]
+    },
+    {
+      "id": "32938667-7362-4a46-8766-b7ac97657edd",
+      "source_id": "32938667-7362-4a46-8766-b7ac97657edd",
+      "words": 202,
+      "score": 60,
+      "positiveRules": [
+        {
+          "label": "Sehr glatte Interpunktion",
+          "delta": 4
+        },
+        {
+          "label": "Wiederholte Satzanfänge",
+          "delta": 4
+        },
+        {
+          "label": "Erhöhte Zeichenfolgen-Wiederholung",
+          "delta": 2
+        }
+      ]
+    }
+  ],
+  "simulatedWeights": [
+    {
+      "rule": "Wiederholte 3-Wort-Folgen",
+      "originalWeight": 8,
+      "simulatedWeight": 4,
+      "groups": {
+        "human": {
+          "n": 250,
+          "at60": 46,
+          "at78": 0
+        },
+        "chatgpt": {
+          "n": 250,
+          "at60": 245,
+          "at78": 71
+        },
+        "gpt4": {
+          "n": 250,
+          "at60": 239,
+          "at78": 44
+        }
+      },
+      "auroc": {
+        "chatgpt": 0.98144,
+        "gpt4": 0.967464
+      }
+    },
+    {
+      "rule": "Wiederholte 3-Wort-Folgen",
+      "originalWeight": 8,
+      "simulatedWeight": 3,
+      "groups": {
+        "human": {
+          "n": 250,
+          "at60": 40,
+          "at78": 0
+        },
+        "chatgpt": {
+          "n": 250,
+          "at60": 244,
+          "at78": 70
+        },
+        "gpt4": {
+          "n": 250,
+          "at60": 239,
+          "at78": 44
+        }
+      },
+      "auroc": {
+        "chatgpt": 0.982864,
+        "gpt4": 0.970192
+      }
+    }
+  ],
+  "repeatedOpening10": {
+    "human": {
+      "n": 250,
+      "repeatedOpening10": 4,
+      "falsePositivesWithRepeatedOpening10": 2
+    },
+    "chatgpt": {
+      "n": 250,
+      "repeatedOpening10": 0,
+      "falsePositivesWithRepeatedOpening10": 0
+    },
+    "gpt4": {
+      "n": 250,
+      "repeatedOpening10": 0,
+      "falsePositivesWithRepeatedOpening10": 0
+    }
+  }
+}

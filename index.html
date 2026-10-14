@@ -115,9 +115,11 @@
           <h2>Gesamteinschätzung</h2>
           <div id="verdict"></div>
           <div class="scoreHero">
-            <div class="scoreHeroLabel">Heuristischer KI-Muster-Score</div>
+            <div class="scoreHeroLabel">Auffälligkeit sprachlicher Muster</div>
             <div class="scoreHeroValue" id="scoreText"></div>
-            <div class="scoreHeroNote">Kein Herkunftsnachweis</div>
+            <div class="scoreHeroNote">
+              KI-Indikator · Kein Herkunftsnachweis
+            </div>
           </div>
           <div class="bar score-bar-space"><div id="scoreBar"></div></div>
 
@@ -195,19 +197,41 @@
 
         <div class="card">
           <h2>2. Google SynthID Text – Referenzdetektor</h2>
+          <h3>Was macht die SynthID-Prüfung?</h3>
           <p>
-            Dieser Bereich ist von der heuristischen KI-Erkennung getrennt. Er
-            implementiert die öffentliche SynthID-Text-Referenzlogik von Google
-            DeepMind für <strong>ngram_len = 5</strong>, den veröffentlichten
-            Default-Key-Satz, Context-Repetition-Masking sowie Mean- und
-            Weighted-Mean-Scoring.
+            SynthID kann beim Erzeugen eines KI-Textes ein unsichtbares
+            Wasserzeichen hinterlassen. Es besteht aus einem Muster in der
+            Auswahl von Wörtern und Wortteilen – nicht aus versteckten Zeichen.
+          </p>
+          <p>
+            Dieser Abschnitt prüft, ob ein Text zur
+            <strong>öffentlichen Beispielkonfiguration von SynthID</strong>
+            passt. Er ist kein allgemeiner Gemini-Detektor: Ohne die passenden
+            Einstellungen und Schlüssel lässt sich ein echtes
+            Google-Wasserzeichen damit nicht zuverlässig erkennen.
+          </p>
+          <h3>Warum muss der Tokenizer vorbereitet werden?</h3>
+          <p>
+            Die Prüfung arbeitet mit Zahlen statt mit Wörtern. Der Tokenizer
+            zerlegt den Text in kleine Bausteine und ordnet jedem eine Nummer
+            zu. Erst mit diesen Nummern kann die Prüfung rechnen.
+          </p>
+          <p>
+            Beim Vorbereiten werden die benötigten Dateien geladen. Das passiert
+            erst bei Bedarf, damit die normale Textanalyse sofort nutzbar
+            bleibt. Dein eingegebener Text bleibt auf deinem Gerät.
+          </p>
+          <p>
+            Du kannst „Tokenizer vorbereiten“ anklicken. Wenn du direkt die
+            SynthID-Referenzprüfung startest, wird der gewählte Tokenizer
+            automatisch vorbereitet. Bei direkt eingegebenen Token-IDs ist das
+            nicht erforderlich.
           </p>
 
           <div id="synthPrereq" class="calloutWarn">
-            Exakte Tokenisierung erforderlich. SynthID arbeitet auf Token-IDs.
-            Die gewählten Tokenizer und das Gemma-Modell werden aus den lokalen
-            Dateien dieser Website geladen; der Eingabetext bleibt auf diesem
-            Gerät.
+            Der gewählte Tokenizer muss zu dem Verfahren passen, mit dem der
+            Text erzeugt wurde. Andere Einstellungen können zu einem
+            unauffälligen Ergebnis führen, obwohl der Text von einer KI stammt.
           </div>
 
           <div class="synthConfig synth-config-space">
@@ -241,8 +265,7 @@
             </button>
           </div>
           <p id="tokenizerStatus" class="small" role="status">
-            Tokenizer werden bei Bedarf aus lokalen Dateien vorbereitet. Das
-            Gemma-Modell kann in IndexedDB gecacht werden.
+            Der gewählte Tokenizer wird erst bei Bedarf vorbereitet.
           </p>
 
           <details>
@@ -882,30 +905,57 @@
             </p>
           </div>
         </div>
-
-        <div class="card">
-          <h2>Methodische Grenzen</h2>
-          <div class="notice">
-            <p>
-              <strong
-                >Dieser Prototyp kann nicht beweisen, dass ein Text von einer KI
-                stammt.</strong
-              >
-            </p>
-            <p>
-              Er erkennt nur lokale Unicode-Auffälligkeiten und
-              statistische/stilometrische Muster. Ein echtes kryptografisches
-              oder tokenbasiertes Wasserzeichen kann nur erkannt werden, wenn
-              das konkrete Verfahren, die Tokenisierung und ggf. der Schlüssel
-              bekannt sind.
-            </p>
-            <p>
-              Kurze Texte, stark redigierte KI-Texte und formale menschliche
-              Texte sind besonders fehleranfällig.
-            </p>
-          </div>
-        </div>
       </div>
+      <section class="card" aria-labelledby="limitsHeading">
+        <h2 id="limitsHeading">Was die Seite nicht kann</h2>
+        <p>
+          <strong
+            >Der KI-Indikator ist kein Beweis für die Herkunft eines
+            Textes.</strong
+          >
+          Ein Wert von 80 bedeutet nicht „80 Prozent Wahrscheinlichkeit für KI“.
+          Menschliche Texte können hohe Werte erhalten; KI-Texte können
+          unauffällig bleiben.
+        </p>
+        <ul>
+          <li>
+            Sie erkennt Gemini, ChatGPT oder andere KI-Modelle nicht zuverlässig
+            und benennt keinen konkreten Erzeuger.
+          </li>
+          <li>
+            Sie unterscheidet nicht sicher zwischen selbst geschriebenen,
+            überarbeiteten und teilweise KI-gestützten Texten.
+          </li>
+          <li>
+            Sie kann aus kurzen Texten nur wenige Muster ableiten. Auch eine
+            hohe angezeigte Aussagekraft bestätigt keine KI-Autorenschaft.
+          </li>
+          <li>
+            Sie bewertet weder den Wahrheitsgehalt noch die Qualität eines
+            Textes und ist keine Plagiatsprüfung.
+          </li>
+          <li>
+            Unsichtbare Zeichen sind kein Nachweis für ein KI-Wasserzeichen.
+          </li>
+          <li>
+            Die SynthID-Referenzprüfung ist kein allgemeiner Gemini-Detektor.
+            Ein fehlendes Signal schließt KI-Autorenschaft nicht aus.
+          </li>
+        </ul>
+        <p>
+          Die Ergebnisse eignen sich zur Untersuchung von Textmerkmalen. Für
+          Vorwürfe oder Entscheidungen über die Autorenschaft reichen sie allein
+          nicht aus.
+        </p>
+      </section>
+      <section class="card" aria-labelledby="privacyHeading">
+        <h2 id="privacyHeading">Datenschutz</h2>
+        <p>
+          Die Analyse läuft im Browser auf deinem Gerät. Der eingegebene Text
+          wird nicht an einen externen Analysedienst gesendet. Zum Öffnen der
+          gehosteten Seite benötigt dein Browser eine Verbindung zum Webserver.
+        </p>
+      </section>
     </main>
 
     <template id="template-row"

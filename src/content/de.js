@@ -56,7 +56,7 @@ export const messages = {
   signals: "{0} von 9",
   meaningLabel: "Was bedeutet das Ergebnis?",
   analysisMeaning:
-    "Der Score beschreibt statistische und stilistische Muster im Text. Er gibt keine Wahrscheinlichkeit für KI-Autorenschaft an. Auch menschliche Texte können hohe Werte erreichen; KI-Texte können unauffällig bleiben.",
+    "Der KI-Indikator beschreibt die Auffälligkeit statistischer und stilistischer Muster im Text. Er gibt keine Wahrscheinlichkeit für KI-Autorenschaft an. Auch menschliche Texte können hohe Werte erreichen; KI-Texte können unauffällig bleiben.",
   confidenceMeaning:
     "Die Aussagekraft beschreibt, wie viel Text und wie viele Merkmalsgruppen auswertbar sind. Auch „hoch“ bedeutet keine hohe Sicherheit über die Herkunft. Die Gruppen sind keine unabhängigen Beweise und die Einstufung ist keine gemessene Trefferquote.",
   shortTextMeaning:
@@ -70,7 +70,7 @@ export const messages = {
   synthCalibrationMeaning:
     "Der z-Wert dient hier nur zur Orientierung. Er ist eine Näherung mit nicht kalibrierten Schwellen; die angezeigte Signalstärke ist keine bestätigte Trefferentscheidung.",
   scoreExplanation:
-    "Der Score ist kein Wahrscheinlichkeitswert. Ein Ergebnis von {0}/100 bedeutet also nicht, dass der Text mit {0} % Wahrscheinlichkeit von einer KI stammt.",
+    "Der Score beschreibt die Auffälligkeit sprachlicher Muster und dient als heuristischer KI-Indikator. Er ist kein Wahrscheinlichkeitswert. Ein Ergebnis von {0}/100 bedeutet also nicht, dass der Text mit {0} % Wahrscheinlichkeit von einer KI stammt.",
   scoreOrigin:
     "Die Berechnung beginnt bei 50 Punkten als neutralem Ausgangswert. Auffällige Merkmale erhöhen oder senken diesen Wert. Bei kurzen Texten werden die Ausschläge anschließend wieder in Richtung 50 abgeschwächt.",
   interpretationLabel: "Interpretation dieses Textes:",

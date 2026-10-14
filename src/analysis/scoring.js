@@ -124,7 +124,8 @@ export function buildScores(metrics) {
   }
   if (triRepeat > 0.025) {
     addScore(
-      8,
+      // Common news wording also repeats; the RAID holdout supports a weaker signal.
+      3,
       analysisContent.text_wiederholte_3_wort_folgen,
       analysisContent.text_mehrere_identische_kurze_wortfolgen_treten_wiederholt_auf_da,
     );

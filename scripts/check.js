@@ -196,7 +196,11 @@ for (const [file, expected] of Object.entries(manifest.sha256)) {
     failures.push("Asset checksum mismatch " + file);
   }
 }
+const technical = await readFile("TECHNISCH.md", "utf8");
 const readme = await readFile("README.md", "utf8");
+if (!readme.includes("[Technische Dokumentation](TECHNISCH.md)")) {
+  failures.push("README.md: missing technical documentation link");
+}
 for (const command of [
   "npm start",
   "npm test",
@@ -204,8 +208,8 @@ for (const command of [
   "npm run test:browser",
   "npm run build",
 ]) {
-  if (!readme.includes(command)) {
-    failures.push("Missing documented command " + command);
+  if (!technical.includes(command)) {
+    failures.push("TECHNISCH.md: missing documented command " + command);
   }
 }
 if (failures.length) {
@@ -215,7 +219,7 @@ if (failures.length) {
   process.exitCode = 1;
 } else {
   console.log(
-    "Syntax, function documentation, branching, local imports, module graph, templates, assets and README: OK (" +
+    "Syntax, function documentation, branching, local imports, module graph, templates, assets and documentation: OK (" +
       sources.length +
       " source modules).",
   );

@@ -1,0 +1,526 @@
+{
+  "date": "2026-10-14",
+  "partition": "evaluation",
+  "candidate": {
+    "rule": "Wiederholte 3-Wort-Folgen",
+    "oldWeight": 8,
+    "newWeight": 3,
+    "thresholds": [60, 78],
+    "otherChanges": "none"
+  },
+  "topics": 250,
+  "texts": 750,
+  "sourceHashes": {
+    "src/analysis/analyze.js": "ed65fb795fb97ea39d292c1cacbd190e2b101ed3c184557c0de99d8069c8418a",
+    "src/analysis/metrics.js": "fe8572ae3a41e02aeeec55c629d30ba8fef16d31bf5ffe48332b97888804a22e",
+    "src/analysis/scoring.js": "5f8fa07e5a54638dd0c33dee8af1414de06990125b03014e9f645d924d18353d",
+    "src/analysis/unicode.js": "991340505774e9c1e46566fa0057bccf3b446d6710bb54c397ac33967bec5400",
+    "src/shared/text.js": "2b857d5ca93ba20500f673d2e591e80eb1dbee27ace570c407f058cc0404a0c7",
+    "src/shared/statistics.js": "6d1af583a05703b65dc0a5be684e27802c869340e0109edcc81ee7f30cfa5420",
+    "src/content/analysis-de.js": "247b98beacaae1352f2ad3cac121d1bfec803d8f4af3102e8bd8edbeb5b29c9a",
+    "src/content/reference-data.js": "6b2947e37455edf65a6e860c8765d73b527387b8a484b2e86e38b5313b3be079"
+  },
+  "selectionManifestSha256": "80286e86eb3c6473aca532c50e7c58cbd5b14f09b7f66e84c6c05a55e2691402",
+  "models": {
+    "human": {
+      "baseline": {
+        "n": 250,
+        "median": 54,
+        "thresholds": {
+          "60": {
+            "count": 52,
+            "rate": 0.208
+          },
+          "78": {
+            "count": 0,
+            "rate": 0
+          }
+        }
+      },
+      "candidate": {
+        "n": 250,
+        "median": 52,
+        "thresholds": {
+          "60": {
+            "count": 38,
+            "rate": 0.152
+          },
+          "78": {
+            "count": 0,
+            "rate": 0
+          }
+        }
+      },
+      "changes": {
+        "60": {
+          "aboveToBelow": 14,
+          "belowToAbove": 0
+        },
+        "78": {
+          "aboveToBelow": 0,
+          "belowToAbove": 0
+        }
+      }
+    },
+    "chatgpt": {
+      "baseline": {
+        "n": 250,
+        "median": 76,
+        "thresholds": {
+          "60": {
+            "count": 249,
+            "rate": 0.996
+          },
+          "78": {
+            "count": 84,
+            "rate": 0.336
+          }
+        }
+      },
+      "candidate": {
+        "n": 250,
+        "median": 75,
+        "thresholds": {
+          "60": {
+            "count": 249,
+            "rate": 0.996
+          },
+          "78": {
+            "count": 74,
+            "rate": 0.296
+          }
+        }
+      },
+      "changes": {
+        "60": {
+          "aboveToBelow": 0,
+          "belowToAbove": 0
+        },
+        "78": {
+          "aboveToBelow": 10,
+          "belowToAbove": 0
+        }
+      }
+    },
+    "gpt4": {
+      "baseline": {
+        "n": 250,
+        "median": 72,
+        "thresholds": {
+          "60": {
+            "count": 235,
+            "rate": 0.94
+          },
+          "78": {
+            "count": 55,
+            "rate": 0.22
+          }
+        }
+      },
+      "candidate": {
+        "n": 250,
+        "median": 72,
+        "thresholds": {
+          "60": {
+            "count": 235,
+            "rate": 0.94
+          },
+          "78": {
+            "count": 50,
+            "rate": 0.2
+          }
+        }
+      },
+      "changes": {
+        "60": {
+          "aboveToBelow": 0,
+          "belowToAbove": 0
+        },
+        "78": {
+          "aboveToBelow": 5,
+          "belowToAbove": 0
+        }
+      }
+    }
+  },
+  "auroc": {
+    "chatgpt": {
+      "baseline": 0.9842,
+      "candidate": 0.990632
+    },
+    "gpt4": {
+      "baseline": 0.956288,
+      "candidate": 0.968872
+    }
+  },
+  "lengthGroups": {
+    "under150": {
+      "human": {
+        "baseline": {
+          "n": 38,
+          "median": 51,
+          "thresholds": {
+            "60": {
+              "count": 0,
+              "rate": 0
+            },
+            "78": {
+              "count": 0,
+              "rate": 0
+            }
+          }
+        },
+        "candidate": {
+          "n": 38,
+          "median": 49,
+          "thresholds": {
+            "60": {
+              "count": 0,
+              "rate": 0
+            },
+            "78": {
+              "count": 0,
+              "rate": 0
+            }
+          }
+        }
+      },
+      "chatgpt": {
+        "baseline": {
+          "n": 0,
+          "median": null,
+          "thresholds": {
+            "60": {
+              "count": 0,
+              "rate": null
+            },
+            "78": {
+              "count": 0,
+              "rate": null
+            }
+          }
+        },
+        "candidate": {
+          "n": 0,
+          "median": null,
+          "thresholds": {
+            "60": {
+              "count": 0,
+              "rate": null
+            },
+            "78": {
+              "count": 0,
+              "rate": null
+            }
+          }
+        }
+      },
+      "gpt4": {
+        "baseline": {
+          "n": 0,
+          "median": null,
+          "thresholds": {
+            "60": {
+              "count": 0,
+              "rate": null
+            },
+            "78": {
+              "count": 0,
+              "rate": null
+            }
+          }
+        },
+        "candidate": {
+          "n": 0,
+          "median": null,
+          "thresholds": {
+            "60": {
+              "count": 0,
+              "rate": null
+            },
+            "78": {
+              "count": 0,
+              "rate": null
+            }
+          }
+        }
+      }
+    },
+    "150to199": {
+      "human": {
+        "baseline": {
+          "n": 161,
+          "median": 54,
+          "thresholds": {
+            "60": {
+              "count": 39,
+              "rate": 0.2422360248447205
+            },
+            "78": {
+              "count": 0,
+              "rate": 0
+            }
+          }
+        },
+        "candidate": {
+          "n": 161,
+          "median": 54,
+          "thresholds": {
+            "60": {
+              "count": 30,
+              "rate": 0.18633540372670807
+            },
+            "78": {
+              "count": 0,
+              "rate": 0
+            }
+          }
+        }
+      },
+      "chatgpt": {
+        "baseline": {
+          "n": 0,
+          "median": null,
+          "thresholds": {
+            "60": {
+              "count": 0,
+              "rate": null
+            },
+            "78": {
+              "count": 0,
+              "rate": null
+            }
+          }
+        },
+        "candidate": {
+          "n": 0,
+          "median": null,
+          "thresholds": {
+            "60": {
+              "count": 0,
+              "rate": null
+            },
+            "78": {
+              "count": 0,
+              "rate": null
+            }
+          }
+        }
+      },
+      "gpt4": {
+        "baseline": {
+          "n": 2,
+          "median": 57,
+          "thresholds": {
+            "60": {
+              "count": 1,
+              "rate": 0.5
+            },
+            "78": {
+              "count": 0,
+              "rate": 0
+            }
+          }
+        },
+        "candidate": {
+          "n": 2,
+          "median": 57,
+          "thresholds": {
+            "60": {
+              "count": 1,
+              "rate": 0.5
+            },
+            "78": {
+              "count": 0,
+              "rate": 0
+            }
+          }
+        }
+      }
+    },
+    "200to249": {
+      "human": {
+        "baseline": {
+          "n": 51,
+          "median": 56,
+          "thresholds": {
+            "60": {
+              "count": 13,
+              "rate": 0.2549019607843137
+            },
+            "78": {
+              "count": 0,
+              "rate": 0
+            }
+          }
+        },
+        "candidate": {
+          "n": 51,
+          "median": 55,
+          "thresholds": {
+            "60": {
+              "count": 8,
+              "rate": 0.1568627450980392
+            },
+            "78": {
+              "count": 0,
+              "rate": 0
+            }
+          }
+        }
+      },
+      "chatgpt": {
+        "baseline": {
+          "n": 76,
+          "median": 76,
+          "thresholds": {
+            "60": {
+              "count": 76,
+              "rate": 1
+            },
+            "78": {
+              "count": 24,
+              "rate": 0.3157894736842105
+            }
+          }
+        },
+        "candidate": {
+          "n": 76,
+          "median": 75,
+          "thresholds": {
+            "60": {
+              "count": 76,
+              "rate": 1
+            },
+            "78": {
+              "count": 21,
+              "rate": 0.27631578947368424
+            }
+          }
+        }
+      },
+      "gpt4": {
+        "baseline": {
+          "n": 112,
+          "median": 72,
+          "thresholds": {
+            "60": {
+              "count": 104,
+              "rate": 0.9285714285714286
+            },
+            "78": {
+              "count": 26,
+              "rate": 0.23214285714285715
+            }
+          }
+        },
+        "candidate": {
+          "n": 112,
+          "median": 72,
+          "thresholds": {
+            "60": {
+              "count": 104,
+              "rate": 0.9285714285714286
+            },
+            "78": {
+              "count": 23,
+              "rate": 0.20535714285714285
+            }
+          }
+        }
+      }
+    },
+    "250plus": {
+      "human": {
+        "baseline": {
+          "n": 0,
+          "median": null,
+          "thresholds": {
+            "60": {
+              "count": 0,
+              "rate": null
+            },
+            "78": {
+              "count": 0,
+              "rate": null
+            }
+          }
+        },
+        "candidate": {
+          "n": 0,
+          "median": null,
+          "thresholds": {
+            "60": {
+              "count": 0,
+              "rate": null
+            },
+            "78": {
+              "count": 0,
+              "rate": null
+            }
+          }
+        }
+      },
+      "chatgpt": {
+        "baseline": {
+          "n": 174,
+          "median": 76,
+          "thresholds": {
+            "60": {
+              "count": 173,
+              "rate": 0.9942528735632183
+            },
+            "78": {
+              "count": 60,
+              "rate": 0.3448275862068966
+            }
+          }
+        },
+        "candidate": {
+          "n": 174,
+          "median": 75,
+          "thresholds": {
+            "60": {
+              "count": 173,
+              "rate": 0.9942528735632183
+            },
+            "78": {
+              "count": 53,
+              "rate": 0.3045977011494253
+            }
+          }
+        }
+      },
+      "gpt4": {
+        "baseline": {
+          "n": 136,
+          "median": 73,
+          "thresholds": {
+            "60": {
+              "count": 130,
+              "rate": 0.9558823529411765
+            },
+            "78": {
+              "count": 29,
+              "rate": 0.21323529411764705
+            }
+          }
+        },
+        "candidate": {
+          "n": 136,
+          "median": 73,
+          "thresholds": {
+            "60": {
+              "count": 130,
+              "rate": 0.9558823529411765
+            },
+            "78": {
+              "count": 27,
+              "rate": 0.19852941176470587
+            }
+          }
+        }
+      }
+    }
+  }
+}

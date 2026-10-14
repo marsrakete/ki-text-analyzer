@@ -199,6 +199,12 @@ test("initialization, full example, Unicode, scores and clearing" /** Verify the
   page,
 }) => {
   await expect(page.locator("#results")).toBeHidden();
+  await expect(
+    page.getByRole("region", { name: "Was die Seite nicht kann" }),
+  ).toBeVisible();
+  await expect(page.getByRole("region", { name: "Datenschutz" })).toContainText(
+    "nicht an einen externen Analysedienst",
+  );
   await page.locator("#analyzeBtn").click();
   await expect(page.locator("#analysisMessage")).toContainText("Bitte zuerst");
   await example(page);
@@ -231,6 +237,10 @@ test("initialization, full example, Unicode, scores and clearing" /** Verify the
   await page.locator("#clearBtn").click();
   await expect(page.locator("#input")).toHaveValue("");
   await expect(page.locator("#results")).toBeHidden();
+  await expect(
+    page.getByRole("region", { name: "Was die Seite nicht kann" }),
+  ).toBeVisible();
+  await expect(page.getByRole("region", { name: "Datenschutz" })).toBeVisible();
 });
 test("both local tokenizers match independent fixtures with empty cache and external network blocked" /** Verify the behavior described by this test case.
  * @param {*} config1 Input supplied by the enclosing API.

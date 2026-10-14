@@ -1,0 +1,11 @@
+{
+  "rule": "Wiederholte 3-Wort-Folgen",
+  "weight": 3,
+  "checked": {
+    "development": 750,
+    "evaluation": 750
+  },
+  "total": 1500,
+  "mismatches": 0,
+  "method": "Current analyze() versus previously frozen candidate scores; no new candidate tuning"
+}

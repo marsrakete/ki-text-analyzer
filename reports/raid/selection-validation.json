@@ -1,0 +1,37 @@
+{
+  "counts": {
+    "development/human": 250,
+    "development/chatgpt": 250,
+    "development/gpt4": 250,
+    "evaluation/human": 250,
+    "evaluation/chatgpt": 250,
+    "evaluation/gpt4": 250
+  },
+  "independent_topics": 500,
+  "distinct_text_hashes": 1500,
+  "cross_partition_topic_overlap": 0,
+  "cross_partition_identical_text_overlap": 0,
+  "model_word_counts": {
+    "human": {
+      "min": 117,
+      "median": 175,
+      "max": 230,
+      "below80": 0,
+      "below150": 91
+    },
+    "chatgpt": {
+      "min": 88,
+      "median": 259,
+      "max": 398,
+      "below80": 0,
+      "below150": 1
+    },
+    "gpt4": {
+      "min": 183,
+      "median": 252,
+      "max": 316,
+      "below80": 0,
+      "below150": 0
+    }
+  }
+}

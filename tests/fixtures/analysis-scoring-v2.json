@@ -1,0 +1,187 @@
+[
+  {
+    "score": 50,
+    "scoreParts": [
+      {
+        "label": "Neutraler Ausgangswert",
+        "detail": "Die Analyse beginnt bewusst bei 50 Punkten. Erst danach verschieben einzelne Merkmale den Wert nach oben oder unten.",
+        "delta": 0
+      },
+      {
+        "label": "Längenkorrektur",
+        "detail": "Der Text ist kurz. Deshalb werden alle Ausschläge zum neutralen Wert 50 deutlich abgeschwächt.",
+        "delta": 0
+      }
+    ]
+  },
+  {
+    "score": 50,
+    "scoreParts": [
+      {
+        "label": "Neutraler Ausgangswert",
+        "detail": "Die Analyse beginnt bewusst bei 50 Punkten. Erst danach verschieben einzelne Merkmale den Wert nach oben oder unten.",
+        "delta": 0
+      },
+      {
+        "label": "Längenkorrektur",
+        "detail": "Der Text ist kurz. Deshalb werden alle Ausschläge zum neutralen Wert 50 deutlich abgeschwächt.",
+        "delta": 0
+      }
+    ]
+  },
+  {
+    "score": 50,
+    "scoreParts": [
+      {
+        "label": "Neutraler Ausgangswert",
+        "detail": "Die Analyse beginnt bewusst bei 50 Punkten. Erst danach verschieben einzelne Merkmale den Wert nach oben oder unten.",
+        "delta": 0
+      },
+      {
+        "label": "Längenkorrektur",
+        "detail": "Der Text ist kurz. Deshalb werden alle Ausschläge zum neutralen Wert 50 deutlich abgeschwächt.",
+        "delta": 0
+      }
+    ]
+  },
+  {
+    "score": 95,
+    "scoreParts": [
+      {
+        "label": "Neutraler Ausgangswert",
+        "detail": "Die Analyse beginnt bewusst bei 50 Punkten. Erst danach verschieben einzelne Merkmale den Wert nach oben oder unten.",
+        "delta": 0
+      },
+      {
+        "label": "Sehr gleichmäßige Satzlängen",
+        "detail": "Geringe Burstiness: Die Sätze sind ungewöhnlich ähnlich lang. Das kommt bei stark geglätteten Texten häufiger vor.",
+        "delta": 13
+      },
+      {
+        "label": "Wiederholte 3-Wort-Folgen",
+        "detail": "Mehrere identische kurze Wortfolgen treten wiederholt auf. Das kann auf formelhafte Textproduktion hinweisen.",
+        "delta": 3
+      },
+      {
+        "label": "Geringere lexikalische Vielfalt",
+        "detail": "Bei ausreichender Textlänge ist der Anteil unterschiedlicher Wörter relativ niedrig.",
+        "delta": 6
+      },
+      {
+        "label": "Sehr glatte Interpunktion",
+        "detail": "Ein längerer Text ohne Fragen oder Ausrufe wirkt formaler und stärker geglättet.",
+        "delta": 4
+      },
+      {
+        "label": "Wiederholte Satzanfänge",
+        "detail": "Viele Sätze beginnen mit denselben Wörtern. Das kann auf formelhafte Textproduktion hindeuten.",
+        "delta": 4
+      },
+      {
+        "label": "Erhöhte Zeichenfolgen-Wiederholung",
+        "detail": "Kurze Zeichenfolgen wiederholen sich relativ häufig.",
+        "delta": 2
+      },
+      {
+        "label": "Geringere Bigramm-Diversität",
+        "detail": "Viele Wortpaare wiederholen sich; das erhöht die gemessene Regelmäßigkeit.",
+        "delta": 3
+      },
+      {
+        "label": "Ähnliche Satzwortschätze",
+        "detail": "Die Sätze teilen relativ viele gleiche Inhaltswörter.",
+        "delta": 3
+      },
+      {
+        "label": "Erhöhte Bigramm-Wiederholung",
+        "detail": "Ein relativ großer Anteil der Wortpaare tritt mehrfach auf.",
+        "delta": 3
+      },
+      {
+        "label": "Konstante lokale Burstiness",
+        "detail": "Die Satzlängen-Regelmäßigkeit bleibt über mehrere Textabschnitte ungewöhnlich konstant.",
+        "delta": 3
+      },
+      {
+        "label": "Konstanter Entropieverlauf",
+        "detail": "Die lokale Wortentropie verändert sich über den Text hinweg nur wenig.",
+        "delta": 3
+      }
+    ]
+  },
+  {
+    "score": 50,
+    "scoreParts": [
+      {
+        "label": "Neutraler Ausgangswert",
+        "detail": "Die Analyse beginnt bewusst bei 50 Punkten. Erst danach verschieben einzelne Merkmale den Wert nach oben oder unten.",
+        "delta": 0
+      },
+      {
+        "label": "Längenkorrektur",
+        "detail": "Der Text ist kurz. Deshalb werden alle Ausschläge zum neutralen Wert 50 deutlich abgeschwächt.",
+        "delta": 0
+      }
+    ]
+  },
+  {
+    "score": 50,
+    "scoreParts": [
+      {
+        "label": "Neutraler Ausgangswert",
+        "detail": "Die Analyse beginnt bewusst bei 50 Punkten. Erst danach verschieben einzelne Merkmale den Wert nach oben oder unten.",
+        "delta": 0
+      },
+      {
+        "label": "Längenkorrektur",
+        "detail": "Der Text ist kurz. Deshalb werden alle Ausschläge zum neutralen Wert 50 deutlich abgeschwächt.",
+        "delta": 0
+      }
+    ]
+  },
+  {
+    "score": 74,
+    "scoreParts": [
+      {
+        "label": "Neutraler Ausgangswert",
+        "detail": "Die Analyse beginnt bewusst bei 50 Punkten. Erst danach verschieben einzelne Merkmale den Wert nach oben oder unten.",
+        "delta": 0
+      },
+      {
+        "label": "Wiederholte 3-Wort-Folgen",
+        "detail": "Mehrere identische kurze Wortfolgen treten wiederholt auf. Das kann auf formelhafte Textproduktion hinweisen.",
+        "delta": 3
+      },
+      {
+        "label": "Geringere lexikalische Vielfalt",
+        "detail": "Bei ausreichender Textlänge ist der Anteil unterschiedlicher Wörter relativ niedrig.",
+        "delta": 6
+      },
+      {
+        "label": "Sehr glatte Interpunktion",
+        "detail": "Ein längerer Text ohne Fragen oder Ausrufe wirkt formaler und stärker geglättet.",
+        "delta": 4
+      },
+      {
+        "label": "Erhöhte Zeichenfolgen-Wiederholung",
+        "detail": "Kurze Zeichenfolgen wiederholen sich relativ häufig.",
+        "delta": 2
+      },
+      {
+        "label": "Geringere Bigramm-Diversität",
+        "detail": "Viele Wortpaare wiederholen sich; das erhöht die gemessene Regelmäßigkeit.",
+        "delta": 3
+      },
+      {
+        "label": "Erhöhte Bigramm-Wiederholung",
+        "detail": "Ein relativ großer Anteil der Wortpaare tritt mehrfach auf.",
+        "delta": 3
+      },
+      {
+        "label": "Konstanter Entropieverlauf",
+        "detail": "Die lokale Wortentropie verändert sich über den Text hinweg nur wenig.",
+        "delta": 3
+      }
+    ]
+  }
+]

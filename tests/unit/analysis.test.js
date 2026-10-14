@@ -18,13 +18,19 @@ import { gzipRatio } from "../../src/services/compression.js";
 const baseline = JSON.parse(
   await readFile("tests/fixtures/analysis.json", "utf8"),
 );
-test("all original metrics, weights, subscores and confidence remain identical", /** Verify the behavior described by this test case.
- * @returns {*} Operation result or undefined for a side effect. */
-() => {
-  for (const fixture of baseline) {
+const calibratedScores = JSON.parse(
+  await readFile("tests/fixtures/analysis-scoring-v2.json", "utf8"),
+);
+test("original metrics, subscores and confidence remain identical with the validated scoring adjustment" /** Verify preserved metrics and explicitly recorded adjusted scores.
+ * @returns {*} Operation result or undefined for a side effect. */, () => {
+  assert.equal(calibratedScores.length, baseline.length);
+  for (const [index, fixture] of baseline.entries()) {
     const result = analyze(fixture.text);
     const { reasons, ...existing } = result;
-    assert.deepEqual(existing, fixture.result);
+    assert.deepEqual(existing, {
+      ...fixture.result,
+      ...calibratedScores[index],
+    });
     assert.deepEqual(buildSubscores(result), fixture.subscores);
     assert.deepEqual(confidenceInfo(result), fixture.confidence);
     assert.ok(Array.isArray(reasons));
@@ -39,9 +45,26 @@ test("all original metrics, weights, subscores and confidence remain identical",
     assert.equal(model.complexityRows[0][1], "nicht unterstützt");
   }
 });
-test("analysis contracts reject missing inputs and tolerate empty text", /** Verify the behavior described by this test case.
- * @returns {*} Operation result or undefined for a side effect. */
-() => {
+test("trigram repetition keeps its exact trigger boundary and contributes only three points" /** Check the unchanged trigger and the calibrated contribution around length corrections.
+ * @returns {void} Verifies the specific rule without changing unrelated metrics. */, () => {
+  const base = collectMetrics("Ein kurzer Beispielsatz. Noch ein Satz.");
+  for (const count of [20, 80, 149, 150, 240]) {
+    const metrics = { ...base, ws: Array(count).fill("wort") };
+    for (const repetition of [0, 0.025, 0.025001]) {
+      const result = buildScores({ ...metrics, triRepeat: repetition });
+      const part = result.scoreParts.find(
+        /** Identify the repetition rule in the score breakdown.
+         * @param {object} item Score contribution.
+         * @returns {boolean} Whether this is the trigram repetition contribution. */
+        (item) => item.label === "Wiederholte 3-Wort-Folgen",
+      );
+      if (repetition > 0.025) assert.equal(part.delta, 3);
+      else assert.equal(part, undefined);
+    }
+  }
+});
+test("analysis contracts reject missing inputs and tolerate empty text" /** Verify the behavior described by this test case.
+ * @returns {*} Operation result or undefined for a side effect. */, () => {
   assert.equal(analyze("").score, 50);
   assert.ok(analyze("Hallo.").reasons.length > 0);
   for (const input of [null, undefined, 42, {}]) {
@@ -107,18 +130,16 @@ test("analysis contracts reject missing inputs and tolerate empty text", /** Ver
     TypeError,
   );
 });
-test("verdict thresholds retain exact boundaries", /** Verify the behavior described by this test case.
- * @returns {*} Operation result or undefined for a side effect. */
-() => {
+test("verdict thresholds retain exact boundaries" /** Verify the behavior described by this test case.
+ * @returns {*} Operation result or undefined for a side effect. */, () => {
   assert.equal(band(34)[1], "good");
   assert.equal(band(35)[1], "warn");
   assert.equal(band(59)[1], "warn");
   assert.equal(band(60)[1], "warn");
   assert.equal(band(78)[1], "bad");
 });
-test("Unicode offsets use UTF-16 and safe word splitting handles punctuation", /** Verify the behavior described by this test case.
- * @returns {*} Operation result or undefined for a side effect. */
-() => {
+test("Unicode offsets use UTF-16 and safe word splitting handles punctuation" /** Verify the behavior described by this test case.
+ * @returns {*} Operation result or undefined for a side effect. */, () => {
   assert.deepEqual(words("Äpfel, BÄUME!"), ["äpfel", "bäume"]);
   assert.deepEqual(words(""), []);
   assert.deepEqual(sentences("Hallo!\nWie geht es?"), [
@@ -139,9 +160,8 @@ test("Unicode offsets use UTF-16 and safe word splitting handles punctuation", /
     greek: 0,
   });
 });
-test("statistics cover normal values, empty arrays and invalid input", /** Verify the behavior described by this test case.
- * @returns {*} Operation result or undefined for a side effect. */
-() => {
+test("statistics cover normal values, empty arrays and invalid input" /** Verify the behavior described by this test case.
+ * @returns {*} Operation result or undefined for a side effect. */, () => {
   assert.equal(statistics.mean([1, 2, 3]), 2);
   assert.equal(statistics.stddev([1, 3]), 1);
   assert.equal(statistics.median([3, 1, 4, 2]), 2.5);
@@ -207,9 +227,8 @@ test("statistics cover normal values, empty arrays and invalid input", /** Verif
     TypeError,
   );
 });
-test("gzip measures UTF-8 bytes and unsupported capabilities", /** Verify the behavior described by this test case.
- * @returns {*} Operation result or undefined for a side effect. */
-async () => {
+test("gzip measures UTF-8 bytes and unsupported capabilities" /** Verify the behavior described by this test case.
+ * @returns {*} Operation result or undefined for a side effect. */, async () => {
   assert.ok((await gzipRatio("Wiederholung ".repeat(100))) < 0.1);
   assert.equal(await gzipRatio(""), null);
   await assert.rejects(gzipRatio(null), TypeError);

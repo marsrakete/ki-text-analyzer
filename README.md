@@ -1,117 +1,59 @@
 # KI-Text-Analyzer
 
-Statische Browser-Anwendung für beschreibende Textstatistik, heuristische Stilmuster und eine getrennte SynthID-Referenzprüfung. Der eingegebene Text wird auf dem Gerät verarbeitet und nicht an einen externen Dienst übertragen.
+**Texte genauer verstehen:** Der KI-Text-Analyzer macht sprachliche Muster, Wiederholungen und unsichtbare Zeichen sichtbar. Er zeigt, welche Merkmale in einem Text auffallen und wie sich daraus ein heuristischer KI-Indikator ergibt.
 
-## Starten
+Der eingegebene Text wird auf deinem Gerät ausgewertet und nicht an einen externen Analysedienst übertragen.
 
-Die fertigen Tokenizer-Dateien sind im Projekt enthalten. Die modularisierte Quellversion benötigt einen lokalen HTTP-Server oder statisches Webhosting; direktes Öffnen von `index.html` über `file://` wird für diese Ausgabe nicht unterstützt.
+[Zur Anwendung](https://marsrakete.github.io/ki-text-analyzer/)
 
-```powershell
-npm start
-```
+## Was die Seite tut
 
-Öffnen: <http://127.0.0.1:49317/>. Der kleine Entwicklungsserver verwendet nur Node.js und benötigt für diesen Start keine installierten npm-Pakete. Einen anderen Port kann man mit `$env:PORT = '49318'` festlegen.
+Du fügst einen Text ein und erhältst eine Auswertung mit verständlichen Erläuterungen:
 
-Für statisches Hosting werden `index.html`, `licenses.html`, `LICENSE`, `THIRD_PARTY_NOTICES.md`, `src/`, `styles/`, `assets/`, `vendor/`, `favicon.ico`, `manifest.webmanifest` und `og-image.jpg` einschließlich aller Dateien in `vendor/licenses/` gemeinsam ausgeliefert. Ein PHP- oder API-Backend ist nicht erforderlich.
+- **Textstatistik:** Umfang, Satz- und Wortlängen, Wortschatz und sprachliche Vielfalt.
+- **Rhythmus und Struktur:** Wie ähnlich die Sätze aufgebaut sind und wie gleichmäßig sich der Text liest.
+- **Wiederholungen:** Häufige Wörter, wiederkehrende Wortfolgen und typische Übergangsformulierungen.
+- **Unsichtbare Zeichen:** Versteckte oder auffällige Unicode-Zeichen werden gefunden und im Text sichtbar gemacht.
+- **Auffälligkeit sprachlicher Muster:** Ein Score von 0 bis 100 fasst ausgewählte Merkmale als KI-Indikator zusammen. Die Auswertung erklärt, welche Merkmale den Wert erhöhen oder senken.
+- **Aussagekraft:** Die Seite ordnet ein, wie viel Text und wie viele Merkmalsgruppen für die Analyse zur Verfügung stehen.
+- **SynthID-Referenzprüfung:** Eine separate Prüfung sucht nach einem Wasserzeichensignal für die gewählten Einstellungen. Eine Positivdemo zeigt, wie ein passendes Signal aussieht.
 
-## Entwicklung und Prüfungen
+## Was du damit machen kannst
 
-Voraussetzung: Node.js 24 oder neuer. Die Browserprüfung verwendet das lokal installierte Microsoft Edge. Nach Installation der Entwicklungsabhängigkeiten arbeiten die regulären Tests und der Build ohne Internetzugriff.
+- Einen eigenen oder fremden Text auf wiederkehrende sprachliche Muster untersuchen.
+- Verschiedene Texte nacheinander analysieren und ihre Ergebnisse vergleichen.
+- Auffällige Stellen und Merkmale nachvollziehen, statt nur einen einzelnen Score zu sehen.
+- Unsichtbare Zeichen erkennen, die beispielsweise beim Kopieren aus Dokumenten oder Webseiten übernommen wurden.
+- Mit dem eingebauten Beispiel die Auswertung kennenlernen.
 
-```powershell
-npm ci
-npm run check
-npm test
-npm run test:browser
-npm run build
-```
+## Was die Seite nicht kann
 
-- `check`: JavaScript-Syntax, Funktionsdokumentation, Verzicht auf Ternarys und HTML-Strings, lokale Imports, zirkuläre Abhängigkeiten, Templates, Ressourcen-Prüfsummen und README-Befehle.
-- `test`: Verträge aller Fachmodule, Vergleich mit den ursprünglichen Rechenwerten, Grenzfälle, Eingabevalidierung, SynthID-Referenzvektoren, Tokenizer-Adapter, Cache-Lebenszyklus sowie DOM- und Controllerprüfungen.
-- `test:browser`: Initialisierung mit erfassten `pageerror`-Ereignissen, vollständige Analyse, Unicode-Darstellung, SynthID-Demo und Parameterfehler, echte GPT-2-/Gemma-Tokenisierung, Cache-Löschen und Geometrie bei 390, 768 und 1280 Pixeln. Drittanbieterzugriffe werden erfasst; die Tokenizerprüfung sperrt sie zusätzlich. Screenshots liegen unter `screenshots/`.
-- `build`: Erzeugt die lokalen Tokenizer-Laufzeiten, Icons, OG-Bilder, statischen Metadaten, Manifeste und Lizenzbeilage. Der Build lädt das Gemma-Modell nicht neu herunter.
+**Der KI-Indikator ist kein Beweis für die Herkunft eines Textes.** Ein Wert von 80 bedeutet nicht „80 Prozent Wahrscheinlichkeit für KI“. Menschliche Texte können hohe Werte erhalten; KI-Texte können unauffällig bleiben.
 
-Der Testserver startet auf seinem eigenen Port und verwendet keinen bereits laufenden Server. Ein belegter Port wird als Fehler gemeldet. Realgeräte, Safari und Firefox sind durch die Edge-Tests nicht abgedeckt.
+- Sie erkennt Gemini, ChatGPT oder andere KI-Modelle nicht zuverlässig und benennt keinen konkreten Erzeuger.
+- Sie unterscheidet nicht sicher zwischen selbst geschriebenen, überarbeiteten und teilweise KI-gestützten Texten.
+- Sie kann aus kurzen Texten nur wenige Muster ableiten. Auch eine hohe angezeigte Aussagekraft bestätigt keine KI-Autorenschaft.
+- Sie bewertet weder den Wahrheitsgehalt noch die Qualität eines Textes und ist keine Plagiatsprüfung.
+- Unsichtbare Zeichen sind kein Nachweis für ein KI-Wasserzeichen.
+- Die SynthID-Referenzprüfung ist kein allgemeiner Gemini-Detektor. Ein fehlendes Signal schließt KI-Autorenschaft nicht aus.
 
-## Favicon, mobile Icons und Open Graph
+Die Ergebnisse eignen sich zur Untersuchung von Textmerkmalen. Für Vorwürfe oder Entscheidungen über die Autorenschaft reichen sie allein nicht aus.
 
-Die bestätigte öffentliche Adresse ist `https://marsrakete.github.io/ki-text-analyzer/`. Titel, Beschreibung, Bild-Alternativtext, Farben und öffentliche URL stehen zentral in `config/site.config.json`. Open-Graph- und Twitter-Card-Metadaten sowie die Canonical-Adresse werden statisch im HTML erzeugt und sind ohne JavaScript sichtbar. Die Bild-URLs sind absolute HTTPS-Adressen; lokale Icon- und Manifest-Pfade bleiben relativ und funktionieren auch im GitHub-Pages-Unterverzeichnis.
+## So benutzt du sie
 
-Der OG-Build ist aus Threadlines `scripts/build-og-images.js` übernommen und an ES-Module angepasst: Eine editierbare SVG-Vorlage wird mit **Resvg** gerendert, auf **1200 × 630 Pixel** geprüft und mit **Sharp** als PNG und JPEG ausgegeben. Die Konfiguration steht in `config/og-image.config.json`, die Vorlage unter `assets/branding/og-image.svg`. Das eingebundene PNG liegt unter `assets/branding/og-image.png`; `og-image.jpg` ist die zusätzliche JPEG-Ausgabe. Für den Text verwendet Resvg verfügbare Systemschriften, bevorzugt Segoe UI bzw. DejaVu Sans.
+1. Öffne die [Anwendung](https://marsrakete.github.io/ki-text-analyzer/).
+2. Füge einen Text ein oder wähle „Beispiel einsetzen“.
+3. Klicke auf „Analysieren“.
+4. Lies den KI-Indikator zusammen mit den einzelnen Befunden und den Hinweisen zur Aussagekraft.
 
-Das gemeinsame Markenzeichen ist in `assets/branding/icon.svg` als wiederverwendbares SVG-Symbol definiert. Der Build übernimmt dieses Symbol in die OG- und Maskable-Vorlagen, damit keine zweite Zeichnung separat gepflegt werden muss.
+Die SynthID-Prüfung ist ein zusätzlicher Bereich mit eigenen Einstellungen. Für die normale statistische Auswertung brauchst du ihn nicht.
 
-`config/icons.config.json` definiert die Browser-Favicons als SVG, 16-/32-Pixel-PNG und ICO mit 16-, 32- und 48-Pixel-Frames. Für Apple gibt es ein **180 × 180 Pixel** großes PNG-Touch-Icon. Das Manifest enthält **192 × 192** und **512 × 512 Pixel** große Android-Icons sowie separate maskierbare Varianten mit deckendem Hintergrund. Das Zeichen liegt in der zentralen sicheren Kreisfläche. Diese Metadaten unterstützen mobile Lesezeichen und Icons; sie führen keinen Service Worker oder eine Offline-Installation ein.
+## Datenschutz
 
-Die Grafiken und Metadaten lassen sich separat neu erzeugen:
+Die Analyse läuft im Browser auf deinem Gerät. Der eingegebene Text wird nicht an einen externen Analysedienst gesendet. Zum Öffnen der gehosteten Seite benötigt dein Browser eine Verbindung zum Webserver.
 
-```powershell
-npm run build:icons
-npm run build:og-image
-npm run build:metadata
-npm run build:branding
-```
+## Weiterführendes
 
-`build:metadata` aktualisiert das vorhandene HTML ohne doppelte Tags und erzeugt `manifest.webmanifest`. Bei Änderungen der öffentlichen URL genügt eine Anpassung in `config/site.config.json` und ein erneuter Metadaten-Build. Live-Vorschauen bei sozialen Netzwerken sind erst nach Veröffentlichung der Dateien prüfbar; deren Vorschau-Caches werden durch diesen lokalen Build nicht geleert.
-
-## Modulgrenzen
-
-| Bereich                   | Verantwortung                                                                    |
-| ------------------------- | -------------------------------------------------------------------------------- |
-| `src/app.js`              | Kleiner Seitenstart                                                              |
-| `src/ui/page.js`          | DOM-Verbindungen und Initialisierung aller Abhängigkeiten                        |
-| `src/shared/`             | Mathematik, Textzerlegung, Formatierung und Template-Helfer                      |
-| `src/analysis/metrics.js` | Beschreibende Textmetriken und Profile                                           |
-| `src/analysis/unicode.js` | Unicode-Marker und Schriftmischung                                               |
-| `src/analysis/scoring.js` | Heuristische Gewichte, Teilbewertungen und Aussagekraft                          |
-| `src/analysis/analyze.js` | Reine Koordination der Textanalyse                                               |
-| `src/synthid/`            | Parameterprüfung, Hashing, Kontextmaskierung und Referenz-Scoring                |
-| `src/services/`           | Lokale Assets, IndexedDB, Tokenizer-Adapter und Browser-Kompression              |
-| `src/ui/`                 | Getrennte Views und Controller für beide Analysebereiche                         |
-| `src/content/`            | Deutsche dynamische Texte, Wortlisten, Unicode-Daten und Referenzkonfiguration   |
-| `index.html`              | Semantische Seitenstruktur, statische Dokumentation und zehn Rendering-Templates |
-| `styles/`                 | Grundgestaltung und Styles nach Analyse, SynthID und Dokumentation               |
-
-Berechnungsmodule kennen weder DOM noch Netzwerk. Views erhalten DOM und Templates ausdrücklich; Controller erhalten Services und Berechnungsfunktionen. Nur die Tokenizer-Registry koordiniert Laufzeit- und Modell-Ladevorgänge. Veraltete asynchrone Ergebnisse werden nach Eingabeänderungen verworfen.
-
-## Tokenizer und lokale Auslieferung
-
-GPT-2 verwendet `gpt-tokenizer` **4.0.0** mit GPT-2/r50k-Vokabular. Vokabular und BPE-Merges sind im lokalen `vendor/gpt2.js` enthalten. Die ungenutzte zweite BPE-Implementierung und ihre separaten Netzwerkquellen wurden entfernt.
-
-Gemma verwendet `@sctg/sentencepiece-js` **1.3.3**. Die Browser-Laufzeit einschließlich WASM liegt in `vendor/sentencepiece.js`; Node-spezifische Dateilader sind im Browser-Build ausdrücklich deaktiviert. Das separat mitgelieferte Modell liegt unter `assets/tokenizers/gemma.model` und stammt aus [google/gemma_pytorch, Commit 33b652c](https://github.com/google/gemma_pytorch/blob/33b652c465537c6158f9a472ea5700e5e770ad3f/tokenizer/tokenizer.model). Der BOS-Token ist standardmäßig aktiv und kann ausgeschaltet werden.
-
-Versionen, Modellquelle und SHA-256-Prüfsummen stehen in `assets/tokenizers/manifest.json`. Lizenzdateien und Herkunft sind unter `vendor/licenses/` und in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) festgehalten.
-
-### Lokale Auslieferung und Cache
-
-Tokenizer-Laufzeiten und Modell werden mit der Website ausgeliefert. Die Anwendung benötigt während der Nutzung keine externen CDN- oder Modellzugriffe. Ein statischer Server muss die lokalen Dateien weiterhin bereitstellen. Das ist keine Service-Worker-PWA und keine Ein-Datei-Ausgabe. Ein vollständig netzunabhängiger Betrieb ist mit lokalem Server und allen mitgelieferten Dateien möglich; ein späterer Aufruf einer extern gehosteten Seite ohne Verbindung ist dadurch nicht zugesagt.
-
-Das Gemma-Modell wird optional im bestehenden IndexedDB-Store `ki-text-analyzer-assets` gespeichert. Datenbankname, Store und Version bleiben erhalten. Cachefehler verhindern die lokale Modellladung nicht. „Tokenizer-Cache löschen“ wartet auf laufende Ladevorgänge, leert den Modell-Store und setzt die vorbereiteten Instanzen zurück. Es entfernt keine vom Browser selbst verwalteten HTTP-/JavaScript-Caches.
-
-## Lizenzbeilage
-
-Der dauerhaft sichtbare Link „Lizenzen und Drittanbieter“ öffnet `licenses.html`. Die Seite enthält die vollständigen Originaltexte, Quellen, Versionen und Änderungshinweise der mitgelieferten Komponenten. `THIRD_PARTY_NOTICES.md` dient als portable Beilage; `vendor/licenses/` enthält die Originaltexte. Der eigene Anwendungscode bleibt unter Apache-2.0.
-
-Die Einträge stehen zentral in `config/licenses.config.json`; die HTML-Struktur steht in `templates/licenses.html`. Nach Änderungen erzeugt `npm run build:licenses` beide Ansichten neu. Der Vendor-Build erhält Herkunfts- und Änderungshinweise in den Bundles und kopiert die npm-Lizenztexte erneut. Die übrigen festgelegten Originaltexte bleiben im Repository enthalten.
-
-**Offen bleibt die Lizenzzuordnung von `assets/tokenizers/gemma.model`.** Der beigefügte Apache-2.0-Text stammt aus dem Herkunftsrepository. Er belegt allein keine abschließende Freigabe dieser Binärdatei unter Apache-2.0; eventuell zusätzlich geltende Gemma-Bedingungen müssen gesondert geklärt werden. Die Beilage kennzeichnet diesen Unterschied ausdrücklich.
-
-Die [dokumentierte Prüfung vom 13.10.2026](GEMMA_LICENSE_REVIEW.md) bestätigt den Original-Lizenztext und die identische Datei in Googles Vertex-AI-SDK. Sie erläutert die verbleibende Abgrenzung zu den Gemma-Bedingungen und enthält einen konkreten Anfrageentwurf an den Rechteinhaber.
-
-## Verhalten und fachliche Grenzen
-
-Die bisherigen heuristischen Werte, Gewichte und Schwellen sind durch Vergleichsfixtures geschützt. Korrigiert wurden der fehlende `reasons`-Rückgabewert, der bisher zum Renderfehler führte, und die SynthID-Kontexthistorie: Sie beginnt entsprechend der Referenz mit Null-Hashes. Zusätzlich werden sichere Ganzzahlen und Parameterbereiche jetzt ausdrücklich geprüft. Mobile Tabellen können lange Begriffe umbrechen.
-
-Der heuristische Score ist weder Herkunftsnachweis noch Wahrscheinlichkeit für KI-Autorenschaft. Die bisherigen Grenzen und Signalgruppen bleiben erhalten; die Anzeige „Aussagekraft“ ist weiterhin eine heuristische Eingabeabdeckung und keine kalibrierte Messunsicherheit.
-
-Direkt bei beiden Ergebnissen erklärt „Was bedeutet das Ergebnis?“ die fachlichen Grenzen. Die Heuristik erläutert die Bedeutung der Aussagekraft und zeigt bei weniger als 80 Wörtern einen zusätzlichen Hinweis zur kurzen Textbasis. SynthID unterscheidet ein erhöhtes von einem unauffälligen Referenzsignal und erklärt Konfigurationsabhängigkeit, fehlende Kalibrierung und mögliche Grenzen der Erkennung. Berechnungen und Schwellen bleiben unverändert.
-
-SynthID prüft die öffentliche Referenzkonfiguration mit den angegebenen Keys und dem passenden Tokenizer. Das ist kein universeller Gemini-Detektor. Der z-Wert bleibt eine Näherung; Abhängigkeiten zwischen g-values werden dabei nicht berücksichtigt.
-
-Die Referenzfixtures beziehen sich auf [google-deepmind/synthid-text, Commit a6ec02c](https://github.com/google-deepmind/synthid-text/tree/a6ec02c22ce87177c061643503e14a7cc839dc2b). Für Hashing, g-values und Mean-/Weighted-Mean-Scoring wurden die festgehaltenen upstream-Funktionen mit NumPy-Arrayoperationen ausgeführt; die Masken folgen der dortigen Historienlogik. Es wurde keine vollständige PyTorch-/JAX-Modellgenerierung ausgeführt. Tokenfolgen werden unabhängig gegen `tiktoken` 0.14.0 und Python `sentencepiece` 0.2.2 verglichen.
-
-Die erzeugten Fixtures liegen unter `tests/fixtures/`, die festgehaltenen upstream-Dateien unter `tests/reference/upstream/`. Zur optionalen Neuerzeugung dient `scripts/generate-reference.py` mit NumPy, `sentencepiece==0.2.2` und `tiktoken==0.14.0`; tiktoken kann beim ersten Lauf sein Referenzvokabular aus dem Netz laden. Die regulären npm-Tests benötigen weder Python noch diese Downloads.
-
-Der ursprüngliche HTML-Stand wurde vor der Umsetzung unter `backups/index.original.html` gesichert. Dieser lokale Sicherungsordner gehört nicht zu Git oder zur Auslieferung.
-
-Weitere Etappen und die ursprünglichen Abnahmekriterien stehen in [UMSETZUNGSPLAN.md](UMSETZUNGSPLAN.md).
+- [Technische Dokumentation](TECHNISCH.md): lokal starten, installieren, weiterentwickeln, testen und veröffentlichen.
+- [Lizenz des eigenen Codes](LICENSE): Apache-2.0.
+- [Drittanbieter und Lizenzbeilage](THIRD_PARTY_NOTICES.md): Bedingungen der mitgelieferten Komponenten. Die abschließende Lizenzzuordnung der Gemma-Tokenizer-Datei bleibt offen; die [dokumentierte Prüfung](GEMMA_LICENSE_REVIEW.md) erläutert den Stand.
